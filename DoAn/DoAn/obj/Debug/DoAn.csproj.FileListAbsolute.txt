@@ -1,0 +1,13 @@
+C:\Users\Khuong\Desktop\LTUDQL\DoAn\DoAn\DoAn\bin\Debug\DoAn.exe
+C:\Users\Khuong\Desktop\LTUDQL\DoAn\DoAn\DoAn\bin\Debug\DoAn.exe.config
+C:\Users\Khuong\Desktop\LTUDQL\DoAn\DoAn\DoAn\obj\Debug\DoAn.csprojAssemblyReference.cache
+C:\Users\Khuong\Desktop\LTUDQL\DoAn\DoAn\DoAn\obj\Debug\DoAn.DangKy.resources
+C:\Users\Khuong\Desktop\LTUDQL\DoAn\DoAn\DoAn\obj\Debug\DoAn.DangNhap.resources
+C:\Users\Khuong\Desktop\LTUDQL\DoAn\DoAn\DoAn\obj\Debug\DoAn.Properties.Resources.resources
+C:\Users\Khuong\Desktop\LTUDQL\DoAn\DoAn\DoAn\obj\Debug\DoAn.csproj.GenerateResource.cache
+C:\Users\Khuong\Desktop\LTUDQL\DoAn\DoAn\DoAn\obj\Debug\DoAn.csproj.CoreCompileInputs.cache
+C:\Users\Khuong\Desktop\LTUDQL\DoAn\DoAn\DoAn\obj\Debug\DoAn.exe
+C:\Users\Khuong\Desktop\LTUDQL\DoAn\DoAn\DoAn\obj\Debug\DoAn.pdb
+C:\Users\Khuong\Desktop\LTUDQL\DoAn\DoAn\DoAn\bin\Debug\DoAn.pdb
+C:\Users\Khuong\Desktop\LTUDQL\DoAn\DoAn\DoAn\obj\Debug\DoAn.HocSinh.resources
+C:\Users\Khuong\Desktop\LTUDQL\DoAn\DoAn\DoAn\obj\Debug\DoAn.ThongTinHocSinh.resources
