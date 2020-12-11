@@ -67,6 +67,7 @@
             this.btnDongGopCauHoi.TabIndex = 3;
             this.btnDongGopCauHoi.Text = "Đóng góp câu hỏi";
             this.btnDongGopCauHoi.UseVisualStyleBackColor = true;
+            this.btnDongGopCauHoi.Click += new System.EventHandler(this.btnDongGopCauHoi_Click);
             // 
             // btnOnLuyenThiThu
             // 

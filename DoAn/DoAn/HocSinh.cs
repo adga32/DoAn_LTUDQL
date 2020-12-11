@@ -23,5 +23,12 @@ namespace DoAn
             ThongTinHocSinh thongTinHocSinh = new ThongTinHocSinh();
             thongTinHocSinh.Show();
         }
+
+        private void btnDongGopCauHoi_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ThongTinHocSinh thongTinHocSinh = new ThongTinHocSinh();
+            thongTinHocSinh.Show();
+        }
     }
 }

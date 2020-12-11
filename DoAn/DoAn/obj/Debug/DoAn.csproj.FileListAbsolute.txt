@@ -1,0 +1,13 @@
+E:\phan mem\PTUDCSDL\DoAn_LTUDQL\DoAn\DoAn\bin\Debug\DoAn.exe.config
+E:\phan mem\PTUDCSDL\DoAn_LTUDQL\DoAn\DoAn\bin\Debug\DoAn.exe
+E:\phan mem\PTUDCSDL\DoAn_LTUDQL\DoAn\DoAn\bin\Debug\DoAn.pdb
+E:\phan mem\PTUDCSDL\DoAn_LTUDQL\DoAn\DoAn\obj\Debug\DoAn.csprojAssemblyReference.cache
+E:\phan mem\PTUDCSDL\DoAn_LTUDQL\DoAn\DoAn\obj\Debug\DoAn.DangKy.resources
+E:\phan mem\PTUDCSDL\DoAn_LTUDQL\DoAn\DoAn\obj\Debug\DoAn.DangNhap.resources
+E:\phan mem\PTUDCSDL\DoAn_LTUDQL\DoAn\DoAn\obj\Debug\DoAn.HocSinh.resources
+E:\phan mem\PTUDCSDL\DoAn_LTUDQL\DoAn\DoAn\obj\Debug\DoAn.Properties.Resources.resources
+E:\phan mem\PTUDCSDL\DoAn_LTUDQL\DoAn\DoAn\obj\Debug\DoAn.ThongTinHocSinh.resources
+E:\phan mem\PTUDCSDL\DoAn_LTUDQL\DoAn\DoAn\obj\Debug\DoAn.csproj.GenerateResource.cache
+E:\phan mem\PTUDCSDL\DoAn_LTUDQL\DoAn\DoAn\obj\Debug\DoAn.csproj.CoreCompileInputs.cache
+E:\phan mem\PTUDCSDL\DoAn_LTUDQL\DoAn\DoAn\obj\Debug\DoAn.exe
+E:\phan mem\PTUDCSDL\DoAn_LTUDQL\DoAn\DoAn\obj\Debug\DoAn.pdb
