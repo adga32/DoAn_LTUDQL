@@ -44,6 +44,7 @@
             this.btnLamBai.TabIndex = 0;
             this.btnLamBai.Text = "Làm bài trắc nghiệm";
             this.btnLamBai.UseVisualStyleBackColor = true;
+            this.btnLamBai.Click += new System.EventHandler(this.btnLamBai_Click);
             // 
             // btnThongTinCaNhan
             // 
@@ -92,7 +93,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "HocSinh";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Học Sinh";
+            this.Text = "7";
             this.ResumeLayout(false);
 
         }

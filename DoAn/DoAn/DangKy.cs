@@ -88,9 +88,9 @@ namespace DoAn
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            this.Hide();
             DangNhap dangNhap = new DangNhap();
-            dangNhap.Show();
+            dangNhap.ShowDialog();
+            this.Close();
         }
 
         private void btnDangKy_Click(object sender, EventArgs e)
@@ -139,7 +139,27 @@ namespace DoAn
                                         _password = strPwHash,
                                         idNguoiSoHuu = MaNguoiDung,
                                     });
-
+                                    if (MaNguoiDung.Substring(0, 2) == "HS")
+                                    {
+                                        db.hocSinhs.InsertOnSubmit(new hocSinh
+                                        {
+                                            ma = MaNguoiDung
+                                        });
+                                    }
+                                    else if (MaNguoiDung.Substring(0, 2) == "GV")
+                                    {
+                                        db.giaoViens.InsertOnSubmit(new giaoVien
+                                        {
+                                            ma = MaNguoiDung
+                                        });
+                                    }
+                                    else
+                                    {
+                                        db.adminns.InsertOnSubmit(new adminn
+                                        {
+                                            ma = MaNguoiDung
+                                        });
+                                    }
                                     db.SubmitChanges();
                                     MessageBox.Show("Đăng ký thành công");
                                     return;

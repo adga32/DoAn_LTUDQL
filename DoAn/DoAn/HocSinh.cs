@@ -12,16 +12,33 @@ namespace DoAn
 {
     public partial class HocSinh : Form
     {
+        string nguoidunghientai;
+        public void LayNguoiDungHienTai(TextBox txtTenTaiKhoan)
+        {
+            nguoidunghientai = txtTenTaiKhoan.Text;
+        }
+        public delegate void NguoiDungHienTai(string value);
+
+
         public HocSinh()
         {
             InitializeComponent();
         }
 
         private void btnThongTinCaNhan_Click(object sender, EventArgs e)
-        {
-            this.Hide();
+        {   
             ThongTinHocSinh thongTinHocSinh = new ThongTinHocSinh();
-            thongTinHocSinh.Show();
+            thongTinHocSinh.ShowDialog();
+            this.Close();
+        }
+
+        private void btnLamBai_Click(object sender, EventArgs e)
+        {
+            LamBaiTracNghiem lamBaiTracNghiem = new LamBaiTracNghiem();
+            NguoiDungHienTai nguoiDungHienTai = new NguoiDungHienTai(lamBaiTracNghiem.LayNguoiDungHienTai);
+            nguoiDungHienTai(this.nguoidunghientai);
+            lamBaiTracNghiem.ShowDialog();
+            this.Close();
         }
     }
 }

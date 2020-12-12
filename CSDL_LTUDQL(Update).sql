@@ -80,7 +80,7 @@ go
 
 
 CREATE TABLE cauHoi (
-    ma varchar(10)  PRIMARY KEY,
+    ma varchar(10)  PRIMARY KEY AUTO_INCREMENT,
 	noiDung nvarchar(50),
 	goiY nvarchar(100),
 	doKho nvarchar(10),

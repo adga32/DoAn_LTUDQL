@@ -93,6 +93,7 @@
             this.txtMatKhau.PasswordChar = '*';
             this.txtMatKhau.Size = new System.Drawing.Size(191, 26);
             this.txtMatKhau.TabIndex = 3;
+            this.txtMatKhau.Text = "khuong01";
             // 
             // txtTenTaiKhoan
             // 
@@ -101,6 +102,7 @@
             this.txtTenTaiKhoan.Name = "txtTenTaiKhoan";
             this.txtTenTaiKhoan.Size = new System.Drawing.Size(191, 26);
             this.txtTenTaiKhoan.TabIndex = 2;
+            this.txtTenTaiKhoan.Text = "khuong01";
             // 
             // label2
             // 
