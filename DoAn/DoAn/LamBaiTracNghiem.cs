@@ -14,7 +14,6 @@ namespace DoAn
     public partial class LamBaiTracNghiem : Form
     {
         string nguoidunghientaiLamBai;
-        string MaCauHoi;
         public void LayNguoiDungHienTai(string value)
         {
             nguoidunghientaiLamBai = value;
@@ -23,13 +22,14 @@ namespace DoAn
         int TongCau;
         int S = 60;
         int M = 59;
+        string MaCauHoi;
 
 
         public LamBaiTracNghiem()
         {
             InitializeComponent();
         }
-       
+
 
         private void LamBaiTracNghiem_Load(object sender, EventArgs e)
         {
@@ -113,17 +113,16 @@ namespace DoAn
             //ucF.DataBindings.Add("CheckBox", bs, "cautraloi6");
 
 
-            //Linq to SQL De hien thi cau hoi
 
-            Load_CauHoi();
 
 
             //Linq de hien thi thoi gian lam bai
             //Chua xet ma de thi nao
             using (var db = new DoAnDataContext())
             {
-                var thoigianlambai = (from i in db.deThis select i.thoiGianLamBai_phut).First().ToString();
-                M = int.Parse(thoigianlambai) - 1;
+                var thongtindethi = (from i in db.deThis select new { i.thoiGianLamBai_phut, i.slCauHoi }).First();
+                M = int.Parse(thongtindethi.thoiGianLamBai_phut.ToString()) - 1;
+                TongCau = int.Parse(thongtindethi.slCauHoi.ToString());
                 //Lay ma nguoi dung hien tai
                 var DSCauHoi = (from i in db.cauHois select i.ma).ToList();
                 var Manguoidung = (from i in db.taiKhoans where i.username == nguoidunghientaiLamBai select i.idNguoiSoHuu).First().ToString();
@@ -131,18 +130,21 @@ namespace DoAn
 
                 //Insert ds cauhoi vao tinhtrang bai lam
                 //Chua xet maDe va Ma ki thi
-                for (int i = 0; i < TongCau; i++)
-                {
-                    db.tinhTrangBaiLams.InsertOnSubmit(new tinhTrangBaiLam
-                    {
-                        maHs = Manguoidung,
-                        maDe = "101",
-                        maKythi = "KT01",
-                        maCauHoi = DSCauHoi[i]
-                    });
-                    db.SubmitChanges();
-                }
+                //for (int i = 0; i < TongCau; i++)
+                //{
+                //    db.tinhTrangBaiLams.InsertOnSubmit(new tinhTrangBaiLam
+                //    {
+                //        maHs = Manguoidung,
+                //        maDe = "101",
+                //        maKythi = "KT01",
+                //        maCauHoi = DSCauHoi[i]
+                //    });
+                //    db.SubmitChanges();
+                //}
             }
+            //Linq to SQL De hien thi cau hoi
+
+            Load_CauHoi();
         }
 
 
@@ -152,32 +154,51 @@ namespace DoAn
             using (var db = new DoAnDataContext())
             {
                 var CauHoi = (from i in db.cauHois
-                              join j in db.dapAnCauhois on i.ma equals j.maCauHoi
+                              join j in db.dapAnCauhois
+                              on i.ma equals j.maCauHoi
                               select new
                               {
-                                  macauhoi = i.ma,
-                                  NoiDungCauHoi = i.noiDung,
-                                  DapAn1 = j.dapAn1,
-                                  DapAn2 = j.dapAn2,
-                                  DapAn3 = j.dapAn3,
-                                  DapAn4 = j.dapAn4,
-                                  DapAn5 = j.dapAn5,
-                                  DapAn6 = j.dapAn6
+                                  Ma = i.ma,
+                                  NoiDung = i.noiDung,
+                                  DapAn = j.dapAn
+                              } into GroupDSCH
+                              group GroupDSCH.DapAn by new { GroupDSCH.Ma, GroupDSCH.NoiDung } into DSCAUHOI
+                              select new
+                              {
+                                  MACAUHOI = DSCAUHOI.Key.Ma,
+                                  NOIDUNGCAUHOI = DSCAUHOI.Key.NoiDung,
+                                  DAPANCUACAUHOI = DSCAUHOI.ToList()
                               }).ToList();
+
+                MaCauHoi = CauHoi[index].MACAUHOI;
                 TongCau = CauHoi.Count;
-                MaCauHoi = CauHoi[index].macauhoi;
-                txtNoiDungCauHoi.Text = CauHoi[index].NoiDungCauHoi;
-                ucA.NoiDung = CauHoi[index].DapAn1;
-                ucB.NoiDung = CauHoi[index].DapAn2;
-                ucC.NoiDung = CauHoi[index].DapAn3;
-                ucD.NoiDung = CauHoi[index].DapAn4;
-                ucE.NoiDung = CauHoi[index].DapAn5;
-                ucF.NoiDung = CauHoi[index].DapAn6;
-                if(ucE.NoiDung.Length == 0)
+
+                txtNoiDungCauHoi.Text = CauHoi[index].NOIDUNGCAUHOI;
+                ucA.NoiDung = "";
+                ucB.NoiDung = "";
+                ucC.NoiDung = "";
+                ucD.NoiDung = "";
+                ucE.NoiDung = "";
+                ucF.NoiDung = "";
+                int SoDapAn = CauHoi[index].DAPANCUACAUHOI.Count;
+                ucA.NoiDung = CauHoi[index].DAPANCUACAUHOI[0];
+                ucB.NoiDung = CauHoi[index].DAPANCUACAUHOI[1];
+                ucC.NoiDung = CauHoi[index].DAPANCUACAUHOI[2];
+                ucD.NoiDung = CauHoi[index].DAPANCUACAUHOI[3];
+                if (SoDapAn == 5)
+                {
+                    ucE.NoiDung = CauHoi[index].DAPANCUACAUHOI[4];
+                }
+                else if (SoDapAn == 6)
+                {
+                    ucF.NoiDung = CauHoi[index].DAPANCUACAUHOI[5];
+                }
+
+                if (ucE.NoiDung.Length == 0)
                 {
                     ucE.Hide();
                 }
-                if(ucF.NoiDung.Length ==0)
+                if (ucF.NoiDung.Length == 0)
                 {
                     ucF.Hide();
                 }
@@ -189,9 +210,9 @@ namespace DoAn
         private void Timer1_Tick(object sender, EventArgs e)
         {
             S--;
-            if(M<10)
+            if (M < 10)
             {
-                if(S<10)
+                if (S < 10)
                 {
                     lblThoiGianConLai.Text = "0" + M + " : 0" + S;
                 }
@@ -212,13 +233,13 @@ namespace DoAn
                 }
             }
 
-            if(M==0 && S==0)
+            if (M == 0 && S == 0)
             {
                 timer1.Stop();
                 MessageBox.Show("Hết thời gian làm bài");
             }
-            
-            if(S ==0)
+
+            if (S == 0)
             {
                 S = 60;
                 M--;
@@ -228,7 +249,7 @@ namespace DoAn
 
         private void btnLeft_Click(object sender, EventArgs e)
         {
-            if(index>0)
+            if (index > 0)
             {
                 index--;
                 Load_CauHoi();
@@ -238,9 +259,9 @@ namespace DoAn
 
         private void btnRight_Click(object sender, EventArgs e)
         {
-            if(index < TongCau-1)
+            if (index < TongCau - 1)
             {
-               index++;
+                index++;
                 Load_CauHoi();
             }
             lblVitri.Text = "Câu " + (index + 1) + "/ " + TongCau;
