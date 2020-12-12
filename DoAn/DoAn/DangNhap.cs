@@ -99,12 +99,16 @@ namespace DoAn
                                 else if (user.idNguoiSoHuu.Substring(0, 2) == "GV")
                                 {
                                     GiaoVien gv = new GiaoVien();
+                                    NguoiDungHienTai nguoiDungHienTai = new NguoiDungHienTai(gv.LayNguoiDungHienTai);
+                                    nguoiDungHienTai(this.txtTenTaiKhoan);
                                     gv.ShowDialog();
                                     this.Close();
                                 }
                                 else
                                 {
                                     Admin ad = new Admin();
+                                    NguoiDungHienTai nguoiDungHienTai = new NguoiDungHienTai(ad.LayNguoiDungHienTai);
+                                    nguoiDungHienTai(this.txtTenTaiKhoan);
                                     ad.ShowDialog();
                                     this.Close();
                                 }

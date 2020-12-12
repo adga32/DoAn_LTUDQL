@@ -12,6 +12,12 @@ namespace DoAn
 {
     public partial class GiaoVien : Form
     {
+        string nguoidunghientai;
+        public void LayNguoiDungHienTai(TextBox txtTenTaiKhoan)
+        {
+            nguoidunghientai = txtTenTaiKhoan.Text;
+        }
+        public delegate void NguoiDungHienTai(string value);
         public GiaoVien()
         {
             InitializeComponent();

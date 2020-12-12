@@ -12,6 +12,12 @@ namespace DoAn
 {
     public partial class Admin : Form
     {
+        string nguoidunghientai;
+        public void LayNguoiDungHienTai(TextBox txtTenTaiKhoan)
+        {
+            nguoidunghientai = txtTenTaiKhoan.Text;
+        }
+        public delegate void NguoiDungHienTai(string value);
         public Admin()
         {
             InitializeComponent();
