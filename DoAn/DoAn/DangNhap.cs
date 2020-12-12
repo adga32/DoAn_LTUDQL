@@ -98,11 +98,15 @@ namespace DoAn
                                 }
                                 else if (user.idNguoiSoHuu.Substring(0, 2) == "GV")
                                 {
+                                    GiaoVien gv = new GiaoVien();
+                                    gv.ShowDialog();
                                     this.Close();
                                 }
                                 else
                                 {
-                                    MessageBox.Show("Lỗi");
+                                    Admin ad = new Admin();
+                                    ad.ShowDialog();
+                                    this.Close();
                                 }
                             }
                             else
