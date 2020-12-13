@@ -13,7 +13,11 @@ namespace DoAn
 {
     public partial class DangNhap : Form
     {
+        public delegate void NguoiDungHienTai(TextBox text);
+        
         static string[] arrHexa = { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F" };
+
+       
         public DangNhap()
         {
             InitializeComponent();
@@ -82,22 +86,31 @@ namespace DoAn
 
                             var strPwhash = ArrByteToString(bytesPwhash);
                             var strPwUserIpHash = ArrByteToString(bytesPwUserHash);
-
                             if (strPwhash == strPwUserIpHash)
                             {
                                 if(user.idNguoiSoHuu.Substring(0,2)=="HS")
                                 { 
-                                    this.Hide();
                                     HocSinh hs = new HocSinh();
-                                    hs.Show();
+                                    NguoiDungHienTai nguoiDungHienTai = new NguoiDungHienTai(hs.LayNguoiDungHienTai);
+                                    nguoiDungHienTai(this.txtTenTaiKhoan);
+                                    hs.ShowDialog();
+                                    this.Close();
                                 }
                                 else if (user.idNguoiSoHuu.Substring(0, 2) == "GV")
                                 {
-                                    this.Hide();
+                                    GiaoVien gv = new GiaoVien();
+                                    NguoiDungHienTai nguoiDungHienTai = new NguoiDungHienTai(gv.LayNguoiDungHienTai);
+                                    nguoiDungHienTai(this.txtTenTaiKhoan);
+                                    gv.ShowDialog();
+                                    this.Close();
                                 }
                                 else
                                 {
-                                    MessageBox.Show("Lỗi");
+                                    Admin ad = new Admin();
+                                    NguoiDungHienTai nguoiDungHienTai = new NguoiDungHienTai(ad.LayNguoiDungHienTai);
+                                    nguoiDungHienTai(this.txtTenTaiKhoan);
+                                    ad.ShowDialog();
+                                    this.Close();
                                 }
                             }
                             else
