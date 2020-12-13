@@ -34,8 +34,26 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Configuration.ConfigurationManager.5.0.0\lib\net461\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.AccessControl, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.AccessControl.5.0.0\lib\net461\System.Security.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Permissions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Permissions.5.0.0\lib\net461\System.Security.Permissions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,6 +63,7 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Admin.cs">
@@ -88,6 +107,12 @@
     <Compile Include="GiaoVien.Designer.cs">
       <DependentUpon>GiaoVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="GVquanlycauhoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GVquanlycauhoi.Designer.cs">
+      <DependentUpon>GVquanlycauhoi.cs</DependentUpon>
+    </Compile>
     <Compile Include="HocSinh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +145,12 @@
     <Compile Include="ThongTinHocSinh.Designer.cs">
       <DependentUpon>ThongTinHocSinh.cs</DependentUpon>
     </Compile>
+    <Compile Include="tool GV quan ly cau hoi\LayCauHoiTuExcel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tool GV quan ly cau hoi\LayCauHoiTuExcel.Designer.cs">
+      <DependentUpon>LayCauHoiTuExcel.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CauTraLoi.resx">
       <DependentUpon>CauTraLoi.cs</DependentUpon>
     </EmbeddedResource>
@@ -128,6 +159,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GVquanlycauhoi.resx">
+      <DependentUpon>GVquanlycauhoi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HocSinh.resx">
       <DependentUpon>HocSinh.cs</DependentUpon>
@@ -147,6 +181,9 @@
     <EmbeddedResource Include="ThongTinHocSinh.resx">
       <DependentUpon>ThongTinHocSinh.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="tool GV quan ly cau hoi\LayCauHoiTuExcel.resx">
+      <DependentUpon>LayCauHoiTuExcel.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="DoAn.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>DoAn.designer.cs</LastGenOutput>
@@ -155,6 +192,7 @@
     <None Include="DoAn.dbml.layout">
       <DependentUpon>DoAn.dbml</DependentUpon>
     </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
