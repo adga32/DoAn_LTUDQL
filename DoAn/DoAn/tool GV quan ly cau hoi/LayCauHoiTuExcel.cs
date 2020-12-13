@@ -60,8 +60,6 @@ namespace DoAn.tool_GV_quan_ly_cau_hoi
 
                 }
                 OleDbConnection olecon = new OleDbConnection();
-                /*             = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=E:\\phan mem\\PTUDCSDL\\DoAn_LTUDQL_duPhong\\database.xls;Extended Properties=Excel 8.0";
-                */
                 olecon.ConnectionString = strCon;
                 olecon.Open();
                 string strSQL = "SELECT * FROM [cauHoi$]";
@@ -70,7 +68,8 @@ namespace DoAn.tool_GV_quan_ly_cau_hoi
                 olecon.Close();
                 dsCauHoi.Tables[0].TableName = "cauHoi";
                 dataGridView1.DataSource = dsCauHoi.Tables[0];
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
@@ -112,64 +111,10 @@ namespace DoAn.tool_GV_quan_ly_cau_hoi
             }
         }
 
- 
 
 
-        //private void btnLoad_Click(object sender, EventArgs e)
-        //{
-        //    OpenFileDialog dlg = new OpenFileDialog();
-        //    dlg.Filter = "Excel Files (.xls*)|*.xls*|All Files (*.*)|*.*";
-        //    dlg.Multiselect = false;
 
-        //    DialogResult dlgResult = dlg.ShowDialog();
-        //    if (dlgResult == DialogResult.OK)
-        //    {
-        //        txtFilePath.Text = dlg.FileName;
-        //        if (txtFilePath.Text.Equals(""))
-        //        {
-        //            lblMsg.Text = "Please Load File First!!!";
-        //            return;
-        //        }
-        //        if (!File.Exists(txtFilePath.Text))
-        //        {
-        //            lblMsg.Text = "Can not Open File!!!";
-        //            return;
-        //        }
-        //        String filePath = txtFilePath.Text;
-        //        string excelcon;
-        //        if (filePath.Substring(filePath.LastIndexOf('.')).ToLower() == ".xlsx")
-        //        {
-        //            excelcon = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + filePath + ";Extended Properties='Excel 12.0;HDR=NO;IMEX=1'";
-        //        }
-        //        else
-        //        {
-        //            excelcon = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + filePath + ";Extended Properties='Excel 8.0;HDR=NO;IMEX=1'";
-        //        }
-        //        OleDbConnection conexcel = new OleDbConnection(excelcon);
 
-        //        try
-        //        {
-        //            conexcel.Open();
-        //            DataTable dtExcel = conexcel.GetOleDbSchemaTable(OleDbSchemaGuid.Tables, null);
-        //            string sheetName = dtExcel.Rows[0]["Table_Name"].ToString();
-        //            OleDbCommand cmdexcel1 = new OleDbCommand();
-        //            cmdexcel1.Connection = conexcel;
-        //            cmdexcel1.CommandText = "select * from[" + sheetName + "]";
-        //            DataTable dt = new DataTable();
-        //            OleDbDataAdapter da = new OleDbDataAdapter();
-        //            da.SelectCommand = cmdexcel1;
-        //            da.Fill(dt);
-        //            conexcel.Close();
-        //            gridviewImportExcel.DataSource = dt;
-        //            gridviewImportExcel.Rows.RemoveAt(0);
-        //        }
-        //        catch (Exception ex)
-        //        {
-        //            conexcel.Close();
-        //            MessageBox.Show(ex.ToString());
-        //        }
-        //    }
-        //}
 
     }
 }
