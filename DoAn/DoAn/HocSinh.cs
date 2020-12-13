@@ -40,5 +40,12 @@ namespace DoAn
             lamBaiTracNghiem.ShowDialog();
             this.Close();
         }
+
+        private void btnDongGopCauHoi_Click(object sender, EventArgs e)
+        {
+            DongGopCauHoi dongGopCauHoi = new DongGopCauHoi();
+            dongGopCauHoi.ShowDialog();
+            this.Close();
+        }
     }
 }

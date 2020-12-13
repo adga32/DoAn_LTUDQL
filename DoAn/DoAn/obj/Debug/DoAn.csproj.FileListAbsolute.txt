@@ -13,3 +13,4 @@ C:\Users\Khuong\Desktop\DoAn_LTUDQL\DoAn\DoAn\obj\Debug\DoAn.csproj.GenerateReso
 C:\Users\Khuong\Desktop\DoAn_LTUDQL\DoAn\DoAn\obj\Debug\DoAn.csproj.CoreCompileInputs.cache
 C:\Users\Khuong\Desktop\DoAn_LTUDQL\DoAn\DoAn\obj\Debug\DoAn.exe
 C:\Users\Khuong\Desktop\DoAn_LTUDQL\DoAn\DoAn\obj\Debug\DoAn.pdb
+C:\Users\Khuong\Desktop\DoAn_LTUDQL\DoAn\DoAn\obj\Debug\DoAn.DongGopCauHoi.resources

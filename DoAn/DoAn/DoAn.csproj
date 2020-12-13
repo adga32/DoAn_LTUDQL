@@ -82,6 +82,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DoAn.dbml</DependentUpon>
     </Compile>
+    <Compile Include="DongGopCauHoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DongGopCauHoi.Designer.cs">
+      <DependentUpon>DongGopCauHoi.cs</DependentUpon>
+    </Compile>
     <Compile Include="GiaoVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DongGopCauHoi.resx">
+      <DependentUpon>DongGopCauHoi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HocSinh.resx">
       <DependentUpon>HocSinh.cs</DependentUpon>
