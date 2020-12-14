@@ -269,7 +269,7 @@
             this.Controls.Add(this.comboBox1);
             this.Name = "DongGopCauHoi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "DongGopCauHoi";
+            this.Text = "Đóng góp câu hỏi";
             this.ResumeLayout(false);
             this.PerformLayout();
 
