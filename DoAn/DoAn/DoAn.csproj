@@ -101,18 +101,39 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DoAn.dbml</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    <Compile Include="DongGopCauHoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DongGopCauHoi.Designer.cs">
+      <DependentUpon>DongGopCauHoi.cs</DependentUpon>
+    </Compile>
+=======
+>>>>>>> origin/18600304
+>>>>>>> main
     <Compile Include="GiaoVien.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GiaoVien.Designer.cs">
       <DependentUpon>GiaoVien.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> main
     <Compile Include="GVquanlycauhoi.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GVquanlycauhoi.Designer.cs">
       <DependentUpon>GVquanlycauhoi.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/18600304
+>>>>>>> main
     <Compile Include="HocSinh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,12 +166,21 @@
     <Compile Include="ThongTinHocSinh.Designer.cs">
       <DependentUpon>ThongTinHocSinh.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> main
     <Compile Include="tool GV quan ly cau hoi\LayCauHoiTuExcel.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="tool GV quan ly cau hoi\LayCauHoiTuExcel.Designer.cs">
       <DependentUpon>LayCauHoiTuExcel.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/18600304
+>>>>>>> main
     <EmbeddedResource Include="CauTraLoi.resx">
       <DependentUpon>CauTraLoi.cs</DependentUpon>
     </EmbeddedResource>
@@ -160,8 +190,18 @@
     <EmbeddedResource Include="DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="GVquanlycauhoi.resx">
       <DependentUpon>GVquanlycauhoi.cs</DependentUpon>
+=======
+<<<<<<< HEAD
+    <EmbeddedResource Include="DongGopCauHoi.resx">
+      <DependentUpon>DongGopCauHoi.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="GVquanlycauhoi.resx">
+      <DependentUpon>GVquanlycauhoi.cs</DependentUpon>
+>>>>>>> origin/18600304
+>>>>>>> main
     </EmbeddedResource>
     <EmbeddedResource Include="HocSinh.resx">
       <DependentUpon>HocSinh.cs</DependentUpon>

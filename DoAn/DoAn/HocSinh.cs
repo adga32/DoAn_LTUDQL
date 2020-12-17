@@ -39,6 +39,19 @@ namespace DoAn
             nguoiDungHienTai(this.nguoidunghientai);
             lamBaiTracNghiem.ShowDialog();
             this.Close();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        }
+
+        private void btnDongGopCauHoi_Click(object sender, EventArgs e)
+        {
+            DongGopCauHoi dongGopCauHoi = new DongGopCauHoi();
+            dongGopCauHoi.ShowDialog();
+            this.Close();
+=======
+>>>>>>> origin/18600304
+>>>>>>> main
         }
     }
 }
