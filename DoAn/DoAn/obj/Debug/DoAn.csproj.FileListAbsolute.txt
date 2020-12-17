@@ -13,4 +13,59 @@ C:\Users\Khuong\Desktop\DoAn_LTUDQL\DoAn\DoAn\obj\Debug\DoAn.csproj.GenerateReso
 C:\Users\Khuong\Desktop\DoAn_LTUDQL\DoAn\DoAn\obj\Debug\DoAn.csproj.CoreCompileInputs.cache
 C:\Users\Khuong\Desktop\DoAn_LTUDQL\DoAn\DoAn\obj\Debug\DoAn.exe
 C:\Users\Khuong\Desktop\DoAn_LTUDQL\DoAn\DoAn\obj\Debug\DoAn.pdb
+<<<<<<< HEAD
 C:\Users\Khuong\Desktop\DoAn_LTUDQL\DoAn\DoAn\obj\Debug\DoAn.DongGopCauHoi.resources
+=======
+E:\phan mem\PTUDCSDL\DoAn_LTUDQL_duPhong\DoAn\DoAn\obj\Debug\DoAn.csprojAssemblyReference.cache
+E:\phan mem\PTUDCSDL\DoAn_LTUDQL_duPhong\DoAn\DoAn\obj\Debug\DoAn.CauTraLoi.resources
+E:\phan mem\PTUDCSDL\DoAn_LTUDQL_duPhong\DoAn\DoAn\obj\Debug\DoAn.DangKy.resources
+E:\phan mem\PTUDCSDL\DoAn_LTUDQL_duPhong\DoAn\DoAn\obj\Debug\DoAn.DangNhap.resources
+E:\phan mem\PTUDCSDL\DoAn_LTUDQL_duPhong\DoAn\DoAn\obj\Debug\DoAn.GVquanlycauhoi.resources
+E:\phan mem\PTUDCSDL\DoAn_LTUDQL_duPhong\DoAn\DoAn\obj\Debug\DoAn.HocSinh.resources
+E:\phan mem\PTUDCSDL\DoAn_LTUDQL_duPhong\DoAn\DoAn\obj\Debug\DoAn.LamBaiTracNghiem.resources
+E:\phan mem\PTUDCSDL\DoAn_LTUDQL_duPhong\DoAn\DoAn\obj\Debug\DoAn.Properties.Resources.resources
+E:\phan mem\PTUDCSDL\DoAn_LTUDQL_duPhong\DoAn\DoAn\obj\Debug\DoAn.ThongTinHocSinh.resources
+E:\phan mem\PTUDCSDL\DoAn_LTUDQL_duPhong\DoAn\DoAn\obj\Debug\DoAn.csproj.GenerateResource.cache
+E:\phan mem\PTUDCSDL\DoAn_LTUDQL_duPhong\DoAn\DoAn\obj\Debug\DoAn.csproj.CoreCompileInputs.cache
+E:\phan mem\PTUDCSDL\DoAn_LTUDQL_duPhong\DoAn\DoAn\obj\Debug\DoAn.exe
+E:\phan mem\PTUDCSDL\DoAn_LTUDQL_duPhong\DoAn\DoAn\obj\Debug\DoAn.pdb
+E:\phan mem\PTUDCSDL\DoAn_LTUDQL_duPhong\DoAn\DoAn\bin\Debug\DoAn.exe.config
+E:\phan mem\PTUDCSDL\DoAn_LTUDQL_duPhong\DoAn\DoAn\bin\Debug\DoAn.exe
+E:\phan mem\PTUDCSDL\DoAn_LTUDQL_duPhong\DoAn\DoAn\bin\Debug\DoAn.pdb
+E:\phan mem\PTUDCSDL\DoAn_LTUDQL_duPhong\DoAn\DoAn\obj\Debug\DoAn.tool_GV_quan_ly_cau_hoi.LayCauHoiTuExcel.resources
+E:\phan mem\PTUDCSDL\DoAn_LTUDQL_duPhong\DoAn\DoAn\bin\Debug\System.Configuration.ConfigurationManager.dll
+E:\phan mem\PTUDCSDL\DoAn_LTUDQL_duPhong\DoAn\DoAn\bin\Debug\System.Security.AccessControl.dll
+E:\phan mem\PTUDCSDL\DoAn_LTUDQL_duPhong\DoAn\DoAn\bin\Debug\System.Security.Permissions.dll
+E:\phan mem\PTUDCSDL\DoAn_LTUDQL_duPhong\DoAn\DoAn\bin\Debug\System.Security.Principal.Windows.dll
+E:\phan mem\PTUDCSDL\DoAn_LTUDQL_duPhong\DoAn\DoAn\bin\Debug\System.Configuration.ConfigurationManager.xml
+E:\phan mem\PTUDCSDL\DoAn_LTUDQL_duPhong\DoAn\DoAn\bin\Debug\System.Security.AccessControl.xml
+E:\phan mem\PTUDCSDL\DoAn_LTUDQL_duPhong\DoAn\DoAn\bin\Debug\System.Security.Permissions.xml
+E:\phan mem\PTUDCSDL\DoAn_LTUDQL_duPhong\DoAn\DoAn\bin\Debug\System.Security.Principal.Windows.xml
+E:\phan mem\PTUDCSDL\DoAn_LTUDQL_duPhong\DoAn\DoAn\obj\Debug\DoAn.csproj.CopyComplete
+E:\phan mem\PTUDCSDL\doantest1\DoAn\DoAn\bin\Debug\DoAn.exe.config
+E:\phan mem\PTUDCSDL\doantest1\DoAn\DoAn\bin\Debug\DoAn.exe
+E:\phan mem\PTUDCSDL\doantest1\DoAn\DoAn\bin\Debug\DoAn.pdb
+E:\phan mem\PTUDCSDL\doantest1\DoAn\DoAn\bin\Debug\System.Configuration.ConfigurationManager.dll
+E:\phan mem\PTUDCSDL\doantest1\DoAn\DoAn\bin\Debug\System.Security.AccessControl.dll
+E:\phan mem\PTUDCSDL\doantest1\DoAn\DoAn\bin\Debug\System.Security.Permissions.dll
+E:\phan mem\PTUDCSDL\doantest1\DoAn\DoAn\bin\Debug\System.Security.Principal.Windows.dll
+E:\phan mem\PTUDCSDL\doantest1\DoAn\DoAn\bin\Debug\System.Configuration.ConfigurationManager.xml
+E:\phan mem\PTUDCSDL\doantest1\DoAn\DoAn\bin\Debug\System.Security.AccessControl.xml
+E:\phan mem\PTUDCSDL\doantest1\DoAn\DoAn\bin\Debug\System.Security.Permissions.xml
+E:\phan mem\PTUDCSDL\doantest1\DoAn\DoAn\bin\Debug\System.Security.Principal.Windows.xml
+E:\phan mem\PTUDCSDL\doantest1\DoAn\DoAn\obj\Debug\DoAn.csprojAssemblyReference.cache
+E:\phan mem\PTUDCSDL\doantest1\DoAn\DoAn\obj\Debug\DoAn.CauTraLoi.resources
+E:\phan mem\PTUDCSDL\doantest1\DoAn\DoAn\obj\Debug\DoAn.DangKy.resources
+E:\phan mem\PTUDCSDL\doantest1\DoAn\DoAn\obj\Debug\DoAn.DangNhap.resources
+E:\phan mem\PTUDCSDL\doantest1\DoAn\DoAn\obj\Debug\DoAn.GVquanlycauhoi.resources
+E:\phan mem\PTUDCSDL\doantest1\DoAn\DoAn\obj\Debug\DoAn.HocSinh.resources
+E:\phan mem\PTUDCSDL\doantest1\DoAn\DoAn\obj\Debug\DoAn.LamBaiTracNghiem.resources
+E:\phan mem\PTUDCSDL\doantest1\DoAn\DoAn\obj\Debug\DoAn.Properties.Resources.resources
+E:\phan mem\PTUDCSDL\doantest1\DoAn\DoAn\obj\Debug\DoAn.ThongTinHocSinh.resources
+E:\phan mem\PTUDCSDL\doantest1\DoAn\DoAn\obj\Debug\DoAn.tool_GV_quan_ly_cau_hoi.LayCauHoiTuExcel.resources
+E:\phan mem\PTUDCSDL\doantest1\DoAn\DoAn\obj\Debug\DoAn.csproj.GenerateResource.cache
+E:\phan mem\PTUDCSDL\doantest1\DoAn\DoAn\obj\Debug\DoAn.csproj.CoreCompileInputs.cache
+E:\phan mem\PTUDCSDL\doantest1\DoAn\DoAn\obj\Debug\DoAn.csproj.CopyComplete
+E:\phan mem\PTUDCSDL\doantest1\DoAn\DoAn\obj\Debug\DoAn.exe
+E:\phan mem\PTUDCSDL\doantest1\DoAn\DoAn\obj\Debug\DoAn.pdb
+>>>>>>> origin/18600304
