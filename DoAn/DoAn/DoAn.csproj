@@ -107,21 +107,18 @@
     <Compile Include="DongGopCauHoi.Designer.cs">
       <DependentUpon>DongGopCauHoi.cs</DependentUpon>
     </Compile>
-
     <Compile Include="GiaoVien.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GiaoVien.Designer.cs">
       <DependentUpon>GiaoVien.cs</DependentUpon>
     </Compile>
-
     <Compile Include="GVquanlycauhoi.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GVquanlycauhoi.Designer.cs">
       <DependentUpon>GVquanlycauhoi.cs</DependentUpon>
     </Compile>
-
     <Compile Include="HocSinh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,14 +151,12 @@
     <Compile Include="ThongTinHocSinh.Designer.cs">
       <DependentUpon>ThongTinHocSinh.cs</DependentUpon>
     </Compile>
-
     <Compile Include="tool GV quan ly cau hoi\LayCauHoiTuExcel.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="tool GV quan ly cau hoi\LayCauHoiTuExcel.Designer.cs">
       <DependentUpon>LayCauHoiTuExcel.cs</DependentUpon>
     </Compile>
-
     <EmbeddedResource Include="CauTraLoi.resx">
       <DependentUpon>CauTraLoi.cs</DependentUpon>
     </EmbeddedResource>
@@ -174,7 +169,9 @@
     <EmbeddedResource Include="DongGopCauHoi.resx">
       <DependentUpon>DongGopCauHoi.cs</DependentUpon>
     </EmbeddedResource>
-
+    <EmbeddedResource Include="GiaoVien.resx">
+      <DependentUpon>GiaoVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GVquanlycauhoi.resx">
       <DependentUpon>GVquanlycauhoi.cs</DependentUpon>
     </EmbeddedResource>

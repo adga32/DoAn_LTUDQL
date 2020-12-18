@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DoAn.tool_GV_quan_ly_cau_hoi;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,6 +22,14 @@ namespace DoAn
         public GiaoVien()
         {
             InitializeComponent();
+        }
+
+
+        private void button_layDulieuTuExcel_Click_1(object sender, EventArgs e)
+        {
+            LayCauHoiTuExcel FormlayCauHoiTuExcel = new LayCauHoiTuExcel();
+            FormlayCauHoiTuExcel.ShowDialog();
+            this.Close();
         }
     }
 }

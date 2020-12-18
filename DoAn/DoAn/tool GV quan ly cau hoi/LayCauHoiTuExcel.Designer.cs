@@ -30,10 +30,11 @@ namespace DoAn.tool_GV_quan_ly_cau_hoi
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtFilePath = new System.Windows.Forms.TextBox();
             this.button_sql = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.txtFilePath = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -50,6 +51,7 @@ namespace DoAn.tool_GV_quan_ly_cau_hoi
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.comboBox1);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
             this.splitContainer1.Panel1.Controls.Add(this.txtFilePath);
             this.splitContainer1.Panel1.Controls.Add(this.button_sql);
@@ -57,13 +59,30 @@ namespace DoAn.tool_GV_quan_ly_cau_hoi
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dataGridView1);
-            this.splitContainer1.Size = new System.Drawing.Size(800, 450);
-            this.splitContainer1.SplitterDistance = 65;
+            this.splitContainer1.Size = new System.Drawing.Size(854, 539);
+            this.splitContainer1.SplitterDistance = 77;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(272, 33);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(36, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "PATH";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // txtFilePath
+            // 
+            this.txtFilePath.Location = new System.Drawing.Point(323, 26);
+            this.txtFilePath.Name = "txtFilePath";
+            this.txtFilePath.Size = new System.Drawing.Size(430, 20);
+            this.txtFilePath.TabIndex = 2;
             // 
             // button_sql
             // 
-            this.button_sql.Location = new System.Drawing.Point(12, 0);
+            this.button_sql.Location = new System.Drawing.Point(12, 10);
             this.button_sql.Name = "button_sql";
             this.button_sql.Size = new System.Drawing.Size(75, 59);
             this.button_sql.TabIndex = 1;
@@ -77,30 +96,26 @@ namespace DoAn.tool_GV_quan_ly_cau_hoi
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(800, 381);
+            this.dataGridView1.Size = new System.Drawing.Size(854, 458);
             this.dataGridView1.TabIndex = 0;
             // 
-            // txtFilePath
+            // comboBox1
             // 
-            this.txtFilePath.Location = new System.Drawing.Point(159, 26);
-            this.txtFilePath.Name = "txtFilePath";
-            this.txtFilePath.Size = new System.Drawing.Size(594, 20);
-            this.txtFilePath.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(118, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(36, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "PATH";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Câu hỏi",
+            "Đáp án câu hỏi"});
+            this.comboBox1.Location = new System.Drawing.Point(115, 26);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 4;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // LayCauHoiTuExcel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(854, 539);
             this.Controls.Add(this.splitContainer1);
             this.Name = "LayCauHoiTuExcel";
             this.Text = "LayCauHoiTuExcel";
@@ -122,5 +137,6 @@ namespace DoAn.tool_GV_quan_ly_cau_hoi
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtFilePath;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

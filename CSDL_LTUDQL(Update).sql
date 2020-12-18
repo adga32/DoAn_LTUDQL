@@ -12,7 +12,7 @@ CREATE TABLE NguoiDung
 CREATE TABLE giaoVien (
     ma varchar(10) PRIMARY KEY,
     ten varchar(255),
-	ngaySinh datetime
+	ngaySinh datetime,
 	FOREIGN KEY (ma) REFERENCES NguoiDung(manguoidung)
 )
 go	
@@ -72,19 +72,23 @@ go
 
 
 
---CREATE TABLE monHoc (
---    ma varchar(10),
---    ten varchar(255)
---)
---go
+CREATE TABLE monHoc (
+    ma varchar(10) PRIMARY KEY ,
+    ten nvarchar(255)
+)
+go
 
 
 CREATE TABLE cauHoi (
-    ma varchar(10)  PRIMARY KEY AUTO_INCREMENT,
-	noiDung nvarchar(50),
-	goiY nvarchar(100),
+    ma varchar(10)  PRIMARY KEY ,
+	noiDung nvarchar(2000),
+	goiY nvarchar(500),
 	doKho nvarchar(10),
-	loaiCauHoi nvarchar(50)--'THI' / 'LUYENTAP'
+	maMonHoc  varchar(10),
+	makhoi varchar (10),
+	loaiCauHoi nvarchar(50),--'THI' / 'LUYENTAP'
+	FOREIGN KEY (maKhoi) REFERENCES khoi(ma),
+	FOREIGN KEY (maMonHoc) REFERENCES monHoc (ma)
 )
 go
 
@@ -98,8 +102,8 @@ go
 
 create table dapAnCauhoi(
 	maCauHoi varchar (10) ,
-	dapAn nvarchar(50),
-	LaDapAnDung int,
+	dapAn nvarchar(2000),
+	laDapAnDung int,
 	PRIMARY KEY (maCauHoi,dapAn),
 	FOREIGN KEY (maCauHoi) REFERENCES cauHoi(ma)
 )
@@ -109,11 +113,8 @@ go
 
 CREATE TABLE kyThi (
     ma varchar(10) PRIMARY KEY,
-	maKhoi varchar(10),
-	maLop varchar(10),
-	FOREIGN KEY (maKhoi) REFERENCES khoi(ma),
-	FOREIGN KEY (maLop) REFERENCES lop(ma)
-
+	maMonHoc varchar(10),
+	FOREIGN KEY (maMonHoc) REFERENCES monHoc (ma)
 )
 go	
 
@@ -127,14 +128,16 @@ go
 CREATE TABLE kyThiThu (
     maKyThi varchar(10) PRIMARY KEY,
 	ngayGioiHan datetime,
-	FOREIGN KEY (maKyThi) REFERENCES kyThi(ma),
+	FOREIGN KEY (maKyThi) REFERENCES kyThi(ma)
 )
 go	
 
 CREATE TABLE deThi (
     ma varchar(10)  PRIMARY KEY,
 	slCauHoi int,
-	thoiGianLamBai_phut int
+	maMonHoc  varchar(10),
+	thoiGianLamBai_phut int,
+	FOREIGN KEY (maMonHoc) REFERENCES monHoc (ma),
 )
 go
 
