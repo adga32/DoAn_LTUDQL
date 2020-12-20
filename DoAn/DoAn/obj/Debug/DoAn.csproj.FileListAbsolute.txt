@@ -26,3 +26,32 @@ E:\phan mem\PTUDCSDL\DoAn_LTUDQL\DoAn\DoAn\obj\Debug\DoAn.csproj.CopyComplete
 E:\phan mem\PTUDCSDL\DoAn_LTUDQL\DoAn\DoAn\obj\Debug\DoAn.exe
 E:\phan mem\PTUDCSDL\DoAn_LTUDQL\DoAn\DoAn\obj\Debug\DoAn.pdb
 E:\phan mem\PTUDCSDL\DoAn_LTUDQL\DoAn\DoAn\obj\Debug\DoAn.GiaoVien.resources
+C:\Users\AD\Desktop\DoAn_LTUDQL\DoAn\DoAn\bin\Debug\DoAn.exe.config
+C:\Users\AD\Desktop\DoAn_LTUDQL\DoAn\DoAn\bin\Debug\DoAn.exe
+C:\Users\AD\Desktop\DoAn_LTUDQL\DoAn\DoAn\bin\Debug\DoAn.pdb
+C:\Users\AD\Desktop\DoAn_LTUDQL\DoAn\DoAn\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\AD\Desktop\DoAn_LTUDQL\DoAn\DoAn\bin\Debug\System.Security.AccessControl.dll
+C:\Users\AD\Desktop\DoAn_LTUDQL\DoAn\DoAn\bin\Debug\System.Security.Permissions.dll
+C:\Users\AD\Desktop\DoAn_LTUDQL\DoAn\DoAn\bin\Debug\System.Security.Principal.Windows.dll
+C:\Users\AD\Desktop\DoAn_LTUDQL\DoAn\DoAn\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\Users\AD\Desktop\DoAn_LTUDQL\DoAn\DoAn\bin\Debug\System.Security.AccessControl.xml
+C:\Users\AD\Desktop\DoAn_LTUDQL\DoAn\DoAn\bin\Debug\System.Security.Permissions.xml
+C:\Users\AD\Desktop\DoAn_LTUDQL\DoAn\DoAn\bin\Debug\System.Security.Principal.Windows.xml
+C:\Users\AD\Desktop\DoAn_LTUDQL\DoAn\DoAn\obj\Debug\DoAn.csprojAssemblyReference.cache
+C:\Users\AD\Desktop\DoAn_LTUDQL\DoAn\DoAn\obj\Debug\DoAn.CauTraLoi.resources
+C:\Users\AD\Desktop\DoAn_LTUDQL\DoAn\DoAn\obj\Debug\DoAn.DangKy.resources
+C:\Users\AD\Desktop\DoAn_LTUDQL\DoAn\DoAn\obj\Debug\DoAn.DangNhap.resources
+C:\Users\AD\Desktop\DoAn_LTUDQL\DoAn\DoAn\obj\Debug\DoAn.DongGopCauHoi.resources
+C:\Users\AD\Desktop\DoAn_LTUDQL\DoAn\DoAn\obj\Debug\DoAn.GiaoVien.resources
+C:\Users\AD\Desktop\DoAn_LTUDQL\DoAn\DoAn\obj\Debug\DoAn.GVquanlycauhoi.resources
+C:\Users\AD\Desktop\DoAn_LTUDQL\DoAn\DoAn\obj\Debug\DoAn.HocSinh.resources
+C:\Users\AD\Desktop\DoAn_LTUDQL\DoAn\DoAn\obj\Debug\DoAn.LamBaiTracNghiem.resources
+C:\Users\AD\Desktop\DoAn_LTUDQL\DoAn\DoAn\obj\Debug\DoAn.Properties.Resources.resources
+C:\Users\AD\Desktop\DoAn_LTUDQL\DoAn\DoAn\obj\Debug\DoAn.ThongTinHocSinh.resources
+C:\Users\AD\Desktop\DoAn_LTUDQL\DoAn\DoAn\obj\Debug\DoAn.tool_GV_quan_ly_cau_hoi.LayCauHoiTuExcel.resources
+C:\Users\AD\Desktop\DoAn_LTUDQL\DoAn\DoAn\obj\Debug\DoAn.csproj.GenerateResource.cache
+C:\Users\AD\Desktop\DoAn_LTUDQL\DoAn\DoAn\obj\Debug\DoAn.csproj.CoreCompileInputs.cache
+C:\Users\AD\Desktop\DoAn_LTUDQL\DoAn\DoAn\obj\Debug\DoAn.csproj.CopyComplete
+C:\Users\AD\Desktop\DoAn_LTUDQL\DoAn\DoAn\obj\Debug\DoAn.exe
+C:\Users\AD\Desktop\DoAn_LTUDQL\DoAn\DoAn\obj\Debug\DoAn.pdb
+C:\Users\AD\Desktop\DoAn_LTUDQL\DoAn\DoAn\obj\Debug\DoAn.DanhSachCauHoiLuyenTap.resources

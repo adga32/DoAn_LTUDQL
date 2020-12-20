@@ -12,9 +12,11 @@ namespace DoAn
 { 
     public partial class CauTraLoi : UserControl
     {
+        RequiredFieldValidator requiedNoiDung = new RequiredFieldValidator();
         public CauTraLoi()
         {
             InitializeComponent();
+            requiedNoiDung.ControlToValidate = txtNoiDung;
         }
       
         public string NoiDung
@@ -32,6 +34,21 @@ namespace DoAn
                 ckBA.Checked = value;
             }
         }
+        public bool Readonly
+        {
+            set
+            {
+                txtNoiDung.ReadOnly = value;
+            }
+        }
        
+        public bool Validator
+        {
+            get => requiedNoiDung.CheckValidate;
+            set
+            {
+                requiedNoiDung.CheckValidate = value;
+            }
+        }
     }
 }

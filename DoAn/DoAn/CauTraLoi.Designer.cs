@@ -36,29 +36,32 @@
             // 
             this.ckBA.AutoSize = true;
             this.ckBA.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckBA.Location = new System.Drawing.Point(3, 22);
+            this.ckBA.Location = new System.Drawing.Point(4, 27);
+            this.ckBA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ckBA.Name = "ckBA";
-            this.ckBA.Size = new System.Drawing.Size(15, 14);
+            this.ckBA.Size = new System.Drawing.Size(18, 17);
             this.ckBA.TabIndex = 0;
             this.ckBA.UseVisualStyleBackColor = true;
             // 
             // txtNoiDung
             // 
-            this.txtNoiDung.Location = new System.Drawing.Point(20, 0);
+            this.txtNoiDung.Location = new System.Drawing.Point(27, 0);
+            this.txtNoiDung.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNoiDung.Multiline = true;
             this.txtNoiDung.Name = "txtNoiDung";
             this.txtNoiDung.ReadOnly = true;
-            this.txtNoiDung.Size = new System.Drawing.Size(300, 57);
+            this.txtNoiDung.Size = new System.Drawing.Size(399, 69);
             this.txtNoiDung.TabIndex = 1;
             // 
             // CauTraLoi
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.txtNoiDung);
             this.Controls.Add(this.ckBA);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "CauTraLoi";
-            this.Size = new System.Drawing.Size(320, 57);
+            this.Size = new System.Drawing.Size(427, 70);
             this.ResumeLayout(false);
             this.PerformLayout();
 

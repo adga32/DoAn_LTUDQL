@@ -96,6 +96,12 @@
     <Compile Include="DangNhap.Designer.cs">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="DanhSachCauHoiLuyenTap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhSachCauHoiLuyenTap.Designer.cs">
+      <DependentUpon>DanhSachCauHoiLuyenTap.cs</DependentUpon>
+    </Compile>
     <Compile Include="DoAn.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -165,6 +171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhSachCauHoiLuyenTap.resx">
+      <DependentUpon>DanhSachCauHoiLuyenTap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DongGopCauHoi.resx">
       <DependentUpon>DongGopCauHoi.cs</DependentUpon>

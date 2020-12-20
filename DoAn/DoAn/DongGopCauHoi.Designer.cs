@@ -28,45 +28,47 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cbbMonHoc = new System.Windows.Forms.ComboBox();
+            this.cbbKhoi = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNoiDungCauHoi = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.cauTraLoi1 = new DoAn.CauTraLoi();
-            this.cauTraLoi2 = new DoAn.CauTraLoi();
+            this.ucA = new DoAn.CauTraLoi();
+            this.ucB = new DoAn.CauTraLoi();
             this.label5 = new System.Windows.Forms.Label();
-            this.cauTraLoi3 = new DoAn.CauTraLoi();
+            this.ucD = new DoAn.CauTraLoi();
             this.label6 = new System.Windows.Forms.Label();
-            this.cauTraLoi4 = new DoAn.CauTraLoi();
+            this.ucC = new DoAn.CauTraLoi();
             this.label7 = new System.Windows.Forms.Label();
-            this.cauTraLoi5 = new DoAn.CauTraLoi();
+            this.ucF = new DoAn.CauTraLoi();
             this.label8 = new System.Windows.Forms.Label();
-            this.cauTraLoi6 = new DoAn.CauTraLoi();
+            this.ucE = new DoAn.CauTraLoi();
             this.label9 = new System.Windows.Forms.Label();
             this.btnDongGop = new System.Windows.Forms.Button();
             this.btnXenDanhSachCauHoiDongGop = new System.Windows.Forms.Button();
+            this.txtGoiY = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // cbbMonHoc
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(93, 26);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 27);
-            this.comboBox1.TabIndex = 0;
+            this.cbbMonHoc.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbMonHoc.FormattingEnabled = true;
+            this.cbbMonHoc.Location = new System.Drawing.Point(112, 26);
+            this.cbbMonHoc.Name = "cbbMonHoc";
+            this.cbbMonHoc.Size = new System.Drawing.Size(121, 27);
+            this.cbbMonHoc.TabIndex = 0;
             // 
-            // comboBox2
+            // cbbKhoi
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(317, 26);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 27);
-            this.comboBox2.TabIndex = 1;
+            this.cbbKhoi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbKhoi.FormattingEnabled = true;
+            this.cbbKhoi.Location = new System.Drawing.Point(361, 26);
+            this.cbbKhoi.Name = "cbbKhoi";
+            this.cbbKhoi.Size = new System.Drawing.Size(121, 27);
+            this.cbbKhoi.TabIndex = 1;
             // 
             // label1
             // 
@@ -82,20 +84,20 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(265, 29);
+            this.label2.Location = new System.Drawing.Point(285, 29);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(46, 19);
             this.label2.TabIndex = 3;
             this.label2.Text = "Khối :";
             // 
-            // textBox1
+            // txtNoiDungCauHoi
             // 
-            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(112, 82);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(729, 61);
-            this.textBox1.TabIndex = 4;
+            this.txtNoiDungCauHoi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNoiDungCauHoi.Location = new System.Drawing.Point(112, 82);
+            this.txtNoiDungCauHoi.Multiline = true;
+            this.txtNoiDungCauHoi.Name = "txtNoiDungCauHoi";
+            this.txtNoiDungCauHoi.Size = new System.Drawing.Size(729, 61);
+            this.txtNoiDungCauHoi.TabIndex = 4;
             // 
             // label3
             // 
@@ -117,23 +119,25 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Đáp án 1:";
             // 
-            // cauTraLoi1
+            // ucA
             // 
-            this.cauTraLoi1.CheckBox = false;
-            this.cauTraLoi1.Location = new System.Drawing.Point(93, 164);
-            this.cauTraLoi1.Name = "cauTraLoi1";
-            this.cauTraLoi1.NoiDung = "";
-            this.cauTraLoi1.Size = new System.Drawing.Size(320, 57);
-            this.cauTraLoi1.TabIndex = 9;
+            this.ucA.CheckBox = false;
+            this.ucA.Location = new System.Drawing.Point(93, 164);
+            this.ucA.Margin = new System.Windows.Forms.Padding(4);
+            this.ucA.Name = "ucA";
+            this.ucA.NoiDung = "";
+            this.ucA.Size = new System.Drawing.Size(320, 57);
+            this.ucA.TabIndex = 9;
             // 
-            // cauTraLoi2
+            // ucB
             // 
-            this.cauTraLoi2.CheckBox = false;
-            this.cauTraLoi2.Location = new System.Drawing.Point(521, 164);
-            this.cauTraLoi2.Name = "cauTraLoi2";
-            this.cauTraLoi2.NoiDung = "";
-            this.cauTraLoi2.Size = new System.Drawing.Size(320, 57);
-            this.cauTraLoi2.TabIndex = 11;
+            this.ucB.CheckBox = false;
+            this.ucB.Location = new System.Drawing.Point(521, 164);
+            this.ucB.Margin = new System.Windows.Forms.Padding(4);
+            this.ucB.Name = "ucB";
+            this.ucB.NoiDung = "";
+            this.ucB.Size = new System.Drawing.Size(320, 57);
+            this.ucB.TabIndex = 11;
             // 
             // label5
             // 
@@ -145,14 +149,15 @@
             this.label5.TabIndex = 10;
             this.label5.Text = "Đáp án 2:";
             // 
-            // cauTraLoi3
+            // ucD
             // 
-            this.cauTraLoi3.CheckBox = false;
-            this.cauTraLoi3.Location = new System.Drawing.Point(521, 254);
-            this.cauTraLoi3.Name = "cauTraLoi3";
-            this.cauTraLoi3.NoiDung = "";
-            this.cauTraLoi3.Size = new System.Drawing.Size(320, 57);
-            this.cauTraLoi3.TabIndex = 15;
+            this.ucD.CheckBox = false;
+            this.ucD.Location = new System.Drawing.Point(521, 254);
+            this.ucD.Margin = new System.Windows.Forms.Padding(4);
+            this.ucD.Name = "ucD";
+            this.ucD.NoiDung = "";
+            this.ucD.Size = new System.Drawing.Size(320, 57);
+            this.ucD.TabIndex = 15;
             // 
             // label6
             // 
@@ -164,14 +169,15 @@
             this.label6.TabIndex = 14;
             this.label6.Text = "Đáp án 4:";
             // 
-            // cauTraLoi4
+            // ucC
             // 
-            this.cauTraLoi4.CheckBox = false;
-            this.cauTraLoi4.Location = new System.Drawing.Point(93, 254);
-            this.cauTraLoi4.Name = "cauTraLoi4";
-            this.cauTraLoi4.NoiDung = "";
-            this.cauTraLoi4.Size = new System.Drawing.Size(320, 57);
-            this.cauTraLoi4.TabIndex = 13;
+            this.ucC.CheckBox = false;
+            this.ucC.Location = new System.Drawing.Point(93, 254);
+            this.ucC.Margin = new System.Windows.Forms.Padding(4);
+            this.ucC.Name = "ucC";
+            this.ucC.NoiDung = "";
+            this.ucC.Size = new System.Drawing.Size(320, 57);
+            this.ucC.TabIndex = 13;
             // 
             // label7
             // 
@@ -183,14 +189,15 @@
             this.label7.TabIndex = 12;
             this.label7.Text = "Đáp án 3:";
             // 
-            // cauTraLoi5
+            // ucF
             // 
-            this.cauTraLoi5.CheckBox = false;
-            this.cauTraLoi5.Location = new System.Drawing.Point(521, 348);
-            this.cauTraLoi5.Name = "cauTraLoi5";
-            this.cauTraLoi5.NoiDung = "";
-            this.cauTraLoi5.Size = new System.Drawing.Size(320, 57);
-            this.cauTraLoi5.TabIndex = 19;
+            this.ucF.CheckBox = false;
+            this.ucF.Location = new System.Drawing.Point(521, 348);
+            this.ucF.Margin = new System.Windows.Forms.Padding(4);
+            this.ucF.Name = "ucF";
+            this.ucF.NoiDung = "";
+            this.ucF.Size = new System.Drawing.Size(320, 57);
+            this.ucF.TabIndex = 19;
             // 
             // label8
             // 
@@ -202,14 +209,15 @@
             this.label8.TabIndex = 18;
             this.label8.Text = "Đáp án 6:";
             // 
-            // cauTraLoi6
+            // ucE
             // 
-            this.cauTraLoi6.CheckBox = false;
-            this.cauTraLoi6.Location = new System.Drawing.Point(93, 348);
-            this.cauTraLoi6.Name = "cauTraLoi6";
-            this.cauTraLoi6.NoiDung = "";
-            this.cauTraLoi6.Size = new System.Drawing.Size(320, 57);
-            this.cauTraLoi6.TabIndex = 17;
+            this.ucE.CheckBox = false;
+            this.ucE.Location = new System.Drawing.Point(93, 348);
+            this.ucE.Margin = new System.Windows.Forms.Padding(4);
+            this.ucE.Name = "ucE";
+            this.ucE.NoiDung = "";
+            this.ucE.Size = new System.Drawing.Size(320, 57);
+            this.ucE.TabIndex = 17;
             // 
             // label9
             // 
@@ -224,7 +232,7 @@
             // btnDongGop
             // 
             this.btnDongGop.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDongGop.Location = new System.Drawing.Point(185, 437);
+            this.btnDongGop.Location = new System.Drawing.Point(184, 509);
             this.btnDongGop.Name = "btnDongGop";
             this.btnDongGop.Size = new System.Drawing.Size(126, 57);
             this.btnDongGop.TabIndex = 20;
@@ -235,41 +243,64 @@
             // btnXenDanhSachCauHoiDongGop
             // 
             this.btnXenDanhSachCauHoiDongGop.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXenDanhSachCauHoiDongGop.Location = new System.Drawing.Point(628, 437);
+            this.btnXenDanhSachCauHoiDongGop.Location = new System.Drawing.Point(628, 509);
             this.btnXenDanhSachCauHoiDongGop.Name = "btnXenDanhSachCauHoiDongGop";
             this.btnXenDanhSachCauHoiDongGop.Size = new System.Drawing.Size(126, 57);
             this.btnXenDanhSachCauHoiDongGop.TabIndex = 21;
             this.btnXenDanhSachCauHoiDongGop.Text = "Xem danh sách câu hỏi luyện tập";
             this.btnXenDanhSachCauHoiDongGop.UseVisualStyleBackColor = true;
+            this.btnXenDanhSachCauHoiDongGop.Click += new System.EventHandler(this.btnXenDanhSachCauHoiDongGop_Click);
+            // 
+            // txtGoiY
+            // 
+            this.txtGoiY.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGoiY.Location = new System.Drawing.Point(112, 426);
+            this.txtGoiY.Multiline = true;
+            this.txtGoiY.Name = "txtGoiY";
+            this.txtGoiY.Size = new System.Drawing.Size(729, 61);
+            this.txtGoiY.TabIndex = 22;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(20, 447);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(45, 19);
+            this.label10.TabIndex = 23;
+            this.label10.Text = "Gợi ý:";
             // 
             // DongGopCauHoi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(917, 523);
+            this.ClientSize = new System.Drawing.Size(917, 614);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.txtGoiY);
             this.Controls.Add(this.btnXenDanhSachCauHoiDongGop);
             this.Controls.Add(this.btnDongGop);
-            this.Controls.Add(this.cauTraLoi5);
+            this.Controls.Add(this.ucF);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.cauTraLoi6);
+            this.Controls.Add(this.ucE);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.cauTraLoi3);
+            this.Controls.Add(this.ucD);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.cauTraLoi4);
+            this.Controls.Add(this.ucC);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.cauTraLoi2);
+            this.Controls.Add(this.ucB);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.cauTraLoi1);
+            this.Controls.Add(this.ucA);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtNoiDungCauHoi);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbbKhoi);
+            this.Controls.Add(this.cbbMonHoc);
             this.Name = "DongGopCauHoi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đóng góp câu hỏi";
+            this.Load += new System.EventHandler(this.DongGopCauHoi_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -277,25 +308,27 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbbMonHoc;
+        private System.Windows.Forms.ComboBox cbbKhoi;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNoiDungCauHoi;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private CauTraLoi cauTraLoi1;
-        private CauTraLoi cauTraLoi2;
+        private CauTraLoi ucA;
+        private CauTraLoi ucB;
         private System.Windows.Forms.Label label5;
-        private CauTraLoi cauTraLoi3;
+        private CauTraLoi ucD;
         private System.Windows.Forms.Label label6;
-        private CauTraLoi cauTraLoi4;
+        private CauTraLoi ucC;
         private System.Windows.Forms.Label label7;
-        private CauTraLoi cauTraLoi5;
+        private CauTraLoi ucF;
         private System.Windows.Forms.Label label8;
-        private CauTraLoi cauTraLoi6;
+        private CauTraLoi ucE;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnDongGop;
         private System.Windows.Forms.Button btnXenDanhSachCauHoiDongGop;
+        private System.Windows.Forms.TextBox txtGoiY;
+        private System.Windows.Forms.Label label10;
     }
 }
