@@ -15,6 +15,7 @@ namespace DoAn
         public DanhSachCauHoiLuyenTap()
         {
             InitializeComponent();
+            lblDaDuocDuyet.Hide();
         }
 
         private void DanhSachCauHoiLuyenTap_Load(object sender, EventArgs e)
@@ -114,6 +115,9 @@ namespace DoAn
 
         private void dgvDSCauHoi_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            lblDaDuocDuyet.Show();
+
+            txtNoiDungCauHoi.Text = "";
             ucA.Enabled = true;
             ucB.Enabled = true;
             ucC.Enabled = true;

@@ -38,6 +38,12 @@ namespace DoAn
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.ucF = new DoAn.CauTraLoi();
+            this.ucE = new DoAn.CauTraLoi();
+            this.ucD = new DoAn.CauTraLoi();
+            this.ucC = new DoAn.CauTraLoi();
+            this.ucB = new DoAn.CauTraLoi();
+            this.ucA = new DoAn.CauTraLoi();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -54,12 +60,6 @@ namespace DoAn
             this.label2 = new System.Windows.Forms.Label();
             this.cbbKhoi = new System.Windows.Forms.ComboBox();
             this.cbbMonHoc = new System.Windows.Forms.ComboBox();
-            this.ucF = new DoAn.CauTraLoi();
-            this.ucE = new DoAn.CauTraLoi();
-            this.ucD = new DoAn.CauTraLoi();
-            this.ucC = new DoAn.CauTraLoi();
-            this.ucB = new DoAn.CauTraLoi();
-            this.ucA = new DoAn.CauTraLoi();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -85,7 +85,7 @@ namespace DoAn
             // 
             this.splitContainer1.Panel2.Controls.Add(this.groupBox2);
             this.splitContainer1.Size = new System.Drawing.Size(1399, 798);
-            this.splitContainer1.SplitterDistance = 699;
+            this.splitContainer1.SplitterDistance = 695;
             this.splitContainer1.SplitterWidth = 6;
             this.splitContainer1.TabIndex = 0;
             // 
@@ -106,12 +106,13 @@ namespace DoAn
             this.groupBox1.Controls.Add(this.ucA);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(0, 4);
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(695, 786);
+            this.groupBox1.Size = new System.Drawing.Size(695, 798);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chi tiết câu hỏi";
@@ -131,7 +132,7 @@ namespace DoAn
             // txtNoiDungCauHoi
             // 
             this.txtNoiDungCauHoi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNoiDungCauHoi.Location = new System.Drawing.Point(89, 52);
+            this.txtNoiDungCauHoi.Location = new System.Drawing.Point(101, 52);
             this.txtNoiDungCauHoi.Multiline = true;
             this.txtNoiDungCauHoi.Name = "txtNoiDungCauHoi";
             this.txtNoiDungCauHoi.ReadOnly = true;
@@ -188,6 +189,85 @@ namespace DoAn
             this.label5.TabIndex = 9;
             this.label5.Text = "Đáp án B";
             // 
+            // ucF
+            // 
+            this.ucF.CheckBox = false;
+            this.ucF.Enabled = false;
+            this.ucF.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ucF.Location = new System.Drawing.Point(101, 647);
+            this.ucF.Margin = new System.Windows.Forms.Padding(8);
+            this.ucF.Name = "ucF";
+            this.ucF.NoiDung = "";
+            this.ucF.Size = new System.Drawing.Size(587, 95);
+            this.ucF.TabIndex = 8;
+            this.ucF.Validator = false;
+            // 
+            // ucE
+            // 
+            this.ucE.CheckBox = false;
+            this.ucE.Enabled = false;
+            this.ucE.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ucE.Location = new System.Drawing.Point(101, 549);
+            this.ucE.Margin = new System.Windows.Forms.Padding(8);
+            this.ucE.Name = "ucE";
+            this.ucE.NoiDung = "";
+            this.ucE.Size = new System.Drawing.Size(587, 95);
+            this.ucE.TabIndex = 7;
+            this.ucE.Validator = false;
+            // 
+            // ucD
+            // 
+            this.ucD.CheckBox = false;
+            this.ucD.Enabled = false;
+            this.ucD.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ucD.Location = new System.Drawing.Point(101, 451);
+            this.ucD.Margin = new System.Windows.Forms.Padding(8);
+            this.ucD.Name = "ucD";
+            this.ucD.NoiDung = "";
+            this.ucD.Size = new System.Drawing.Size(587, 95);
+            this.ucD.TabIndex = 6;
+            this.ucD.Validator = false;
+            // 
+            // ucC
+            // 
+            this.ucC.CheckBox = false;
+            this.ucC.Enabled = false;
+            this.ucC.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ucC.Location = new System.Drawing.Point(101, 354);
+            this.ucC.Margin = new System.Windows.Forms.Padding(8);
+            this.ucC.Name = "ucC";
+            this.ucC.NoiDung = "";
+            this.ucC.Size = new System.Drawing.Size(587, 95);
+            this.ucC.TabIndex = 5;
+            this.ucC.Validator = false;
+            // 
+            // ucB
+            // 
+            this.ucB.CheckBox = false;
+            this.ucB.Enabled = false;
+            this.ucB.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ucB.Location = new System.Drawing.Point(101, 254);
+            this.ucB.Margin = new System.Windows.Forms.Padding(8);
+            this.ucB.Name = "ucB";
+            this.ucB.NoiDung = "";
+            this.ucB.Size = new System.Drawing.Size(587, 95);
+            this.ucB.TabIndex = 4;
+            this.ucB.Validator = false;
+            // 
+            // ucA
+            // 
+            this.ucA.BackColor = System.Drawing.SystemColors.Control;
+            this.ucA.CheckBox = false;
+            this.ucA.Enabled = false;
+            this.ucA.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ucA.Location = new System.Drawing.Point(101, 156);
+            this.ucA.Margin = new System.Windows.Forms.Padding(8);
+            this.ucA.Name = "ucA";
+            this.ucA.NoiDung = "";
+            this.ucA.Size = new System.Drawing.Size(587, 95);
+            this.ucA.TabIndex = 3;
+            this.ucA.Validator = false;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -215,12 +295,13 @@ namespace DoAn
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.cbbKhoi);
             this.groupBox2.Controls.Add(this.cbbMonHoc);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(-2, 4);
+            this.groupBox2.Location = new System.Drawing.Point(0, 0);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(686, 786);
+            this.groupBox2.Size = new System.Drawing.Size(698, 798);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách câu hỏi";
@@ -365,79 +446,6 @@ namespace DoAn
             this.cbbMonHoc.Size = new System.Drawing.Size(152, 30);
             this.cbbMonHoc.TabIndex = 0;
             this.cbbMonHoc.SelectedIndexChanged += new System.EventHandler(this.cbbMonHoc_SelectedIndexChanged);
-            // 
-            // ucF
-            // 
-            this.ucF.CheckBox = false;
-            this.ucF.Enabled = false;
-            this.ucF.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ucF.Location = new System.Drawing.Point(101, 647);
-            this.ucF.Margin = new System.Windows.Forms.Padding(8);
-            this.ucF.Name = "ucF";
-            this.ucF.NoiDung = "";
-            this.ucF.Size = new System.Drawing.Size(587, 95);
-            this.ucF.TabIndex = 8;
-            // 
-            // ucE
-            // 
-            this.ucE.CheckBox = false;
-            this.ucE.Enabled = false;
-            this.ucE.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ucE.Location = new System.Drawing.Point(101, 549);
-            this.ucE.Margin = new System.Windows.Forms.Padding(8);
-            this.ucE.Name = "ucE";
-            this.ucE.NoiDung = "";
-            this.ucE.Size = new System.Drawing.Size(587, 95);
-            this.ucE.TabIndex = 7;
-            // 
-            // ucD
-            // 
-            this.ucD.CheckBox = false;
-            this.ucD.Enabled = false;
-            this.ucD.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ucD.Location = new System.Drawing.Point(101, 451);
-            this.ucD.Margin = new System.Windows.Forms.Padding(8);
-            this.ucD.Name = "ucD";
-            this.ucD.NoiDung = "";
-            this.ucD.Size = new System.Drawing.Size(587, 95);
-            this.ucD.TabIndex = 6;
-            // 
-            // ucC
-            // 
-            this.ucC.CheckBox = false;
-            this.ucC.Enabled = false;
-            this.ucC.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ucC.Location = new System.Drawing.Point(101, 354);
-            this.ucC.Margin = new System.Windows.Forms.Padding(8);
-            this.ucC.Name = "ucC";
-            this.ucC.NoiDung = "";
-            this.ucC.Size = new System.Drawing.Size(587, 95);
-            this.ucC.TabIndex = 5;
-            // 
-            // ucB
-            // 
-            this.ucB.CheckBox = false;
-            this.ucB.Enabled = false;
-            this.ucB.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ucB.Location = new System.Drawing.Point(101, 254);
-            this.ucB.Margin = new System.Windows.Forms.Padding(8);
-            this.ucB.Name = "ucB";
-            this.ucB.NoiDung = "";
-            this.ucB.Size = new System.Drawing.Size(587, 95);
-            this.ucB.TabIndex = 4;
-            // 
-            // ucA
-            // 
-            this.ucA.BackColor = System.Drawing.SystemColors.Control;
-            this.ucA.CheckBox = false;
-            this.ucA.Enabled = false;
-            this.ucA.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ucA.Location = new System.Drawing.Point(101, 156);
-            this.ucA.Margin = new System.Windows.Forms.Padding(8);
-            this.ucA.Name = "ucA";
-            this.ucA.NoiDung = "";
-            this.ucA.Size = new System.Drawing.Size(587, 95);
-            this.ucA.TabIndex = 3;
             // 
             // DanhSachCauHoiLuyenTap
             // 
