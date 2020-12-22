@@ -46,7 +46,7 @@ namespace DoAn
                     //insert cau hoi
                     db.cauHois.InsertOnSubmit(new cauHoi
                     {
-                        ma = "CH" + sotrongmacauhoi.ToString("00000"),
+                        ma = "CH" + sotrongmacauhoi.ToString("000"),
                         noiDung = txtNoiDungCauHoi.Text,
                         goiY = txtGoiY.Text,
                         maMonHoc = cbbMonHoc.SelectedValue.ToString(),
@@ -55,30 +55,30 @@ namespace DoAn
                     });
                     db.cauHoiLuyentaps.InsertOnSubmit(new cauHoiLuyentap
                     {
-                        maCauHoi = "CH" + sotrongmacauhoi.ToString("00000"),
+                        maCauHoi = "CH" + sotrongmacauhoi.ToString("000"),
                         daDuocDuyet = 0
                     });
                     List<dapAnCauhoi> LSTDapAn = new List<dapAnCauhoi>();
                     dapAnCauhoi cauA = new dapAnCauhoi();
-                    cauA.maCauHoi = "CH" + sotrongmacauhoi.ToString("00000");
+                    cauA.maCauHoi = "CH" + sotrongmacauhoi.ToString("000");
                     cauA.dapAn = ucA.NoiDung;
                     cauA.laDapAnDung = Convert.ToInt32(ucA.CheckBox);
                     LSTDapAn.Add(cauA);
 
                     dapAnCauhoi cauB = new dapAnCauhoi();
-                    cauB.maCauHoi = "CH" + sotrongmacauhoi.ToString("00000");
+                    cauB.maCauHoi = "CH" + sotrongmacauhoi.ToString("000");
                     cauB.dapAn = ucB.NoiDung;
                     cauB.laDapAnDung = Convert.ToInt32(ucB.CheckBox);
                     LSTDapAn.Add(cauB);
 
                     dapAnCauhoi cauC = new dapAnCauhoi();
-                    cauC.maCauHoi = "CH" + sotrongmacauhoi.ToString("00000");
+                    cauC.maCauHoi = "CH" + sotrongmacauhoi.ToString("000");
                     cauC.dapAn = ucC.NoiDung;
                     cauC.laDapAnDung = Convert.ToInt32(ucC.CheckBox);
                     LSTDapAn.Add(cauC);
 
                     dapAnCauhoi cauD = new dapAnCauhoi();
-                    cauD.maCauHoi = "CH" + sotrongmacauhoi.ToString("00000");
+                    cauD.maCauHoi = "CH" + sotrongmacauhoi.ToString("000");
                     cauD.dapAn = ucD.NoiDung;
                     cauD.laDapAnDung = Convert.ToInt32(ucD.CheckBox);
                     LSTDapAn.Add(cauD);
@@ -87,7 +87,7 @@ namespace DoAn
                     if (ucE.Validator == true)
                     {
                         dapAnCauhoi cauE = new dapAnCauhoi();
-                        cauE.maCauHoi = "CH" + sotrongmacauhoi.ToString("00000");
+                        cauE.maCauHoi = "CH" + sotrongmacauhoi.ToString("000");
                         cauE.dapAn = ucE.NoiDung;
                         cauE.laDapAnDung = Convert.ToInt32(ucE.CheckBox);
                         LSTDapAn.Add(cauE);
@@ -95,7 +95,7 @@ namespace DoAn
                     if (ucF.Validator == true)
                     {
                         dapAnCauhoi cauF = new dapAnCauhoi();
-                        cauF.maCauHoi = "CH" + sotrongmacauhoi.ToString("00000");
+                        cauF.maCauHoi = "CH" + sotrongmacauhoi.ToString("000");
                         cauF.dapAn = ucF.NoiDung;
                         cauF.laDapAnDung = Convert.ToInt32(ucF.CheckBox);
                         LSTDapAn.Add(cauF);
