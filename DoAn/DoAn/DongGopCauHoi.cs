@@ -115,6 +115,8 @@ namespace DoAn
                     ucD.NoiDung = "";
                     ucE.NoiDung = "";
                     ucF.NoiDung = "";
+                    txtNoiDungCauHoi.Text = "";
+                    txtGoiY.Text = "";
                 }
                 else
                 {
