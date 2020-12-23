@@ -95,7 +95,6 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "HocSinh";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "7";
             this.ResumeLayout(false);
 
         }

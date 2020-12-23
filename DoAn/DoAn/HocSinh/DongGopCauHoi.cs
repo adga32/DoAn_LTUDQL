@@ -13,9 +13,12 @@ namespace DoAn
     public partial class DongGopCauHoi : Form
     {
         RequiredFieldValidator requiedNoiDungCauHoi;
+        CauTraLoi[] listCtrlDapAn;
         public DongGopCauHoi()
         {
             InitializeComponent();
+
+            //Mở cái readonly cho người dùng nhập câu hỏi đóng góp
             ucA.Readonly = false;
             ucB.Readonly = false;
             ucC.Readonly = false;
@@ -23,6 +26,7 @@ namespace DoAn
             ucE.Readonly = false;
             ucF.Readonly = false;
 
+            //Regex cho txtNoiDungCauHoi
             requiedNoiDungCauHoi = new RequiredFieldValidator();
             requiedNoiDungCauHoi.ControlToValidate = txtNoiDungCauHoi;
 
@@ -36,6 +40,19 @@ namespace DoAn
                 if (requiedNoiDungCauHoi.CheckValidate == true && ucA.Validator ==true && ucB.Validator ==true
                     && ucC.Validator ==true && ucD.Validator ==true)
                 {
+                    listCtrlDapAn = new CauTraLoi[] { ucA, ucB, ucC, ucD, ucE, ucF };
+                    for(int i = 0;i<listCtrlDapAn.Count()-1;i++)
+                    {
+                       for(int j = i +1;j<listCtrlDapAn.Count();j++)
+                        {
+                            if(listCtrlDapAn[i].NoiDung == listCtrlDapAn[j].NoiDung && listCtrlDapAn[i].NoiDung != "" && listCtrlDapAn[j].NoiDung != "")
+                            {       
+                                MessageBox.Show("Đáp án không được trùng nhau");
+                                return;
+                            }
+                        }
+                    }
+
                     int sotrongmacauhoi = 1;
                     string cauhoicuoi = (from i in db.cauHois select i.ma).ToList().LastOrDefault();
                     if (cauhoicuoi != null)
@@ -46,11 +63,7 @@ namespace DoAn
                     //insert cau hoi
                     db.cauHois.InsertOnSubmit(new cauHoi
                     {
-<<<<<<< HEAD:DoAn/DoAn/HocSinh/DongGopCauHoi.cs
-                        ma = "CH" + sotrongmacauhoi.ToString("0000"),
-=======
                         ma = "CH" + sotrongmacauhoi.ToString("000"),
->>>>>>> d7beb9f61b8614544dd47ea6b6890d34076884d2:DoAn/DoAn/DongGopCauHoi.cs
                         noiDung = txtNoiDungCauHoi.Text,
                         goiY = txtGoiY.Text,
                         maMonHoc = cbbMonHoc.SelectedValue.ToString(),
@@ -59,50 +72,37 @@ namespace DoAn
                     });
                     db.cauHoiLuyentaps.InsertOnSubmit(new cauHoiLuyentap
                     {
-<<<<<<< HEAD:DoAn/DoAn/HocSinh/DongGopCauHoi.cs
-                        maCauHoi = "CH" + sotrongmacauhoi.ToString("0000"),
-=======
                         maCauHoi = "CH" + sotrongmacauhoi.ToString("000"),
->>>>>>> d7beb9f61b8614544dd47ea6b6890d34076884d2:DoAn/DoAn/DongGopCauHoi.cs
                         daDuocDuyet = 0
                     });
+                    //Tạo 1 list để insert nguyên 1 list
                     List<dapAnCauhoi> LSTDapAn = new List<dapAnCauhoi>();
                     dapAnCauhoi cauA = new dapAnCauhoi();
-<<<<<<< HEAD:DoAn/DoAn/HocSinh/DongGopCauHoi.cs
-                    cauA.maCauHoi = "CH" + sotrongmacauhoi.ToString("0000");
-=======
+
                     cauA.maCauHoi = "CH" + sotrongmacauhoi.ToString("000");
->>>>>>> d7beb9f61b8614544dd47ea6b6890d34076884d2:DoAn/DoAn/DongGopCauHoi.cs
+
                     cauA.dapAn = ucA.NoiDung;
                     cauA.laDapAnDung = Convert.ToInt32(ucA.CheckBox);
                     LSTDapAn.Add(cauA);
 
                     dapAnCauhoi cauB = new dapAnCauhoi();
-<<<<<<< HEAD:DoAn/DoAn/HocSinh/DongGopCauHoi.cs
-                    cauB.maCauHoi = "CH" + sotrongmacauhoi.ToString("0000");
-=======
                     cauB.maCauHoi = "CH" + sotrongmacauhoi.ToString("000");
->>>>>>> d7beb9f61b8614544dd47ea6b6890d34076884d2:DoAn/DoAn/DongGopCauHoi.cs
                     cauB.dapAn = ucB.NoiDung;
                     cauB.laDapAnDung = Convert.ToInt32(ucB.CheckBox);
                     LSTDapAn.Add(cauB);
 
                     dapAnCauhoi cauC = new dapAnCauhoi();
-<<<<<<< HEAD:DoAn/DoAn/HocSinh/DongGopCauHoi.cs
-                    cauC.maCauHoi = "CH" + sotrongmacauhoi.ToString("0000");
-=======
+
                     cauC.maCauHoi = "CH" + sotrongmacauhoi.ToString("000");
->>>>>>> d7beb9f61b8614544dd47ea6b6890d34076884d2:DoAn/DoAn/DongGopCauHoi.cs
+
                     cauC.dapAn = ucC.NoiDung;
                     cauC.laDapAnDung = Convert.ToInt32(ucC.CheckBox);
                     LSTDapAn.Add(cauC);
 
                     dapAnCauhoi cauD = new dapAnCauhoi();
-<<<<<<< HEAD:DoAn/DoAn/HocSinh/DongGopCauHoi.cs
-                    cauD.maCauHoi = "CH" + sotrongmacauhoi.ToString("0000");
-=======
+
                     cauD.maCauHoi = "CH" + sotrongmacauhoi.ToString("000");
->>>>>>> d7beb9f61b8614544dd47ea6b6890d34076884d2:DoAn/DoAn/DongGopCauHoi.cs
+
                     cauD.dapAn = ucD.NoiDung;
                     cauD.laDapAnDung = Convert.ToInt32(ucD.CheckBox);
                     LSTDapAn.Add(cauD);
@@ -111,11 +111,8 @@ namespace DoAn
                     if (ucE.Validator == true)
                     {
                         dapAnCauhoi cauE = new dapAnCauhoi();
-<<<<<<< HEAD:DoAn/DoAn/HocSinh/DongGopCauHoi.cs
-                        cauE.maCauHoi = "CH" + sotrongmacauhoi.ToString("0000");
-=======
+
                         cauE.maCauHoi = "CH" + sotrongmacauhoi.ToString("000");
->>>>>>> d7beb9f61b8614544dd47ea6b6890d34076884d2:DoAn/DoAn/DongGopCauHoi.cs
                         cauE.dapAn = ucE.NoiDung;
                         cauE.laDapAnDung = Convert.ToInt32(ucE.CheckBox);
                         LSTDapAn.Add(cauE);
@@ -123,11 +120,7 @@ namespace DoAn
                     if (ucF.Validator == true)
                     {
                         dapAnCauhoi cauF = new dapAnCauhoi();
-<<<<<<< HEAD:DoAn/DoAn/HocSinh/DongGopCauHoi.cs
-                        cauF.maCauHoi = "CH" + sotrongmacauhoi.ToString("0000");
-=======
                         cauF.maCauHoi = "CH" + sotrongmacauhoi.ToString("000");
->>>>>>> d7beb9f61b8614544dd47ea6b6890d34076884d2:DoAn/DoAn/DongGopCauHoi.cs
                         cauF.dapAn = ucF.NoiDung;
                         cauF.laDapAnDung = Convert.ToInt32(ucF.CheckBox);
                         LSTDapAn.Add(cauF);
@@ -135,6 +128,7 @@ namespace DoAn
                     db.dapAnCauhois.InsertAllOnSubmit(LSTDapAn);
                     db.SubmitChanges();
                     MessageBox.Show("Đóng góp thành công");
+
                     ucA.CheckBox = false;
                     ucB.CheckBox = false;
                     ucC.CheckBox = false;

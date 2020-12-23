@@ -84,13 +84,9 @@ namespace DoAn
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.groupBox2);
-<<<<<<< HEAD:DoAn/DoAn/HocSinh/DanhSachCauHoiLuyenTap.designer.cs
-            this.splitContainer1.Size = new System.Drawing.Size(1423, 798);
-            this.splitContainer1.SplitterDistance = 699;
-=======
+
             this.splitContainer1.Size = new System.Drawing.Size(1399, 798);
             this.splitContainer1.SplitterDistance = 695;
->>>>>>> d7beb9f61b8614544dd47ea6b6890d34076884d2:DoAn/DoAn/DanhSachCauHoiLuyenTap.Designer.cs
             this.splitContainer1.SplitterWidth = 6;
             this.splitContainer1.TabIndex = 0;
             // 

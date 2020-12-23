@@ -15,11 +15,7 @@ namespace DoAn
         public DanhSachCauHoiLuyenTap()
         {
             InitializeComponent();
-<<<<<<< HEAD:DoAn/DoAn/HocSinh/DanhSachCauHoiLuyenTap.cs
-            
-=======
             lblDaDuocDuyet.Hide();
->>>>>>> d7beb9f61b8614544dd47ea6b6890d34076884d2:DoAn/DoAn/DanhSachCauHoiLuyenTap.cs
         }
 
 
@@ -95,7 +91,11 @@ namespace DoAn
                                   LADAPANCAUE = DSCAUHOI.Skip(4).Take(1).First().LADAPANCAUHOI,
                                   LADAPANCAUF = DSCAUHOI.Skip(5).Take(1).First().LADAPANCAUHOI
                               }).ToList();
+
+                //Gắn data source vào data gridview
                 dgvDSCauHoi.DataSource = CauHoi;
+
+                //Ẩn mấy cái không cần thiết hiển thị trên data gridview
                 dgvDSCauHoi.Columns["MACAUHOI"].Visible = false;
                 dgvDSCauHoi.Columns["DADUOCDUYETCHUA"].Visible = false;
                 dgvDSCauHoi.Columns["MaMon"].Visible = false;
@@ -128,8 +128,10 @@ namespace DoAn
 
         private void dgvDSCauHoi_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            //Hiển thị câu đã được duyệt chưa
             lblDaDuocDuyet.Show();
 
+            //Gán Mấy Đáp án bằng rỗng
             txtNoiDungCauHoi.Text = "";
             ucA.Enabled = true;
             ucB.Enabled = true;
@@ -138,7 +140,7 @@ namespace DoAn
             ucE.Enabled = true;
             ucF.Enabled = true;
 
-
+            //Tắt check của mấy câu đúng để cho sự kiện cell click mới hiển thị đúng ko bị còn check mấy câu của cell click cũ
 
             ucA.CheckBox = false;
             ucB.CheckBox = false;
@@ -147,21 +149,27 @@ namespace DoAn
             ucE.CheckBox = false;
             ucF.CheckBox = false;
 
+            // Giống trên gán nội dung = rỗng
             ucA.NoiDung = "";
             ucB.NoiDung = "";
             ucC.NoiDung = "";
             ucD.NoiDung = "";
             ucE.NoiDung = "";
             ucF.NoiDung = "";
+
             if(e.RowIndex>=0)
             {
                 DataGridViewRow row = this.dgvDSCauHoi.Rows[e.RowIndex];
+                //Gán dữ liệu từ datagrid view vào txtNoiDungCauHoi
                 txtNoiDungCauHoi.Text = row.Cells["NOIDUNGCAUHOI"].Value.ToString();
 
+                //Gán Nội dung Đáp án vào từ data gridview
                 ucA.NoiDung = row.Cells["DAPANCUACAUHOI1"].Value.ToString();
                 ucB.NoiDung = row.Cells["DAPANCUACAUHOI2"].Value.ToString();
                 ucC.NoiDung = row.Cells["DAPANCUACAUHOI3"].Value.ToString();
                 ucD.NoiDung = row.Cells["DAPANCUACAUHOI4"].Value.ToString();
+
+                //Kiểm tra nếu đáp án 5,6 trong datagridview khác rỗng thì mới gán vào check box ko sẽ bị lỗi
                 if(string.IsNullOrEmpty(row.Cells["DAPANCUACAUHOI5"].Value as string) != true)
                 {
                     ucE.NoiDung = row.Cells["DAPANCUACAUHOI5"].Value.ToString();
@@ -172,11 +180,13 @@ namespace DoAn
                     ucF.NoiDung = row.Cells["DAPANCUACAUHOI6"].Value.ToString();
                     ucF.CheckBox = Convert.ToBoolean(row.Cells["LADAPANCAUF"].Value);
                 }
-
+                //Gán checkbox xem có check hay chưa vào từ datagrid view
                 ucA.CheckBox = Convert.ToBoolean(row.Cells["LADAPANCAUA"].Value);
                 ucB.CheckBox = Convert.ToBoolean(row.Cells["LADAPANCAUB"].Value);
                 ucC.CheckBox = Convert.ToBoolean(row.Cells["LADAPANCAUC"].Value);
                 ucD.CheckBox = Convert.ToBoolean(row.Cells["LADAPANCAUD"].Value);
+
+                //Kiểm tra và gán xem câu đã được duyệt chưa //chưa duyệt thì màu hơi hơi đỏ // duyệt rồi thì màu xanh
                 if (Convert.ToInt32(row.Cells["DADUOCDUYETCHUA"].Value) == 1)
                 {
                     lblDaDuocDuyet.Text = "Đã được duyệt";
