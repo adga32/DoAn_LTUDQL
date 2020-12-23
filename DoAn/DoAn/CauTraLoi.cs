@@ -27,6 +27,7 @@ namespace DoAn
             }
         }
 
+        
         public bool CheckBox
         {
             get => ckBA.Checked;
@@ -34,6 +35,7 @@ namespace DoAn
                 ckBA.Checked = value;
             }
         }
+
         public bool Readonly
         {
             set
@@ -41,13 +43,28 @@ namespace DoAn
                 txtNoiDung.ReadOnly = value;
             }
         }
-       
+
         public bool Validator
         {
             get => requiedNoiDung.CheckValidate;
             set
             {
                 requiedNoiDung.CheckValidate = value;
+            }
+        }
+
+
+        //sự kiện thay đổi chọn của check box 
+        [Browsable(true)]
+        [Category("Action")]
+        [Description("Invoked when user choose checkbox")]
+        public event EventHandler CheckBoxChange;
+
+        private void ckBA_CheckedChanged(object sender, EventArgs e)
+        {
+            if(this.CheckBoxChange != null)
+            {
+                this.CheckBoxChange(this, e);
             }
         }
     }

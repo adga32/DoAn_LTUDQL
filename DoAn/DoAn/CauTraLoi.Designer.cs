@@ -42,6 +42,7 @@
             this.ckBA.Size = new System.Drawing.Size(18, 17);
             this.ckBA.TabIndex = 0;
             this.ckBA.UseVisualStyleBackColor = true;
+            this.ckBA.CheckedChanged += new System.EventHandler(this.ckBA_CheckedChanged);
             // 
             // txtNoiDung
             // 
