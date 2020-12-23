@@ -46,7 +46,11 @@ namespace DoAn
                     //insert cau hoi
                     db.cauHois.InsertOnSubmit(new cauHoi
                     {
+<<<<<<< HEAD:DoAn/DoAn/HocSinh/DongGopCauHoi.cs
                         ma = "CH" + sotrongmacauhoi.ToString("0000"),
+=======
+                        ma = "CH" + sotrongmacauhoi.ToString("000"),
+>>>>>>> d7beb9f61b8614544dd47ea6b6890d34076884d2:DoAn/DoAn/DongGopCauHoi.cs
                         noiDung = txtNoiDungCauHoi.Text,
                         goiY = txtGoiY.Text,
                         maMonHoc = cbbMonHoc.SelectedValue.ToString(),
@@ -55,30 +59,50 @@ namespace DoAn
                     });
                     db.cauHoiLuyentaps.InsertOnSubmit(new cauHoiLuyentap
                     {
+<<<<<<< HEAD:DoAn/DoAn/HocSinh/DongGopCauHoi.cs
                         maCauHoi = "CH" + sotrongmacauhoi.ToString("0000"),
+=======
+                        maCauHoi = "CH" + sotrongmacauhoi.ToString("000"),
+>>>>>>> d7beb9f61b8614544dd47ea6b6890d34076884d2:DoAn/DoAn/DongGopCauHoi.cs
                         daDuocDuyet = 0
                     });
                     List<dapAnCauhoi> LSTDapAn = new List<dapAnCauhoi>();
                     dapAnCauhoi cauA = new dapAnCauhoi();
+<<<<<<< HEAD:DoAn/DoAn/HocSinh/DongGopCauHoi.cs
                     cauA.maCauHoi = "CH" + sotrongmacauhoi.ToString("0000");
+=======
+                    cauA.maCauHoi = "CH" + sotrongmacauhoi.ToString("000");
+>>>>>>> d7beb9f61b8614544dd47ea6b6890d34076884d2:DoAn/DoAn/DongGopCauHoi.cs
                     cauA.dapAn = ucA.NoiDung;
                     cauA.laDapAnDung = Convert.ToInt32(ucA.CheckBox);
                     LSTDapAn.Add(cauA);
 
                     dapAnCauhoi cauB = new dapAnCauhoi();
+<<<<<<< HEAD:DoAn/DoAn/HocSinh/DongGopCauHoi.cs
                     cauB.maCauHoi = "CH" + sotrongmacauhoi.ToString("0000");
+=======
+                    cauB.maCauHoi = "CH" + sotrongmacauhoi.ToString("000");
+>>>>>>> d7beb9f61b8614544dd47ea6b6890d34076884d2:DoAn/DoAn/DongGopCauHoi.cs
                     cauB.dapAn = ucB.NoiDung;
                     cauB.laDapAnDung = Convert.ToInt32(ucB.CheckBox);
                     LSTDapAn.Add(cauB);
 
                     dapAnCauhoi cauC = new dapAnCauhoi();
+<<<<<<< HEAD:DoAn/DoAn/HocSinh/DongGopCauHoi.cs
                     cauC.maCauHoi = "CH" + sotrongmacauhoi.ToString("0000");
+=======
+                    cauC.maCauHoi = "CH" + sotrongmacauhoi.ToString("000");
+>>>>>>> d7beb9f61b8614544dd47ea6b6890d34076884d2:DoAn/DoAn/DongGopCauHoi.cs
                     cauC.dapAn = ucC.NoiDung;
                     cauC.laDapAnDung = Convert.ToInt32(ucC.CheckBox);
                     LSTDapAn.Add(cauC);
 
                     dapAnCauhoi cauD = new dapAnCauhoi();
+<<<<<<< HEAD:DoAn/DoAn/HocSinh/DongGopCauHoi.cs
                     cauD.maCauHoi = "CH" + sotrongmacauhoi.ToString("0000");
+=======
+                    cauD.maCauHoi = "CH" + sotrongmacauhoi.ToString("000");
+>>>>>>> d7beb9f61b8614544dd47ea6b6890d34076884d2:DoAn/DoAn/DongGopCauHoi.cs
                     cauD.dapAn = ucD.NoiDung;
                     cauD.laDapAnDung = Convert.ToInt32(ucD.CheckBox);
                     LSTDapAn.Add(cauD);
@@ -87,7 +111,11 @@ namespace DoAn
                     if (ucE.Validator == true)
                     {
                         dapAnCauhoi cauE = new dapAnCauhoi();
+<<<<<<< HEAD:DoAn/DoAn/HocSinh/DongGopCauHoi.cs
                         cauE.maCauHoi = "CH" + sotrongmacauhoi.ToString("0000");
+=======
+                        cauE.maCauHoi = "CH" + sotrongmacauhoi.ToString("000");
+>>>>>>> d7beb9f61b8614544dd47ea6b6890d34076884d2:DoAn/DoAn/DongGopCauHoi.cs
                         cauE.dapAn = ucE.NoiDung;
                         cauE.laDapAnDung = Convert.ToInt32(ucE.CheckBox);
                         LSTDapAn.Add(cauE);
@@ -95,7 +123,11 @@ namespace DoAn
                     if (ucF.Validator == true)
                     {
                         dapAnCauhoi cauF = new dapAnCauhoi();
+<<<<<<< HEAD:DoAn/DoAn/HocSinh/DongGopCauHoi.cs
                         cauF.maCauHoi = "CH" + sotrongmacauhoi.ToString("0000");
+=======
+                        cauF.maCauHoi = "CH" + sotrongmacauhoi.ToString("000");
+>>>>>>> d7beb9f61b8614544dd47ea6b6890d34076884d2:DoAn/DoAn/DongGopCauHoi.cs
                         cauF.dapAn = ucF.NoiDung;
                         cauF.laDapAnDung = Convert.ToInt32(ucF.CheckBox);
                         LSTDapAn.Add(cauF);
@@ -115,6 +147,8 @@ namespace DoAn
                     ucD.NoiDung = "";
                     ucE.NoiDung = "";
                     ucF.NoiDung = "";
+                    txtNoiDungCauHoi.Text = "";
+                    txtGoiY.Text = "";
                 }
                 else
                 {

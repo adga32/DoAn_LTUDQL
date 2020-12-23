@@ -84,8 +84,13 @@ namespace DoAn
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.groupBox2);
+<<<<<<< HEAD:DoAn/DoAn/HocSinh/DanhSachCauHoiLuyenTap.designer.cs
             this.splitContainer1.Size = new System.Drawing.Size(1423, 798);
             this.splitContainer1.SplitterDistance = 699;
+=======
+            this.splitContainer1.Size = new System.Drawing.Size(1399, 798);
+            this.splitContainer1.SplitterDistance = 695;
+>>>>>>> d7beb9f61b8614544dd47ea6b6890d34076884d2:DoAn/DoAn/DanhSachCauHoiLuyenTap.Designer.cs
             this.splitContainer1.SplitterWidth = 6;
             this.splitContainer1.TabIndex = 0;
             // 
@@ -106,12 +111,13 @@ namespace DoAn
             this.groupBox1.Controls.Add(this.ucA);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(0, 4);
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(695, 786);
+            this.groupBox1.Size = new System.Drawing.Size(695, 798);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chi tiết câu hỏi";
@@ -131,7 +137,7 @@ namespace DoAn
             // txtNoiDungCauHoi
             // 
             this.txtNoiDungCauHoi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNoiDungCauHoi.Location = new System.Drawing.Point(89, 52);
+            this.txtNoiDungCauHoi.Location = new System.Drawing.Point(101, 52);
             this.txtNoiDungCauHoi.Multiline = true;
             this.txtNoiDungCauHoi.Name = "txtNoiDungCauHoi";
             this.txtNoiDungCauHoi.ReadOnly = true;
@@ -294,12 +300,13 @@ namespace DoAn
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.cbbKhoi);
             this.groupBox2.Controls.Add(this.cbbMonHoc);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(-2, 4);
+            this.groupBox2.Location = new System.Drawing.Point(0, 0);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(686, 786);
+            this.groupBox2.Size = new System.Drawing.Size(698, 798);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách câu hỏi";
