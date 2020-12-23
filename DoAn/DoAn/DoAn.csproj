@@ -35,25 +35,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
-    <Reference Include="System.Configuration.ConfigurationManager, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Configuration.ConfigurationManager.5.0.0\lib\net461\System.Configuration.ConfigurationManager.dll</HintPath>
-    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
-    <Reference Include="System.Data.OracleClient" />
-    <Reference Include="System.Net" />
-    <Reference Include="System.Security" />
-    <Reference Include="System.Security.AccessControl, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Security.AccessControl.5.0.0\lib\net461\System.Security.AccessControl.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Security.Permissions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Security.Permissions.5.0.0\lib\net461\System.Security.Permissions.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Security.Principal.Windows, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
-    </Reference>
-    <Reference Include="System.ServiceProcess" />
-    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -63,19 +46,24 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin.cs">
+    <Compile Include="Admin\frmAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin.Designer.cs">
-      <DependentUpon>Admin.cs</DependentUpon>
+    <Compile Include="Admin\frmAdmin.Designer.cs">
+      <DependentUpon>frmAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="BaseValidator.cs">
+    <Compile Include="Admin\QuanLyNguoiDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\QuanLyNguoiDung.Designer.cs">
+      <DependentUpon>QuanLyNguoiDung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Regex\BaseValidator.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="BaseValidator.Designer.cs">
+    <Compile Include="Regex\BaseValidator.Designer.cs">
       <DependentUpon>BaseValidator.cs</DependentUpon>
     </Compile>
     <Compile Include="CauTraLoi.cs">
@@ -96,10 +84,10 @@
     <Compile Include="DangNhap.Designer.cs">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="DanhSachCauHoiLuyenTap.cs">
+    <Compile Include="HocSinh\DanhSachCauHoiLuyenTap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DanhSachCauHoiLuyenTap.Designer.cs">
+    <Compile Include="HocSinh\DanhSachCauHoiLuyenTap.designer.cs">
       <DependentUpon>DanhSachCauHoiLuyenTap.cs</DependentUpon>
     </Compile>
     <Compile Include="DoAn.designer.cs">
@@ -107,62 +95,74 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DoAn.dbml</DependentUpon>
     </Compile>
-    <Compile Include="DongGopCauHoi.cs">
+    <Compile Include="HocSinh\DongGopCauHoi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DongGopCauHoi.Designer.cs">
+    <Compile Include="HocSinh\DongGopCauHoi.designer.cs">
       <DependentUpon>DongGopCauHoi.cs</DependentUpon>
     </Compile>
-    <Compile Include="GiaoVien.cs">
+    <Compile Include="GiaoVien\GiaoVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GiaoVien.Designer.cs">
+    <Compile Include="GiaoVien\GiaoVien.designer.cs">
       <DependentUpon>GiaoVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="GVquanlycauhoi.cs">
+    <Compile Include="GiaoVien\GVquanlycauhoi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GVquanlycauhoi.Designer.cs">
+    <Compile Include="GiaoVien\GVquanlycauhoi.designer.cs">
       <DependentUpon>GVquanlycauhoi.cs</DependentUpon>
     </Compile>
-    <Compile Include="HocSinh.cs">
+    <Compile Include="HocSinh\HocSinh.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HocSinh.Designer.cs">
+    <Compile Include="HocSinh\HocSinh.Designer.cs">
       <DependentUpon>HocSinh.cs</DependentUpon>
     </Compile>
-    <Compile Include="LamBaiTracNghiem.cs">
+    <Compile Include="HocSinh\LamBaiTracNghiem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LamBaiTracNghiem.Designer.cs">
+    <Compile Include="HocSinh\LamBaiTracNghiem.Designer.cs">
       <DependentUpon>LamBaiTracNghiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GiaoVien\LayCauHoiTuExcel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GiaoVien\LayCauHoiTuExcel.designer.cs">
+      <DependentUpon>LayCauHoiTuExcel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HocSinh\OnLuyenThiThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HocSinh\OnLuyenThiThu.Designer.cs">
+      <DependentUpon>OnLuyenThiThu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RegExValidator.cs">
+    <Compile Include="Regex\RegExValidator.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="RegExValidator.Designer.cs">
+    <Compile Include="Regex\RegExValidator.Designer.cs">
       <DependentUpon>RegExValidator.cs</DependentUpon>
     </Compile>
-    <Compile Include="RequiredFieldValidator.cs">
+    <Compile Include="Regex\RequiredFieldValidator.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="RequiredFieldValidator.Designer.cs">
+    <Compile Include="Regex\RequiredFieldValidator.Designer.cs">
       <DependentUpon>RequiredFieldValidator.cs</DependentUpon>
     </Compile>
-    <Compile Include="ThongTinHocSinh.cs">
+    <Compile Include="HocSinh\ThongTinHocSinh.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ThongTinHocSinh.Designer.cs">
+    <Compile Include="HocSinh\ThongTinHocSinh.Designer.cs">
       <DependentUpon>ThongTinHocSinh.cs</DependentUpon>
     </Compile>
-    <Compile Include="tool GV quan ly cau hoi\LayCauHoiTuExcel.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="tool GV quan ly cau hoi\LayCauHoiTuExcel.Designer.cs">
-      <DependentUpon>LayCauHoiTuExcel.cs</DependentUpon>
-    </Compile>
+    <EmbeddedResource Include="Admin\frmAdmin.resx">
+      <DependentUpon>frmAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\QuanLyNguoiDung.resx">
+      <DependentUpon>QuanLyNguoiDung.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CauTraLoi.resx">
       <DependentUpon>CauTraLoi.cs</DependentUpon>
     </EmbeddedResource>
@@ -172,23 +172,29 @@
     <EmbeddedResource Include="DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DanhSachCauHoiLuyenTap.resx">
+    <EmbeddedResource Include="HocSinh\DanhSachCauHoiLuyenTap.resx">
       <DependentUpon>DanhSachCauHoiLuyenTap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DongGopCauHoi.resx">
+    <EmbeddedResource Include="HocSinh\DongGopCauHoi.resx">
       <DependentUpon>DongGopCauHoi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GiaoVien.resx">
+    <EmbeddedResource Include="GiaoVien\GiaoVien.resx">
       <DependentUpon>GiaoVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GVquanlycauhoi.resx">
+    <EmbeddedResource Include="GiaoVien\GVquanlycauhoi.resx">
       <DependentUpon>GVquanlycauhoi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HocSinh.resx">
+    <EmbeddedResource Include="HocSinh\HocSinh.resx">
       <DependentUpon>HocSinh.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LamBaiTracNghiem.resx">
+    <EmbeddedResource Include="HocSinh\LamBaiTracNghiem.resx">
       <DependentUpon>LamBaiTracNghiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GiaoVien\LayCauHoiTuExcel.resx">
+      <DependentUpon>LayCauHoiTuExcel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HocSinh\OnLuyenThiThu.resx">
+      <DependentUpon>OnLuyenThiThu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -199,11 +205,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ThongTinHocSinh.resx">
+    <EmbeddedResource Include="HocSinh\ThongTinHocSinh.resx">
       <DependentUpon>ThongTinHocSinh.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="tool GV quan ly cau hoi\LayCauHoiTuExcel.resx">
-      <DependentUpon>LayCauHoiTuExcel.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="DoAn.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
@@ -213,7 +216,6 @@
     <None Include="DoAn.dbml.layout">
       <DependentUpon>DoAn.dbml</DependentUpon>
     </None>
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -230,5 +232,6 @@
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

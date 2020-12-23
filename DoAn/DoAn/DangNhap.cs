@@ -13,7 +13,7 @@ namespace DoAn
 {
     public partial class DangNhap : Form
     {
-        public delegate void NguoiDungHienTai(TextBox text);
+        public delegate void NguoiDungHienTai(TextBox tbtext);
         
         static string[] arrHexa = { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F" };
 
@@ -104,9 +104,9 @@ namespace DoAn
                                     gv.ShowDialog();
                                     this.Close();
                                 }
-                                else
+                                else //AD
                                 {
-                                    Admin ad = new Admin();
+                                    frmAdmin ad = new frmAdmin();
                                     NguoiDungHienTai nguoiDungHienTai = new NguoiDungHienTai(ad.LayNguoiDungHienTai);
                                     nguoiDungHienTai(this.txtTenTaiKhoan);
                                     ad.ShowDialog();
@@ -139,7 +139,8 @@ namespace DoAn
         {
             this.Hide();
             DangKy dangky = new DangKy();
-            dangky.Show();
+            dangky.ShowDialog();
+            this.Close();
         }
         public string ArrByteToString(Byte[] arrByte)
         {
