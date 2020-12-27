@@ -31,6 +31,7 @@ namespace DoAn
         {
             this.button_layDulieuTuExcel = new System.Windows.Forms.Button();
             this.button_HienThiCauHoiTuCSDL = new System.Windows.Forms.Button();
+            this.button_DuyetCauHOiDongGop = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button_layDulieuTuExcel
@@ -53,11 +54,22 @@ namespace DoAn
             this.button_HienThiCauHoiTuCSDL.UseVisualStyleBackColor = true;
             this.button_HienThiCauHoiTuCSDL.Click += new System.EventHandler(this.button_HienThiCauHoiTuCSDL_Click);
             // 
+            // button_DuyetCauHOiDongGop
+            // 
+            this.button_DuyetCauHOiDongGop.Location = new System.Drawing.Point(263, 29);
+            this.button_DuyetCauHOiDongGop.Name = "button_DuyetCauHOiDongGop";
+            this.button_DuyetCauHOiDongGop.Size = new System.Drawing.Size(75, 67);
+            this.button_DuyetCauHOiDongGop.TabIndex = 2;
+            this.button_DuyetCauHOiDongGop.Text = "Duyet Cau hoi";
+            this.button_DuyetCauHOiDongGop.UseVisualStyleBackColor = true;
+            this.button_DuyetCauHOiDongGop.Click += new System.EventHandler(this.button_DuyetCauHOiDongGop_Click);
+            // 
             // GVquanlycauhoi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button_DuyetCauHOiDongGop);
             this.Controls.Add(this.button_HienThiCauHoiTuCSDL);
             this.Controls.Add(this.button_layDulieuTuExcel);
             this.Name = "GVquanlycauhoi";
@@ -70,5 +82,6 @@ namespace DoAn
 
         private System.Windows.Forms.Button button_layDulieuTuExcel;
         private System.Windows.Forms.Button button_HienThiCauHoiTuCSDL;
+        private System.Windows.Forms.Button button_DuyetCauHOiDongGop;
     }
 }

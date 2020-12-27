@@ -8,17 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DoAn
+namespace DoAn.ModuleGiaoVien
 {
-    public partial class DanhSachCauHoiLuyenTap : Form
+    public partial class DuyetCauHoiDongGop : Form
     {
-        public DanhSachCauHoiLuyenTap()
+
+        string maCauHoiHienTai;
+        public DuyetCauHoiDongGop()
         {
             InitializeComponent();
         }
 
-
-        private void DanhSachCauHoiLuyenTap_Load(object sender, EventArgs e)
+        private void DuyetCauHoiDongGop_Load(object sender, EventArgs e)
         {
             using (var db = new DoAnDataContext())
             {
@@ -68,7 +69,7 @@ namespace DoAn
                                   LADAPANCAUHOI = GroupDSCH.LADAPANCAUHOI,
                                   LOAICAUHOI = GroupDSCH.LoaiCauhoi
                               } into GroupDSCHLT
-                              where GroupDSCHLT.MaMon == cbbMonHoc.SelectedValue.ToString() && GroupDSCHLT.MaKhoi == cbbKhoi.SelectedValue.ToString() && GroupDSCHLT.LOAICAUHOI=="THILUYENTAP"
+                              where GroupDSCHLT.MaMon == cbbMonHoc.SelectedValue.ToString() && GroupDSCHLT.MaKhoi == cbbKhoi.SelectedValue.ToString() && GroupDSCHLT.LOAICAUHOI == "LUYENTAP"
                               group new { GroupDSCHLT.DapAn, GroupDSCHLT.LADAPANCAUHOI } by new { GroupDSCHLT.Ma, GroupDSCHLT.NoiDung, GroupDSCHLT.DADUOCDUYET, GroupDSCHLT.GoiY, GroupDSCHLT.MaMon, GroupDSCHLT.MaKhoi } into DSCAUHOI
                               select new
                               {
@@ -106,6 +107,13 @@ namespace DoAn
                 dgvDSCauHoi.Columns["LADAPANCAUD"].Visible = false;
                 dgvDSCauHoi.Columns["LADAPANCAUE"].Visible = false;
                 dgvDSCauHoi.Columns["LADAPANCAUF"].Visible = false;
+                dgvDSCauHoi.Columns["DAPANCUACAUHOI1"].Visible = false;
+                dgvDSCauHoi.Columns["DAPANCUACAUHOI2"].Visible = false;
+                dgvDSCauHoi.Columns["DAPANCUACAUHOI3"].Visible = false;
+                dgvDSCauHoi.Columns["DAPANCUACAUHOI4"].Visible = false;
+                dgvDSCauHoi.Columns["DAPANCUACAUHOI5"].Visible = false;
+                dgvDSCauHoi.Columns["DAPANCUACAUHOI6"].Visible = false;
+                dgvDSCauHoi.Columns["GOIY"].Visible = false;
             }
         }
 
@@ -153,11 +161,19 @@ namespace DoAn
             ucE.NoiDung = "";
             ucF.NoiDung = "";
 
-            if(e.RowIndex>=0)
+            if (e.RowIndex >= 0)
             {
+               
+
                 DataGridViewRow row = this.dgvDSCauHoi.Rows[e.RowIndex];
+                // gán biến riêng để sử dụng lại cho các thao tác khác
+                maCauHoiHienTai = row.Cells["MACAUHOI"].Value.ToString();
+
                 //Gán dữ liệu từ datagrid view vào txtNoiDungCauHoi
                 txtNoiDungCauHoi.Text = row.Cells["NOIDUNGCAUHOI"].Value.ToString();
+
+                //Gán dữ liệu từ datagrid view vào txtGoiYCauHoi
+                txtGoiYCauHoi.Text = row.Cells["GOIY"].Value.ToString();
 
                 //Gán Nội dung Đáp án vào từ data gridview
                 ucA.NoiDung = row.Cells["DAPANCUACAUHOI1"].Value.ToString();
@@ -166,12 +182,12 @@ namespace DoAn
                 ucD.NoiDung = row.Cells["DAPANCUACAUHOI4"].Value.ToString();
 
                 //Kiểm tra nếu đáp án 5,6 trong datagridview khác rỗng thì mới gán vào check box ko sẽ bị lỗi
-                if(string.IsNullOrEmpty(row.Cells["DAPANCUACAUHOI5"].Value as string) != true)
+                if (string.IsNullOrEmpty(row.Cells["DAPANCUACAUHOI5"].Value as string) != true)
                 {
                     ucE.NoiDung = row.Cells["DAPANCUACAUHOI5"].Value.ToString();
                     ucE.CheckBox = Convert.ToBoolean(row.Cells["LADAPANCAUE"].Value);
                 }
-                if (string.IsNullOrEmpty(row.Cells["DAPANCUACAUHOI6"].Value as string) !=true)
+                if (string.IsNullOrEmpty(row.Cells["DAPANCUACAUHOI6"].Value as string) != true)
                 {
                     ucF.NoiDung = row.Cells["DAPANCUACAUHOI6"].Value.ToString();
                     ucF.CheckBox = Convert.ToBoolean(row.Cells["LADAPANCAUF"].Value);
@@ -181,6 +197,86 @@ namespace DoAn
                 ucB.CheckBox = Convert.ToBoolean(row.Cells["LADAPANCAUB"].Value);
                 ucC.CheckBox = Convert.ToBoolean(row.Cells["LADAPANCAUC"].Value);
                 ucD.CheckBox = Convert.ToBoolean(row.Cells["LADAPANCAUD"].Value);
+            }
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonDuyet_Click(object sender, EventArgs e)
+        {
+            // Update câu hỏi dược duyệt 
+            using (var db = new DoAnDataContext())
+            {
+                cauHoiLuyentap cauHoiLuyentap = db.cauHoiLuyentaps.Single(CH => CH.maCauHoi == maCauHoiHienTai);
+
+                cauHoiLuyentap.daDuocDuyet = 1;
+                db.SubmitChanges();
+            }
+
+            // Update loại câu hỏi cho câu hỏi
+            using (var db = new DoAnDataContext())
+            {
+                cauHoi cauHoi = db.cauHois.Single(CH => CH.ma == maCauHoiHienTai);
+
+                cauHoi.loaiCauHoi = "THILUYENTAP";
+                db.SubmitChanges();
+            }
+
+            MessageBox.Show("đã duyệt");
+            Load_Data();
+        }
+
+        private void buttonXoa_Click(object sender, EventArgs e)
+        {
+            using (DoAnDataContext db = new DoAnDataContext())
+            {
+                //xoa trong list dapAnCauhois
+                var listToRemove = (from a in db.dapAnCauhois
+                                    where a.maCauHoi == maCauHoiHienTai
+                                    select a).ToList();
+
+                db.dapAnCauhois.DeleteAllOnSubmit(listToRemove);
+                db.SubmitChanges();
+
+                //xoa trong list cauHoiLuyentap
+                var CauHoiLuyenTapRemove = (from a in db.cauHoiLuyentaps
+                                    where a.maCauHoi == maCauHoiHienTai
+                                    select a).ToList();
+                db.cauHoiLuyentaps.DeleteAllOnSubmit(CauHoiLuyenTapRemove);
+                db.SubmitChanges();
+
+                //xoa trong list Cauhois
+                var CauHoiRemove = (from a in db.cauHois
+                                    where a.ma == maCauHoiHienTai
+                                    select a).ToList();
+                db.cauHois.DeleteAllOnSubmit(CauHoiRemove);
+                db.SubmitChanges();
+
+                MessageBox.Show("đã xóa");
+                Load_Data();
             }
         }
     }

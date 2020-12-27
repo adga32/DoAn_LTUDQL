@@ -1,4 +1,5 @@
 ﻿using DoAn;
+using DoAn.ModuleGiaoVien;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,9 +29,14 @@ namespace DoAn
 
         private void button_HienThiCauHoiTuCSDL_Click(object sender, EventArgs e)
         {
-            HienThiCauHoiTuCSDL FormlayCauHoiTuExcel = new HienThiCauHoiTuCSDL();
-            FormlayCauHoiTuExcel.ShowDialog();
-            
+            HienThiCauHoiTuCSDL LayCauHoiTuCsdl = new HienThiCauHoiTuCSDL();
+            LayCauHoiTuCsdl.ShowDialog();  
+        }
+
+        private void button_DuyetCauHOiDongGop_Click(object sender, EventArgs e)
+        {
+            DuyetCauHoiDongGop duyetCauHOiDongGop = new DuyetCauHoiDongGop();
+            duyetCauHOiDongGop.ShowDialog();
         }
     }
 }

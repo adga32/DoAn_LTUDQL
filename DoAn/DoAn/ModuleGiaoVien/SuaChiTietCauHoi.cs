@@ -157,8 +157,8 @@ namespace DoAn
                                     where a.maCauHoi == maCH
                                     select a).ToList();
 
-                db.dapAnCauhois.DeleteAllOnSubmit(listToRemove);
-                db.SubmitChanges();
+                    db.dapAnCauhois.DeleteAllOnSubmit(listToRemove);
+                    db.SubmitChanges();
 
                     var CauHoiRemove = (from a in db.cauHois
                                         where a.ma == maCH
