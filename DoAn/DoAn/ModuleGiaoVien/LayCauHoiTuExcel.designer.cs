@@ -1,5 +1,5 @@
 ﻿
-namespace DoAn.tool_GV_quan_ly_cau_hoi
+namespace DoAn
 {
     partial class LayCauHoiTuExcel
     {

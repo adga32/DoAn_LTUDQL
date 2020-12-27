@@ -60,6 +60,18 @@
     <Compile Include="Admin\QuanLyNguoiDung.Designer.cs">
       <DependentUpon>QuanLyNguoiDung.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModuleGiaoVien\HienThiCauHoiTuCSDL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuleGiaoVien\HienThiCauHoiTuCSDL.Designer.cs">
+      <DependentUpon>HienThiCauHoiTuCSDL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuleGiaoVien\SuaChiTietCauHoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuleGiaoVien\SuaChiTietCauHoi.Designer.cs">
+      <DependentUpon>SuaChiTietCauHoi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Regex\BaseValidator.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -101,16 +113,16 @@
     <Compile Include="HocSinh\DongGopCauHoi.designer.cs">
       <DependentUpon>DongGopCauHoi.cs</DependentUpon>
     </Compile>
-    <Compile Include="GiaoVien\GiaoVien.cs">
+    <Compile Include="ModuleGiaoVien\GiaoVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GiaoVien\GiaoVien.designer.cs">
+    <Compile Include="ModuleGiaoVien\GiaoVien.designer.cs">
       <DependentUpon>GiaoVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="GiaoVien\GVquanlycauhoi.cs">
+    <Compile Include="ModuleGiaoVien\GVquanlycauhoi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GiaoVien\GVquanlycauhoi.designer.cs">
+    <Compile Include="ModuleGiaoVien\GVquanlycauhoi.designer.cs">
       <DependentUpon>GVquanlycauhoi.cs</DependentUpon>
     </Compile>
     <Compile Include="HocSinh\HocSinh.cs">
@@ -125,10 +137,10 @@
     <Compile Include="HocSinh\LamBaiTracNghiem.Designer.cs">
       <DependentUpon>LamBaiTracNghiem.cs</DependentUpon>
     </Compile>
-    <Compile Include="GiaoVien\LayCauHoiTuExcel.cs">
+    <Compile Include="ModuleGiaoVien\LayCauHoiTuExcel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GiaoVien\LayCauHoiTuExcel.designer.cs">
+    <Compile Include="ModuleGiaoVien\LayCauHoiTuExcel.designer.cs">
       <DependentUpon>LayCauHoiTuExcel.cs</DependentUpon>
     </Compile>
     <Compile Include="HocSinh\OnLuyenThiThu.cs">
@@ -172,16 +184,19 @@
     <EmbeddedResource Include="DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ModuleGiaoVien\HienThiCauHoiTuCSDL.resx">
+      <DependentUpon>HienThiCauHoiTuCSDL.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HocSinh\DanhSachCauHoiLuyenTap.resx">
       <DependentUpon>DanhSachCauHoiLuyenTap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HocSinh\DongGopCauHoi.resx">
       <DependentUpon>DongGopCauHoi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GiaoVien\GiaoVien.resx">
+    <EmbeddedResource Include="ModuleGiaoVien\GiaoVien.resx">
       <DependentUpon>GiaoVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GiaoVien\GVquanlycauhoi.resx">
+    <EmbeddedResource Include="ModuleGiaoVien\GVquanlycauhoi.resx">
       <DependentUpon>GVquanlycauhoi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HocSinh\HocSinh.resx">
@@ -190,11 +205,14 @@
     <EmbeddedResource Include="HocSinh\LamBaiTracNghiem.resx">
       <DependentUpon>LamBaiTracNghiem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GiaoVien\LayCauHoiTuExcel.resx">
+    <EmbeddedResource Include="ModuleGiaoVien\LayCauHoiTuExcel.resx">
       <DependentUpon>LayCauHoiTuExcel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HocSinh\OnLuyenThiThu.resx">
       <DependentUpon>OnLuyenThiThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuleGiaoVien\SuaChiTietCauHoi.resx">
+      <DependentUpon>SuaChiTietCauHoi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

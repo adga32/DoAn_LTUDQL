@@ -11,8 +11,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
 using System.IO;
+using DoAn;
 
-namespace DoAn.tool_GV_quan_ly_cau_hoi
+namespace DoAn
 {
     public partial class LayCauHoiTuExcel : Form
     {

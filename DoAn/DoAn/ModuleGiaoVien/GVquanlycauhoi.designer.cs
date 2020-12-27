@@ -30,6 +30,7 @@ namespace DoAn
         private void InitializeComponent()
         {
             this.button_layDulieuTuExcel = new System.Windows.Forms.Button();
+            this.button_HienThiCauHoiTuCSDL = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button_layDulieuTuExcel
@@ -42,11 +43,22 @@ namespace DoAn
             this.button_layDulieuTuExcel.UseVisualStyleBackColor = true;
             this.button_layDulieuTuExcel.Click += new System.EventHandler(this.button_layDulieuTuExcel_Click);
             // 
+            // button_HienThiCauHoiTuCSDL
+            // 
+            this.button_HienThiCauHoiTuCSDL.Location = new System.Drawing.Point(142, 29);
+            this.button_HienThiCauHoiTuCSDL.Name = "button_HienThiCauHoiTuCSDL";
+            this.button_HienThiCauHoiTuCSDL.Size = new System.Drawing.Size(75, 67);
+            this.button_HienThiCauHoiTuCSDL.TabIndex = 1;
+            this.button_HienThiCauHoiTuCSDL.Text = "Hien Thi CauHoi Tu CSDL";
+            this.button_HienThiCauHoiTuCSDL.UseVisualStyleBackColor = true;
+            this.button_HienThiCauHoiTuCSDL.Click += new System.EventHandler(this.button_HienThiCauHoiTuCSDL_Click);
+            // 
             // GVquanlycauhoi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button_HienThiCauHoiTuCSDL);
             this.Controls.Add(this.button_layDulieuTuExcel);
             this.Name = "GVquanlycauhoi";
             this.Text = "GVquanlycauhoi";
@@ -57,5 +69,6 @@ namespace DoAn
         #endregion
 
         private System.Windows.Forms.Button button_layDulieuTuExcel;
+        private System.Windows.Forms.Button button_HienThiCauHoiTuCSDL;
     }
 }
