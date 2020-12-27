@@ -31,7 +31,6 @@ namespace DoAn
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblDaDuocDuyet = new System.Windows.Forms.Label();
             this.txtNoiDungCauHoi = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -84,15 +83,13 @@ namespace DoAn
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.groupBox2);
-
-            this.splitContainer1.Size = new System.Drawing.Size(1399, 798);
+            this.splitContainer1.Size = new System.Drawing.Size(1423, 798);
             this.splitContainer1.SplitterDistance = 695;
             this.splitContainer1.SplitterWidth = 6;
             this.splitContainer1.TabIndex = 0;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.lblDaDuocDuyet);
             this.groupBox1.Controls.Add(this.txtNoiDungCauHoi);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label8);
@@ -117,18 +114,6 @@ namespace DoAn
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chi tiết câu hỏi";
-            // 
-            // lblDaDuocDuyet
-            // 
-            this.lblDaDuocDuyet.AutoSize = true;
-            this.lblDaDuocDuyet.BackColor = System.Drawing.Color.Salmon;
-            this.lblDaDuocDuyet.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDaDuocDuyet.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblDaDuocDuyet.Location = new System.Drawing.Point(257, 750);
-            this.lblDaDuocDuyet.Name = "lblDaDuocDuyet";
-            this.lblDaDuocDuyet.Size = new System.Drawing.Size(236, 35);
-            this.lblDaDuocDuyet.TabIndex = 15;
-            this.lblDaDuocDuyet.Text = "Chưa được duyệt";
             // 
             // txtNoiDungCauHoi
             // 
@@ -302,7 +287,7 @@ namespace DoAn
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(698, 798);
+            this.groupBox2.Size = new System.Drawing.Size(722, 798);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách câu hỏi";
@@ -497,7 +482,6 @@ namespace DoAn
         private CauTraLoi ucB;
         private System.Windows.Forms.TextBox txtNoiDungCauHoi;
         private System.Windows.Forms.DataGridView dgvDSCauHoi;
-        private System.Windows.Forms.Label lblDaDuocDuyet;
         private System.Windows.Forms.DataGridViewTextBoxColumn NOIDUNGCAUHOI;
         private System.Windows.Forms.DataGridViewTextBoxColumn DAPANCUACAUHOI1;
         private System.Windows.Forms.DataGridViewTextBoxColumn DAPANCUACAUHOI2;

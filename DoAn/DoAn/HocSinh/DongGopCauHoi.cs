@@ -12,6 +12,18 @@ namespace DoAn
 {
     public partial class DongGopCauHoi : Form
     {
+        string ID;
+        string LoaiCauHoi="";
+
+        //nhận thông tin nguoi dung từ form hoc sinh 
+        public void LayNguoiDungHienTai(string userName)
+        {
+            using (var db = new DoAnDataContext())
+            {
+                ID = db.taiKhoans.Where(tk => tk.username == userName).Select(tk => tk.idNguoiSoHuu).Single();
+            }
+
+        }
         RequiredFieldValidator requiedNoiDungCauHoi;
         CauTraLoi[] listCtrlDapAn;
         public DongGopCauHoi()
@@ -60,22 +72,34 @@ namespace DoAn
                         sotrongmacauhoi = int.Parse(cauhoicuoi.Substring(2)) + 1;
                     }
 
-                    //insert cau hoi
+                    if (ID.Substring(0, 2) == "HS")
+                    {
+                        LoaiCauHoi = "LUYENTAP";
+                    }
+                    else if (ID.Substring(0, 2) == "GV")
+                    {
+                        LoaiCauHoi = cbbLoaiCauHoi.SelectedValue.ToString();
+                    }
+                    //INSERT CAU HOI
                     db.cauHois.InsertOnSubmit(new cauHoi
                     {
                         ma = "CH" + sotrongmacauhoi.ToString("000"),
                         noiDung = txtNoiDungCauHoi.Text,
                         goiY = txtGoiY.Text,
                         maMonHoc = cbbMonHoc.SelectedValue.ToString(),
-                        makhoi = cbbKhoi.SelectedValue.ToString()
-
+                        makhoi = cbbKhoi.SelectedValue.ToString(),
+                        doKho = cbbDoKho.SelectedValue.ToString(),
+                        loaiCauHoi = LoaiCauHoi
                     });
                     db.cauHoiLuyentaps.InsertOnSubmit(new cauHoiLuyentap
                     {
                         maCauHoi = "CH" + sotrongmacauhoi.ToString("000"),
                         daDuocDuyet = 0
                     });
-                    //Tạo 1 list để insert nguyên 1 list
+
+
+
+                    //Tạo 1 list để insert nguyên 1 list đáp án
                     List<dapAnCauhoi> LSTDapAn = new List<dapAnCauhoi>();
                     dapAnCauhoi cauA = new dapAnCauhoi();
 
@@ -153,6 +177,36 @@ namespace DoAn
 
         private void DongGopCauHoi_Load(object sender, EventArgs e)
         {
+            //Tạo giá trị cho combo box độ khó
+            var cbbDokho = new Dictionary<int, string>();
+            cbbDokho.Add(1, "Dễ");
+            cbbDokho.Add(2, "Trung bình");
+            cbbDokho.Add(3, "Khó");
+            cbbDokho.Add(4, "Cực khó");
+
+            cbbDoKho.DataSource = new BindingSource(cbbDokho, null);
+            cbbDoKho.DisplayMember = "Value";
+            cbbDoKho.ValueMember = "Key";
+
+
+            //Nếu là học sinh thì ẩn ko cho chọn loại câu hỏi
+            if (ID.Substring(0, 2) == "HS")
+            {
+                lblLoaiCauHoi.Hide();
+                cbbLoaiCauHoi.Hide();
+            }
+            else
+            {
+                var ccbLoaicauhoi = new Dictionary<string, string>();
+                ccbLoaicauhoi.Add("LUYENTAP", "Luyện tập");
+                ccbLoaicauhoi.Add("THI", "Thi");
+
+                cbbLoaiCauHoi.DataSource = new BindingSource(ccbLoaicauhoi, null);
+                cbbLoaiCauHoi.DisplayMember = "Value";
+                cbbLoaiCauHoi.ValueMember = "Key";
+            }
+
+            //Truy vấn để lấy giá trị cho combo box môn học v khối
             using (var db = new DoAnDataContext())
             {
                 var monhoc = (from i in db.monHocs select i);
