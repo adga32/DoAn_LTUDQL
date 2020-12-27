@@ -62,6 +62,8 @@ namespace DoAn
         private void btnDongGopCauHoi_Click(object sender, EventArgs e)
         {
             DongGopCauHoi frmDongGopCauHoi = new DongGopCauHoi();
+            NguoiDungHienTai nguoiDungHienTai = new NguoiDungHienTai(frmDongGopCauHoi.LayNguoiDungHienTai);
+            nguoiDungHienTai(this.nguoidunghientai);
             frmDongGopCauHoi.ShowDialog();
             this.Close();
         }

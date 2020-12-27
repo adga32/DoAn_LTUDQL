@@ -15,7 +15,6 @@ namespace DoAn
         public DanhSachCauHoiLuyenTap()
         {
             InitializeComponent();
-            lblDaDuocDuyet.Hide();
         }
 
 
@@ -53,6 +52,7 @@ namespace DoAn
                                   GoiY = i.goiY,
                                   MaMon = i.maMonHoc,
                                   MaKhoi = i.makhoi,
+                                  LoaiCauhoi = i.loaiCauHoi,
                                   LADAPANCAUHOI = j.laDapAnDung
                               } into GroupDSCH
                               join a in db.cauHoiLuyentaps
@@ -66,9 +66,10 @@ namespace DoAn
                                   GoiY = GroupDSCH.GoiY,
                                   MaMon = GroupDSCH.MaMon,
                                   MaKhoi = GroupDSCH.MaKhoi,
-                                  LADAPANCAUHOI = GroupDSCH.LADAPANCAUHOI
+                                  LADAPANCAUHOI = GroupDSCH.LADAPANCAUHOI,
+                                  LOAICAUHOI = GroupDSCH.LoaiCauhoi
                               } into GroupDSCHLT
-                              where GroupDSCHLT.MaMon == cbbMonHoc.SelectedValue.ToString() && GroupDSCHLT.MaKhoi == cbbKhoi.SelectedValue.ToString()
+                              where GroupDSCHLT.MaMon == cbbMonHoc.SelectedValue.ToString() && GroupDSCHLT.MaKhoi == cbbKhoi.SelectedValue.ToString() && GroupDSCHLT.LOAICAUHOI=="THILUYENTAP"
                               group new { GroupDSCHLT.DapAn, GroupDSCHLT.LADAPANCAUHOI } by new { GroupDSCHLT.Ma, GroupDSCHLT.NoiDung, GroupDSCHLT.DADUOCDUYET, GroupDSCHLT.GoiY, GroupDSCHLT.MaMon, GroupDSCHLT.MaKhoi } into DSCAUHOI
                               select new
                               {
@@ -106,7 +107,6 @@ namespace DoAn
                 dgvDSCauHoi.Columns["LADAPANCAUD"].Visible = false;
                 dgvDSCauHoi.Columns["LADAPANCAUE"].Visible = false;
                 dgvDSCauHoi.Columns["LADAPANCAUF"].Visible = false;
-
             }
         }
 
@@ -128,9 +128,6 @@ namespace DoAn
 
         private void dgvDSCauHoi_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            //Hiển thị câu đã được duyệt chưa
-            lblDaDuocDuyet.Show();
-
             //Gán Mấy Đáp án bằng rỗng
             txtNoiDungCauHoi.Text = "";
             ucA.Enabled = true;
@@ -185,18 +182,6 @@ namespace DoAn
                 ucB.CheckBox = Convert.ToBoolean(row.Cells["LADAPANCAUB"].Value);
                 ucC.CheckBox = Convert.ToBoolean(row.Cells["LADAPANCAUC"].Value);
                 ucD.CheckBox = Convert.ToBoolean(row.Cells["LADAPANCAUD"].Value);
-
-                //Kiểm tra và gán xem câu đã được duyệt chưa //chưa duyệt thì màu hơi hơi đỏ // duyệt rồi thì màu xanh
-                if (Convert.ToInt32(row.Cells["DADUOCDUYETCHUA"].Value) == 1)
-                {
-                    lblDaDuocDuyet.Text = "Đã được duyệt";
-                    lblDaDuocDuyet.BackColor = Color.Green;
-                }
-                else
-                {
-                    lblDaDuocDuyet.Text = "Chưa được duyệt";
-                    lblDaDuocDuyet.BackColor = Color.Salmon;
-                }
             }
         }
     }

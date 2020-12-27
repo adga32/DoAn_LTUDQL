@@ -34,13 +34,14 @@
             this.btnQuanLyKyThiThu = new System.Windows.Forms.Button();
             this.btnQuanLyHocSinh = new System.Windows.Forms.Button();
             this.btnThongTinCaNhan = new System.Windows.Forms.Button();
+            this.btnDongGopCauHoi = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnQuanLyCauHoi
             // 
             this.btnQuanLyCauHoi.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuanLyCauHoi.Location = new System.Drawing.Point(358, 99);
-            this.btnQuanLyCauHoi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnQuanLyCauHoi.Margin = new System.Windows.Forms.Padding(4);
             this.btnQuanLyCauHoi.Name = "btnQuanLyCauHoi";
             this.btnQuanLyCauHoi.Size = new System.Drawing.Size(183, 66);
             this.btnQuanLyCauHoi.TabIndex = 1;
@@ -98,18 +99,30 @@
             this.btnThongTinCaNhan.Text = "Thông tin cá nhân";
             this.btnThongTinCaNhan.UseVisualStyleBackColor = true;
             // 
+            // btnDongGopCauHoi
+            // 
+            this.btnDongGopCauHoi.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDongGopCauHoi.Location = new System.Drawing.Point(722, 36);
+            this.btnDongGopCauHoi.Name = "btnDongGopCauHoi";
+            this.btnDongGopCauHoi.Size = new System.Drawing.Size(179, 63);
+            this.btnDongGopCauHoi.TabIndex = 3;
+            this.btnDongGopCauHoi.Text = "Đóng góp câu hỏi";
+            this.btnDongGopCauHoi.UseVisualStyleBackColor = true;
+            this.btnDongGopCauHoi.Click += new System.EventHandler(this.btnDongGopCauHoi_Click);
+            // 
             // GiaoVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(1067, 644);
+            this.Controls.Add(this.btnDongGopCauHoi);
             this.Controls.Add(this.btnThongTinCaNhan);
             this.Controls.Add(this.btnQuanLyHocSinh);
             this.Controls.Add(this.btnQuanLyKyThiThu);
             this.Controls.Add(this.btnQuanLyKyThi);
             this.Controls.Add(this.btnQuanLyDeThi);
             this.Controls.Add(this.btnQuanLyCauHoi);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "GiaoVien";
             this.Text = "Thông tin cá nhân";
             this.ResumeLayout(false);
@@ -124,5 +137,6 @@
         private System.Windows.Forms.Button btnQuanLyKyThiThu;
         private System.Windows.Forms.Button btnQuanLyHocSinh;
         private System.Windows.Forms.Button btnThongTinCaNhan;
+        private System.Windows.Forms.Button btnDongGopCauHoi;
     }
 }

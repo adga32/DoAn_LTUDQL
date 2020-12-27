@@ -35,21 +35,25 @@
             this.txtNoiDungCauHoi = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.ucA = new DoAn.CauTraLoi();
-            this.ucB = new DoAn.CauTraLoi();
             this.label5 = new System.Windows.Forms.Label();
-            this.ucD = new DoAn.CauTraLoi();
             this.label6 = new System.Windows.Forms.Label();
-            this.ucC = new DoAn.CauTraLoi();
             this.label7 = new System.Windows.Forms.Label();
-            this.ucF = new DoAn.CauTraLoi();
             this.label8 = new System.Windows.Forms.Label();
-            this.ucE = new DoAn.CauTraLoi();
             this.label9 = new System.Windows.Forms.Label();
             this.btnDongGop = new System.Windows.Forms.Button();
             this.btnXemDanhSachCauHoiDongGop = new System.Windows.Forms.Button();
             this.txtGoiY = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.cbbDoKho = new System.Windows.Forms.ComboBox();
+            this.ucF = new DoAn.CauTraLoi();
+            this.ucE = new DoAn.CauTraLoi();
+            this.ucD = new DoAn.CauTraLoi();
+            this.ucC = new DoAn.CauTraLoi();
+            this.ucB = new DoAn.CauTraLoi();
+            this.ucA = new DoAn.CauTraLoi();
+            this.lblLoaiCauHoi = new System.Windows.Forms.Label();
+            this.cbbLoaiCauHoi = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // cbbMonHoc
@@ -57,7 +61,7 @@
             this.cbbMonHoc.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbMonHoc.FormattingEnabled = true;
             this.cbbMonHoc.Location = new System.Drawing.Point(149, 32);
-            this.cbbMonHoc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbbMonHoc.Margin = new System.Windows.Forms.Padding(4);
             this.cbbMonHoc.Name = "cbbMonHoc";
             this.cbbMonHoc.Size = new System.Drawing.Size(160, 30);
             this.cbbMonHoc.TabIndex = 0;
@@ -67,9 +71,9 @@
             this.cbbKhoi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbKhoi.FormattingEnabled = true;
             this.cbbKhoi.Location = new System.Drawing.Point(481, 32);
-            this.cbbKhoi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbbKhoi.Margin = new System.Windows.Forms.Padding(4);
             this.cbbKhoi.Name = "cbbKhoi";
-            this.cbbKhoi.Size = new System.Drawing.Size(160, 30);
+            this.cbbKhoi.Size = new System.Drawing.Size(101, 30);
             this.cbbKhoi.TabIndex = 1;
             // 
             // label1
@@ -98,7 +102,7 @@
             // 
             this.txtNoiDungCauHoi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNoiDungCauHoi.Location = new System.Drawing.Point(149, 101);
-            this.txtNoiDungCauHoi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNoiDungCauHoi.Margin = new System.Windows.Forms.Padding(4);
             this.txtNoiDungCauHoi.Multiline = true;
             this.txtNoiDungCauHoi.Name = "txtNoiDungCauHoi";
             this.txtNoiDungCauHoi.Size = new System.Drawing.Size(971, 74);
@@ -126,28 +130,6 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Đáp án 1:";
             // 
-            // ucA
-            // 
-            this.ucA.CheckBox = false;
-            this.ucA.Location = new System.Drawing.Point(124, 202);
-            this.ucA.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.ucA.Name = "ucA";
-            this.ucA.NoiDung = "";
-            this.ucA.Size = new System.Drawing.Size(427, 70);
-            this.ucA.TabIndex = 9;
-            this.ucA.Validator = false;
-            // 
-            // ucB
-            // 
-            this.ucB.CheckBox = false;
-            this.ucB.Location = new System.Drawing.Point(695, 202);
-            this.ucB.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.ucB.Name = "ucB";
-            this.ucB.NoiDung = "";
-            this.ucB.Size = new System.Drawing.Size(427, 70);
-            this.ucB.TabIndex = 11;
-            this.ucB.Validator = false;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -158,17 +140,6 @@
             this.label5.Size = new System.Drawing.Size(87, 22);
             this.label5.TabIndex = 10;
             this.label5.Text = "Đáp án 2:";
-            // 
-            // ucD
-            // 
-            this.ucD.CheckBox = false;
-            this.ucD.Location = new System.Drawing.Point(695, 313);
-            this.ucD.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.ucD.Name = "ucD";
-            this.ucD.NoiDung = "";
-            this.ucD.Size = new System.Drawing.Size(427, 70);
-            this.ucD.TabIndex = 15;
-            this.ucD.Validator = false;
             // 
             // label6
             // 
@@ -181,17 +152,6 @@
             this.label6.TabIndex = 14;
             this.label6.Text = "Đáp án 4:";
             // 
-            // ucC
-            // 
-            this.ucC.CheckBox = false;
-            this.ucC.Location = new System.Drawing.Point(124, 313);
-            this.ucC.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.ucC.Name = "ucC";
-            this.ucC.NoiDung = "";
-            this.ucC.Size = new System.Drawing.Size(427, 70);
-            this.ucC.TabIndex = 13;
-            this.ucC.Validator = false;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -203,17 +163,6 @@
             this.label7.TabIndex = 12;
             this.label7.Text = "Đáp án 3:";
             // 
-            // ucF
-            // 
-            this.ucF.CheckBox = false;
-            this.ucF.Location = new System.Drawing.Point(695, 428);
-            this.ucF.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.ucF.Name = "ucF";
-            this.ucF.NoiDung = "";
-            this.ucF.Size = new System.Drawing.Size(427, 70);
-            this.ucF.TabIndex = 19;
-            this.ucF.Validator = false;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -224,17 +173,6 @@
             this.label8.Size = new System.Drawing.Size(87, 22);
             this.label8.TabIndex = 18;
             this.label8.Text = "Đáp án 6:";
-            // 
-            // ucE
-            // 
-            this.ucE.CheckBox = false;
-            this.ucE.Location = new System.Drawing.Point(124, 428);
-            this.ucE.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.ucE.Name = "ucE";
-            this.ucE.NoiDung = "";
-            this.ucE.Size = new System.Drawing.Size(427, 70);
-            this.ucE.TabIndex = 17;
-            this.ucE.Validator = false;
             // 
             // label9
             // 
@@ -251,7 +189,7 @@
             // 
             this.btnDongGop.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDongGop.Location = new System.Drawing.Point(245, 626);
-            this.btnDongGop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDongGop.Margin = new System.Windows.Forms.Padding(4);
             this.btnDongGop.Name = "btnDongGop";
             this.btnDongGop.Size = new System.Drawing.Size(168, 70);
             this.btnDongGop.TabIndex = 20;
@@ -263,7 +201,7 @@
             // 
             this.btnXemDanhSachCauHoiDongGop.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXemDanhSachCauHoiDongGop.Location = new System.Drawing.Point(837, 626);
-            this.btnXemDanhSachCauHoiDongGop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnXemDanhSachCauHoiDongGop.Margin = new System.Windows.Forms.Padding(4);
             this.btnXemDanhSachCauHoiDongGop.Name = "btnXemDanhSachCauHoiDongGop";
             this.btnXemDanhSachCauHoiDongGop.Size = new System.Drawing.Size(168, 70);
             this.btnXemDanhSachCauHoiDongGop.TabIndex = 21;
@@ -275,7 +213,7 @@
             // 
             this.txtGoiY.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGoiY.Location = new System.Drawing.Point(149, 524);
-            this.txtGoiY.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtGoiY.Margin = new System.Windows.Forms.Padding(4);
             this.txtGoiY.Multiline = true;
             this.txtGoiY.Name = "txtGoiY";
             this.txtGoiY.Size = new System.Drawing.Size(971, 74);
@@ -292,11 +230,123 @@
             this.label10.TabIndex = 23;
             this.label10.Text = "Gợi ý:";
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(615, 36);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(73, 22);
+            this.label11.TabIndex = 25;
+            this.label11.Text = "Độ khó:";
+            // 
+            // cbbDoKho
+            // 
+            this.cbbDoKho.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbDoKho.FormattingEnabled = true;
+            this.cbbDoKho.Location = new System.Drawing.Point(716, 32);
+            this.cbbDoKho.Margin = new System.Windows.Forms.Padding(4);
+            this.cbbDoKho.Name = "cbbDoKho";
+            this.cbbDoKho.Size = new System.Drawing.Size(119, 30);
+            this.cbbDoKho.TabIndex = 24;
+            // 
+            // ucF
+            // 
+            this.ucF.CheckBox = false;
+            this.ucF.Location = new System.Drawing.Point(695, 428);
+            this.ucF.Margin = new System.Windows.Forms.Padding(5);
+            this.ucF.Name = "ucF";
+            this.ucF.NoiDung = "";
+            this.ucF.Size = new System.Drawing.Size(427, 70);
+            this.ucF.TabIndex = 19;
+            this.ucF.Validator = false;
+            // 
+            // ucE
+            // 
+            this.ucE.CheckBox = false;
+            this.ucE.Location = new System.Drawing.Point(124, 428);
+            this.ucE.Margin = new System.Windows.Forms.Padding(5);
+            this.ucE.Name = "ucE";
+            this.ucE.NoiDung = "";
+            this.ucE.Size = new System.Drawing.Size(427, 70);
+            this.ucE.TabIndex = 17;
+            this.ucE.Validator = false;
+            // 
+            // ucD
+            // 
+            this.ucD.CheckBox = false;
+            this.ucD.Location = new System.Drawing.Point(695, 313);
+            this.ucD.Margin = new System.Windows.Forms.Padding(5);
+            this.ucD.Name = "ucD";
+            this.ucD.NoiDung = "";
+            this.ucD.Size = new System.Drawing.Size(427, 70);
+            this.ucD.TabIndex = 15;
+            this.ucD.Validator = false;
+            // 
+            // ucC
+            // 
+            this.ucC.CheckBox = false;
+            this.ucC.Location = new System.Drawing.Point(124, 313);
+            this.ucC.Margin = new System.Windows.Forms.Padding(5);
+            this.ucC.Name = "ucC";
+            this.ucC.NoiDung = "";
+            this.ucC.Size = new System.Drawing.Size(427, 70);
+            this.ucC.TabIndex = 13;
+            this.ucC.Validator = false;
+            // 
+            // ucB
+            // 
+            this.ucB.CheckBox = false;
+            this.ucB.Location = new System.Drawing.Point(695, 202);
+            this.ucB.Margin = new System.Windows.Forms.Padding(5);
+            this.ucB.Name = "ucB";
+            this.ucB.NoiDung = "";
+            this.ucB.Size = new System.Drawing.Size(427, 70);
+            this.ucB.TabIndex = 11;
+            this.ucB.Validator = false;
+            // 
+            // ucA
+            // 
+            this.ucA.CheckBox = false;
+            this.ucA.Location = new System.Drawing.Point(124, 202);
+            this.ucA.Margin = new System.Windows.Forms.Padding(5);
+            this.ucA.Name = "ucA";
+            this.ucA.NoiDung = "";
+            this.ucA.Size = new System.Drawing.Size(427, 70);
+            this.ucA.TabIndex = 9;
+            this.ucA.Validator = false;
+            // 
+            // lblLoaiCauHoi
+            // 
+            this.lblLoaiCauHoi.AutoSize = true;
+            this.lblLoaiCauHoi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLoaiCauHoi.Location = new System.Drawing.Point(873, 36);
+            this.lblLoaiCauHoi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblLoaiCauHoi.Name = "lblLoaiCauHoi";
+            this.lblLoaiCauHoi.Size = new System.Drawing.Size(114, 22);
+            this.lblLoaiCauHoi.TabIndex = 27;
+            this.lblLoaiCauHoi.Text = "Loại câu hỏi:";
+            // 
+            // cbbLoaiCauHoi
+            // 
+            this.cbbLoaiCauHoi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbLoaiCauHoi.FormattingEnabled = true;
+            this.cbbLoaiCauHoi.Location = new System.Drawing.Point(995, 33);
+            this.cbbLoaiCauHoi.Margin = new System.Windows.Forms.Padding(4);
+            this.cbbLoaiCauHoi.Name = "cbbLoaiCauHoi";
+            this.cbbLoaiCauHoi.Size = new System.Drawing.Size(119, 30);
+            this.cbbLoaiCauHoi.TabIndex = 26;
+            // 
             // DongGopCauHoi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1223, 756);
+            this.Controls.Add(this.lblLoaiCauHoi);
+            this.Controls.Add(this.cbbLoaiCauHoi);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.cbbDoKho);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtGoiY);
             this.Controls.Add(this.btnXemDanhSachCauHoiDongGop);
@@ -319,7 +369,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbbKhoi);
             this.Controls.Add(this.cbbMonHoc);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DongGopCauHoi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đóng góp câu hỏi";
@@ -353,5 +403,9 @@
         private System.Windows.Forms.Button btnXemDanhSachCauHoiDongGop;
         private System.Windows.Forms.TextBox txtGoiY;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ComboBox cbbDoKho;
+        private System.Windows.Forms.Label lblLoaiCauHoi;
+        private System.Windows.Forms.ComboBox cbbLoaiCauHoi;
     }
 }
