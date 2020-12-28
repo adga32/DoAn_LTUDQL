@@ -54,6 +54,12 @@
     <Compile Include="Admin\frmAdmin.Designer.cs">
       <DependentUpon>frmAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin\importDsHocSinhGiaoVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\importDsHocSinhGiaoVien.Designer.cs">
+      <DependentUpon>importDsHocSinhGiaoVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin\QuanLyNguoiDung.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,6 +189,9 @@
     </Compile>
     <EmbeddedResource Include="Admin\frmAdmin.resx">
       <DependentUpon>frmAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\importDsHocSinhGiaoVien.resx">
+      <DependentUpon>importDsHocSinhGiaoVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\QuanLyNguoiDung.resx">
       <DependentUpon>QuanLyNguoiDung.cs</DependentUpon>

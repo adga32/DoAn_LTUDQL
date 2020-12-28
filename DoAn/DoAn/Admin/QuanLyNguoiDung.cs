@@ -67,5 +67,11 @@ namespace DoAn.Admin
             BindingSource dbsHocSinh = new BindingSource(dsHocSinh,"hocSinh");
             dtgHocSinh.DataSource = dbsHocSinh;
         }
+
+        private void buttonImport_Click(object sender, EventArgs e)
+        {
+            importDsHocSinhGiaoVien importDsHocSinhGiaoVien = new importDsHocSinhGiaoVien();
+            importDsHocSinhGiaoVien.ShowDialog();
+        }
     }
 }

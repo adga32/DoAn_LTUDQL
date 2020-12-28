@@ -11,7 +11,7 @@ CREATE TABLE NguoiDung
 
 CREATE TABLE giaoVien (
     ma varchar(10) PRIMARY KEY,
-    ten varchar(255),
+    ten nvarchar(255),
 	ngaySinh datetime,
 	FOREIGN KEY (ma) REFERENCES NguoiDung(manguoidung)
 )
@@ -38,7 +38,7 @@ go
 
 CREATE TABLE hocSinh (
     ma varchar(10)  PRIMARY KEY,
-    ten varchar(255),
+    ten nvarchar(255),
     ngaySinh datetime,
     maLop varchar(10),
     maKhoi varchar(10),
