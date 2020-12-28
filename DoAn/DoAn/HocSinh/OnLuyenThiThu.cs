@@ -40,7 +40,7 @@ namespace DoAn
             using (var db = new DoAnDataContext())
             {
                 var ListDeThi = db.deThis
-                                .Join(db.monHocs, dt => dt.monHoc, mh => mh.ma, (dt, mh) => new { dt, mh })
+                                .Join(db.monHocs, dt => dt.maMonHoc, mh => mh.ma, (dt, mh) => new { dt, mh })
                                 .Select(dt => new
                                 {
                                     maDe = dt.dt.ma,

@@ -38,5 +38,11 @@ namespace DoAn
             DuyetCauHoiDongGop duyetCauHOiDongGop = new DuyetCauHoiDongGop();
             duyetCauHOiDongGop.ShowDialog();
         }
+
+        private void buttonXemCauHoiTrongDeThiNao_Click(object sender, EventArgs e)
+        {
+            xemCauHoiTrongDeThiNao xemCauHoiTrongDeThi = new xemCauHoiTrongDeThiNao();
+            xemCauHoiTrongDeThi.ShowDialog();
+        }
     }
 }

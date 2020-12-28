@@ -78,6 +78,12 @@
     <Compile Include="ModuleGiaoVien\SuaChiTietCauHoi.Designer.cs">
       <DependentUpon>SuaChiTietCauHoi.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModuleGiaoVien\xemCauHoiTrongDeThiNao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuleGiaoVien\xemCauHoiTrongDeThiNao.Designer.cs">
+      <DependentUpon>xemCauHoiTrongDeThiNao.cs</DependentUpon>
+    </Compile>
     <Compile Include="Regex\BaseValidator.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -222,6 +228,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ModuleGiaoVien\SuaChiTietCauHoi.resx">
       <DependentUpon>SuaChiTietCauHoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuleGiaoVien\xemCauHoiTrongDeThiNao.resx">
+      <DependentUpon>xemCauHoiTrongDeThiNao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -126,7 +126,7 @@ namespace DoAn
             using (var db = new DoAnDataContext())
             {
                 var thongtindethi = (from i in db.deThis
-                                     join j in db.monHocs on i.monHoc equals j.ma
+                                     join j in db.monHocs on i.maMonHoc equals j.ma
                                      select new { i.thoiGianLamBai_phut, i.slCauHoi, j.ten }).First();
 
                 phut = int.Parse(thongtindethi.thoiGianLamBai_phut.ToString()) - 1;

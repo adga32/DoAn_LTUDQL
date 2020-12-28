@@ -1,48 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Configuration;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DoAn;
 
-namespace DoAn
+namespace DoAn.ModuleGiaoVien
 {
-    public partial class HienThiCauHoiTuCSDL : Form
+    public partial class xemCauHoiTrongDeThiNao : Form
     {
-
         public string ma;
-
         public List<int> ListrowIndex = new List<int>();
-
-        public delegate void sendmessage();
-        public HienThiCauHoiTuCSDL()
+        public xemCauHoiTrongDeThiNao()
         {
             InitializeComponent();
-        }
-
-        private void HienThiCauHoiTuCSDL_Load(object sender, EventArgs e)
-        {
-            using (var db = new DoAnDataContext())
-            {
-                var dsmonhoc = (from i in db.monHocs select i).ToList();
-                cbbMonHoc.DataSource = dsmonhoc;
-                var dskhoi = (from i in db.khois select i).ToList();
-                cbbKhoi.DataSource = dskhoi;
-
-                cbbMonHoc.ValueMember = "ma";
-                cbbMonHoc.DisplayMember = "ten";
-
-                cbbKhoi.ValueMember = "ma";
-                cbbKhoi.DisplayMember = "ten";
-            }
-
-            loadGVcauHoi();
         }
 
 
@@ -51,12 +25,12 @@ namespace DoAn
             var dt = new DataTable();
             foreach (DataGridViewColumn column in dgv.Columns)
             {
-                //if (column.Visible)
-                {                    dt.Columns.Add(column.DataPropertyName.ToString());
+                {
+                    dt.Columns.Add(column.DataPropertyName.ToString());
                 }
             }
 
-            
+
 
             object[] cellValues = new object[dgv.Columns.Count];
             foreach (DataGridViewRow row in dgv.Rows)
@@ -87,30 +61,9 @@ namespace DoAn
             return dt;
         }
 
-    
-
         public void loadGVcauHoi()
         {
-            //using (var db = new DoAnDataContext())
-            //{
-            //    try
-            //    {
-            //        var cauHoi = db.cauHois
-            //             .Select(dsCH => new
-            //             {
-            //                 maCauHoi = dsCH.ma,
-            //                 noiDung = dsCH.noiDung,
-            //                 goiY = dsCH.goiY,
-            //                 doKho = dsCH.doKho,
-            //                 maMonHoc = dsCH.maMonHoc,
-            //                 makhoi = dsCH.makhoi,
-            //                 loaiCauHoi = dsCH.loaiCauHoi
-            //             });
-            //        dataGridView_CauHoi.DataSource = cauHoi;
-            //    }
-            //    catch (Exception ex)
-            //    { MessageBox.Show(ex.ToString()); }
-            //}
+
 
             using (var db = new DoAnDataContext())
             {
@@ -128,7 +81,7 @@ namespace DoAn
                                   LoaiCauhoi = i.loaiCauHoi,
                                   LADAPANCAUHOI = j.laDapAnDung
                               } into GroupDSCH
-                              where GroupDSCH.MaMon == cbbMonHoc.SelectedValue.ToString() && GroupDSCH.MaKhoi == cbbKhoi.SelectedValue.ToString() &&(GroupDSCH.LoaiCauhoi == "THILUYENTAP" || GroupDSCH.LoaiCauhoi == "THI")
+                              where GroupDSCH.MaMon == cbbMonHoc.SelectedValue.ToString() && GroupDSCH.MaKhoi == cbbKhoi.SelectedValue.ToString() && (GroupDSCH.LoaiCauhoi == "THILUYENTAP" || GroupDSCH.LoaiCauhoi == "THI")
                               group new { GroupDSCH.DapAn, GroupDSCH.LADAPANCAUHOI } by new { GroupDSCH.Ma, GroupDSCH.NoiDung, GroupDSCH.GoiY, GroupDSCH.MaMon, GroupDSCH.MaKhoi } into DSCAUHOI
                               select new
                               {
@@ -141,7 +94,7 @@ namespace DoAn
                                   DAPANCUACAUHOI4 = DSCAUHOI.Skip(3).Take(1).First().DapAn,
                                   DAPANCUACAUHOI5 = DSCAUHOI.Skip(4).Take(1).First().DapAn,
                                   DAPANCUACAUHOI6 = DSCAUHOI.Skip(5).Take(1).First().DapAn,
-                                  
+
                                   MaMon = DSCAUHOI.Key.MaMon,
                                   MaKhoi = DSCAUHOI.Key.MaKhoi,
                                   LADAPANCAUA = DSCAUHOI.Take(1).First().LADAPANCAUHOI,
@@ -151,7 +104,7 @@ namespace DoAn
                                   LADAPANCAUE = DSCAUHOI.Skip(4).Take(1).First().LADAPANCAUHOI,
                                   LADAPANCAUF = DSCAUHOI.Skip(5).Take(1).First().LADAPANCAUHOI
                               }).ToList();
-               
+
                 DataTable boundTable = new DataTable();
 
                 //Gắn data source vào data gridview
@@ -174,28 +127,45 @@ namespace DoAn
 
                 try
                 {
-                    cmbSearchType.Items.Clear();   
+                    cmbSearchType.Items.Clear();
                     string[] ColNameList = dtSource.Columns.OfType<DataColumn>().Select(x => x.ColumnName).ToArray();
-                    cmbSearchType.Items.AddRange(ColNameList); 
+                    cmbSearchType.Items.AddRange(ColNameList);
                     if (cmbSearchType.Items.Count > 0) cmbSearchType.SelectedIndex = 0;
                 }
-                catch (Exception ex) {
-                     MessageBox.Show(ex.ToString()); 
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
                 }
             }
 
         }
 
-        private void button_suaCauhoiSelected_Click(object sender, EventArgs e)
+
+
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
-            if (dgvDSCauHoi.CurrentCell.Selected == true)
-            {
-                SuaChiTietCauHoi form_sua = new SuaChiTietCauHoi(loadGVcauHoi, ma);
-                form_sua.Show();
-            }
+
         }
 
- 
+        private void xemCauHoiTrongDeThiNao_Load(object sender, EventArgs e)
+        {
+            using (var db = new DoAnDataContext())
+            {
+                var dsmonhoc = (from i in db.monHocs select i).ToList();
+                cbbMonHoc.DataSource = dsmonhoc;
+                var dskhoi = (from i in db.khois select i).ToList();
+                cbbKhoi.DataSource = dskhoi;
+
+                cbbMonHoc.ValueMember = "ma";
+                cbbMonHoc.DisplayMember = "ten";
+
+                cbbKhoi.ValueMember = "ma";
+                cbbKhoi.DisplayMember = "ten";
+            }
+
+            loadGVcauHoi();
+        }
 
         private void cbbMonHoc_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -213,22 +183,6 @@ namespace DoAn
             }
         }
 
-        private void dgvDSCauHoi_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-                dgvDSCauHoi.CurrentRow.Selected = true;
-                ma = dgvDSCauHoi.Rows[e.RowIndex].Cells["maCauHoi"].FormattedValue.ToString();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void buttonSearch_Click(object sender, EventArgs e)
         {
             ListrowIndex.Clear();
@@ -239,13 +193,13 @@ namespace DoAn
             {
                 foreach (DataGridViewRow row in dgvDSCauHoi.Rows)
                 {
-                    if(row.Cells[dgvDSCauHoi.Columns[cmbSearchType.Text].Index].Value != null)
-                    if (row.Cells[dgvDSCauHoi.Columns[cmbSearchType.Text].Index].Value.ToString().Contains(searchValue)) //
-                    {
-                        rowIndex = row.Index;
-                        dgvDSCauHoi.ClearSelection();
-                        
-                        ListrowIndex.Add(rowIndex);
+                    if (row.Cells[dgvDSCauHoi.Columns[cmbSearchType.Text].Index].Value != null)
+                        if (row.Cells[dgvDSCauHoi.Columns[cmbSearchType.Text].Index].Value.ToString().Contains(searchValue)) //
+                        {
+                            rowIndex = row.Index;
+                            dgvDSCauHoi.ClearSelection();
+
+                            ListrowIndex.Add(rowIndex);
                         }
                 }
                 dgvDSCauHoi.Rows[ListrowIndex[0]].Selected = true;
@@ -258,7 +212,7 @@ namespace DoAn
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonShowALL_Click(object sender, EventArgs e)
         {
             using (var db = new DoAnDataContext())
             {
@@ -267,6 +221,7 @@ namespace DoAn
                     var cauHoi = db.cauHois
                          .Select(dsCH => new
                          {
+                             maCauHoi = dsCH.ma,
                              NOIDUNGCAUHOI = dsCH.noiDung,
                              GOIY = dsCH.goiY,
                              DOKHO = dsCH.doKho,
@@ -278,7 +233,6 @@ namespace DoAn
                 catch (Exception ex)
                 { MessageBox.Show(ex.ToString()); }
             }
-
         }
 
         private void buttonSearchNext_Click(object sender, EventArgs e)
@@ -300,6 +254,38 @@ namespace DoAn
                 dgvDSCauHoi.Focus();
             }
             else { MessageBox.Show("hết"); }
+        }
+
+        private void dgvDSCauHoi_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            dgvDSCauHoi.CurrentRow.Selected = true;
+            ma = dgvDSCauHoi.Rows[e.RowIndex].Cells["maCauHoi"].FormattedValue.ToString();
+
+            using (var db = new DoAnDataContext())
+            {
+                try
+                {
+                    var DsDt = (from i in db.chiTietDethis
+                                join j in db.deThis
+                                on i.maDethi equals j.ma
+                                where i.maCauHoi == ma
+                                select new
+                                {
+                                    MaDe = j.ma,
+                                    soLuongCauHoi = j.slCauHoi,
+                                    maMonHoc = j.maMonHoc,
+                                    thoiGianLamBai = j.thoiGianLamBai_phut
+                                }).ToList();
+
+                    dataGridViewDethi.DataSource = DsDt;
+                }
+                catch (Exception ex)
+                { MessageBox.Show(ex.ToString()); }
+            }
+
+            
+
         }
     }
 }

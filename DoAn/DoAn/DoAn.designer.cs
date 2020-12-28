@@ -729,11 +729,11 @@ namespace DoAn
 		
 		private string _doKho;
 		
-		private string _loaiCauHoi;
-		
 		private string _maMonHoc;
 		
 		private string _makhoi;
+		
+		private string _loaiCauHoi;
 		
 		private EntityRef<cauHoiLuyentap> _cauHoiLuyentap;
 		
@@ -759,12 +759,12 @@ namespace DoAn
     partial void OngoiYChanged();
     partial void OndoKhoChanging(string value);
     partial void OndoKhoChanged();
-    partial void OnloaiCauHoiChanging(string value);
-    partial void OnloaiCauHoiChanged();
     partial void OnmaMonHocChanging(string value);
     partial void OnmaMonHocChanged();
     partial void OnmakhoiChanging(string value);
     partial void OnmakhoiChanged();
+    partial void OnloaiCauHoiChanging(string value);
+    partial void OnloaiCauHoiChanged();
     #endregion
 		
 		public cauHoi()
@@ -798,7 +798,7 @@ namespace DoAn
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_noiDung", DbType="NVarChar(50)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_noiDung", DbType="NVarChar(2000)")]
 		public string noiDung
 		{
 			get
@@ -818,7 +818,7 @@ namespace DoAn
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_goiY", DbType="NVarChar(100)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_goiY", DbType="NVarChar(500)")]
 		public string goiY
 		{
 			get
@@ -854,26 +854,6 @@ namespace DoAn
 					this._doKho = value;
 					this.SendPropertyChanged("doKho");
 					this.OndoKhoChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_loaiCauHoi", DbType="NVarChar(50)")]
-		public string loaiCauHoi
-		{
-			get
-			{
-				return this._loaiCauHoi;
-			}
-			set
-			{
-				if ((this._loaiCauHoi != value))
-				{
-					this.OnloaiCauHoiChanging(value);
-					this.SendPropertyChanging();
-					this._loaiCauHoi = value;
-					this.SendPropertyChanged("loaiCauHoi");
-					this.OnloaiCauHoiChanged();
 				}
 			}
 		}
@@ -922,6 +902,26 @@ namespace DoAn
 					this._makhoi = value;
 					this.SendPropertyChanged("makhoi");
 					this.OnmakhoiChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_loaiCauHoi", DbType="NVarChar(50)")]
+		public string loaiCauHoi
+		{
+			get
+			{
+				return this._loaiCauHoi;
+			}
+			set
+			{
+				if ((this._loaiCauHoi != value))
+				{
+					this.OnloaiCauHoiChanging(value);
+					this.SendPropertyChanging();
+					this._loaiCauHoi = value;
+					this.SendPropertyChanged("loaiCauHoi");
+					this.OnloaiCauHoiChanged();
 				}
 			}
 		}
@@ -1816,7 +1816,7 @@ namespace DoAn
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dapAn", DbType="NVarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dapAn", DbType="NVarChar(2000) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
 		public string dapAn
 		{
 			get
@@ -1921,9 +1921,9 @@ namespace DoAn
 		
 		private System.Nullable<int> _slCauHoi;
 		
-		private System.Nullable<int> _thoiGianLamBai_phut;
+		private string _maMonHoc;
 		
-		private string _monHoc;
+		private System.Nullable<int> _thoiGianLamBai_phut;
 		
 		private EntitySet<tinhTrangBaiLam> _tinhTrangBaiLams;
 		
@@ -1935,6 +1935,8 @@ namespace DoAn
 		
 		private EntitySet<thamGiaKyThi> _thamGiaKyThis;
 		
+		private EntityRef<monHoc> _monHoc;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -1943,10 +1945,10 @@ namespace DoAn
     partial void OnmaChanged();
     partial void OnslCauHoiChanging(System.Nullable<int> value);
     partial void OnslCauHoiChanged();
+    partial void OnmaMonHocChanging(string value);
+    partial void OnmaMonHocChanged();
     partial void OnthoiGianLamBai_phutChanging(System.Nullable<int> value);
     partial void OnthoiGianLamBai_phutChanged();
-    partial void OnmonHocChanging(string value);
-    partial void OnmonHocChanged();
     #endregion
 		
 		public deThi()
@@ -1956,6 +1958,7 @@ namespace DoAn
 			this._chiTietDethis = new EntitySet<chiTietDethi>(new Action<chiTietDethi>(this.attach_chiTietDethis), new Action<chiTietDethi>(this.detach_chiTietDethis));
 			this._ketQuas = new EntitySet<ketQua>(new Action<ketQua>(this.attach_ketQuas), new Action<ketQua>(this.detach_ketQuas));
 			this._thamGiaKyThis = new EntitySet<thamGiaKyThi>(new Action<thamGiaKyThi>(this.attach_thamGiaKyThis), new Action<thamGiaKyThi>(this.detach_thamGiaKyThis));
+			this._monHoc = default(EntityRef<monHoc>);
 			OnCreated();
 		}
 		
@@ -1999,6 +2002,30 @@ namespace DoAn
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_maMonHoc", DbType="VarChar(10)")]
+		public string maMonHoc
+		{
+			get
+			{
+				return this._maMonHoc;
+			}
+			set
+			{
+				if ((this._maMonHoc != value))
+				{
+					if (this._monHoc.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnmaMonHocChanging(value);
+					this.SendPropertyChanging();
+					this._maMonHoc = value;
+					this.SendPropertyChanged("maMonHoc");
+					this.OnmaMonHocChanged();
+				}
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_thoiGianLamBai_phut", DbType="Int")]
 		public System.Nullable<int> thoiGianLamBai_phut
 		{
@@ -2015,26 +2042,6 @@ namespace DoAn
 					this._thoiGianLamBai_phut = value;
 					this.SendPropertyChanged("thoiGianLamBai_phut");
 					this.OnthoiGianLamBai_phutChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_monHoc", DbType="NVarChar(50)")]
-		public string monHoc
-		{
-			get
-			{
-				return this._monHoc;
-			}
-			set
-			{
-				if ((this._monHoc != value))
-				{
-					this.OnmonHocChanging(value);
-					this.SendPropertyChanging();
-					this._monHoc = value;
-					this.SendPropertyChanged("monHoc");
-					this.OnmonHocChanged();
 				}
 			}
 		}
@@ -2101,6 +2108,40 @@ namespace DoAn
 			set
 			{
 				this._thamGiaKyThis.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="monHoc_deThi", Storage="_monHoc", ThisKey="maMonHoc", OtherKey="ma", IsForeignKey=true)]
+		public monHoc monHoc
+		{
+			get
+			{
+				return this._monHoc.Entity;
+			}
+			set
+			{
+				monHoc previousValue = this._monHoc.Entity;
+				if (((previousValue != value) 
+							|| (this._monHoc.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._monHoc.Entity = null;
+						previousValue.deThis.Remove(this);
+					}
+					this._monHoc.Entity = value;
+					if ((value != null))
+					{
+						value.deThis.Add(this);
+						this._maMonHoc = value.ma;
+					}
+					else
+					{
+						this._maMonHoc = default(string);
+					}
+					this.SendPropertyChanged("monHoc");
+				}
 			}
 		}
 		
@@ -3092,7 +3133,7 @@ namespace DoAn
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ten", DbType="NVarChar(20)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ten", DbType="VarChar(255)")]
 		public string ten
 		{
 			get
@@ -4045,6 +4086,8 @@ namespace DoAn
 		
 		private EntitySet<cauHoi> _cauHois;
 		
+		private EntitySet<deThi> _deThis;
+		
 		private EntitySet<kyThi> _kyThis;
 		
     #region Extensibility Method Definitions
@@ -4060,6 +4103,7 @@ namespace DoAn
 		public monHoc()
 		{
 			this._cauHois = new EntitySet<cauHoi>(new Action<cauHoi>(this.attach_cauHois), new Action<cauHoi>(this.detach_cauHois));
+			this._deThis = new EntitySet<deThi>(new Action<deThi>(this.attach_deThis), new Action<deThi>(this.detach_deThis));
 			this._kyThis = new EntitySet<kyThi>(new Action<kyThi>(this.attach_kyThis), new Action<kyThi>(this.detach_kyThis));
 			OnCreated();
 		}
@@ -4084,7 +4128,7 @@ namespace DoAn
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ten", DbType="VarChar(255)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ten", DbType="NVarChar(255)")]
 		public string ten
 		{
 			get
@@ -4114,6 +4158,19 @@ namespace DoAn
 			set
 			{
 				this._cauHois.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="monHoc_deThi", Storage="_deThis", ThisKey="ma", OtherKey="maMonHoc")]
+		public EntitySet<deThi> deThis
+		{
+			get
+			{
+				return this._deThis;
+			}
+			set
+			{
+				this._deThis.Assign(value);
 			}
 		}
 		
@@ -4157,6 +4214,18 @@ namespace DoAn
 		}
 		
 		private void detach_cauHois(cauHoi entity)
+		{
+			this.SendPropertyChanging();
+			entity.monHoc = null;
+		}
+		
+		private void attach_deThis(deThi entity)
+		{
+			this.SendPropertyChanging();
+			entity.monHoc = this;
+		}
+		
+		private void detach_deThis(deThi entity)
 		{
 			this.SendPropertyChanging();
 			entity.monHoc = null;

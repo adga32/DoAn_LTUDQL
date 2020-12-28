@@ -18,7 +18,7 @@ namespace DoAn
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DuyetCauHoiDongGop());
+            Application.Run(new xemCauHoiTrongDeThiNao());
         }
     }
 }

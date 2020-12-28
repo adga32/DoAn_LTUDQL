@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QLTTN" Class="DoAnDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DRAGON-PC-SHARP\SQLEXPRESS;Initial Catalog=QLTTN;Integrated Security=True" SettingsObjectName="DoAn.Properties.Settings" SettingsPropertyName="QLTTNConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-283JDNO\SQLEXPRESS;Initial Catalog=QLTTN;Integrated Security=True" SettingsObjectName="DoAn.Properties.Settings" SettingsPropertyName="QLTTNConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.adminn" Member="adminns">
     <Type Name="adminn">
       <Column Name="ma" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -23,12 +23,12 @@
   <Table Name="dbo.cauHoi" Member="cauHois">
     <Type Name="cauHoi">
       <Column Name="ma" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="noiDung" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="goiY" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="noiDung" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="goiY" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
       <Column Name="doKho" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
-      <Column Name="loaiCauHoi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="maMonHoc" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
       <Column Name="makhoi" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="loaiCauHoi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Association Name="cauHoi_cauHoiLuyentap" Member="cauHoiLuyentap" ThisKey="ma" OtherKey="maCauHoi" Type="cauHoiLuyentap" Cardinality="One" />
       <Association Name="cauHoi_chiTietBaiThi" Member="chiTietBaiThis" ThisKey="ma" OtherKey="maCauHoi" Type="chiTietBaiThi" />
       <Association Name="cauHoi_chiTietDethi" Member="chiTietDethis" ThisKey="ma" OtherKey="maCauHoi" Type="chiTietDethi" />
@@ -69,7 +69,7 @@
   <Table Name="dbo.dapAnCauhoi" Member="dapAnCauhois">
     <Type Name="dapAnCauhoi">
       <Column Name="maCauHoi" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="dapAn" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="dapAn" Type="System.String" DbType="NVarChar(2000) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="laDapAnDung" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="cauHoi_dapAnCauhoi" Member="cauHoi" ThisKey="maCauHoi" OtherKey="ma" Type="cauHoi" IsForeignKey="true" />
     </Type>
@@ -78,13 +78,14 @@
     <Type Name="deThi">
       <Column Name="ma" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="slCauHoi" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="maMonHoc" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
       <Column Name="thoiGianLamBai_phut" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="monHoc" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Association Name="deThi_tinhTrangBaiLam" Member="tinhTrangBaiLams" ThisKey="ma" OtherKey="maDe" Type="tinhTrangBaiLam" />
       <Association Name="deThi_chiTietBaiThi" Member="chiTietBaiThis" ThisKey="ma" OtherKey="maDe" Type="chiTietBaiThi" />
       <Association Name="deThi_chiTietDethi" Member="chiTietDethis" ThisKey="ma" OtherKey="maDethi" Type="chiTietDethi" />
       <Association Name="deThi_ketQua" Member="ketQuas" ThisKey="ma" OtherKey="maDe" Type="ketQua" />
       <Association Name="deThi_thamGiaKyThi" Member="thamGiaKyThis" ThisKey="ma" OtherKey="maDe" Type="thamGiaKyThi" />
+      <Association Name="monHoc_deThi" Member="monHoc" ThisKey="maMonHoc" OtherKey="ma" Type="monHoc" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.giaoVien" Member="giaoViens">
@@ -127,7 +128,7 @@
   <Table Name="dbo.khoi" Member="khois">
     <Type Name="khoi">
       <Column Name="ma" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="ten" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="ten" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
       <Association Name="khoi_cauHoi" Member="cauHois" ThisKey="ma" OtherKey="makhoi" Type="cauHoi" />
       <Association Name="khoi_hocSinh" Member="hocSinhs" ThisKey="ma" OtherKey="maKhoi" Type="hocSinh" />
       <Association Name="khoi_lop" Member="lops" ThisKey="ma" OtherKey="makhoi" Type="lop" />
@@ -175,8 +176,9 @@
   <Table Name="dbo.monHoc" Member="monHocs">
     <Type Name="monHoc">
       <Column Name="ma" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="ten" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="ten" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Association Name="monHoc_cauHoi" Member="cauHois" ThisKey="ma" OtherKey="maMonHoc" Type="cauHoi" />
+      <Association Name="monHoc_deThi" Member="deThis" ThisKey="ma" OtherKey="maMonHoc" Type="deThi" />
       <Association Name="monHoc_kyThi" Member="kyThis" ThisKey="ma" OtherKey="maMonHoc" Type="kyThi" />
     </Type>
   </Table>
