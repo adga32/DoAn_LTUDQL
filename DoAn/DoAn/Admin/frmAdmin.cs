@@ -28,7 +28,12 @@ namespace DoAn
         {
             QuanLyNguoiDung frmQuanLyNguoiDung = new QuanLyNguoiDung();
             frmQuanLyNguoiDung.ShowDialog();
-            this.Close();
+        }
+
+        private void btnQuanLyHeThong_Click(object sender, EventArgs e)
+        {
+            QuanLyHeThong frmQuanLyHeThong = new QuanLyHeThong();
+            frmQuanLyHeThong.ShowDialog();
         }
     }
 }
