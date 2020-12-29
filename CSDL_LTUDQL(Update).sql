@@ -205,3 +205,48 @@ CREATE TABLE tinhTrangBaiLam(
 	FOREIGN KEY (maDe) REFERENCES deThi(ma)
 )
 go	
+
+
+CREATE TRIGGER trg_insertMaNguoiDung_giaovien
+ON giaoVien
+INSTEAD OF INSERT
+AS
+BEGIN
+     declare cur_ cursor for select * from inserted
+	open cur_ 
+	declare @ma VARCHAR(10),@ten nVARCHAR(255), @ngaySinh datetime 
+	fetch next from cur_ into @ma ,@ten, @ngaySinh
+	while @@FETCH_STATUS = 0
+	begin
+		insert into NguoiDung  VALUES (@ma)
+		insert  into giaoVien VALUES (@ma, @ten, @ngaySinh)
+	fetch next from cur_ into @ma ,@ten, @ngaySinh
+	end
+	close cur_
+	deallocate cur_
+END
+go
+
+CREATE TRIGGER trg_insertMaNguoiDung_hocsinh
+ON hocSinh
+INSTEAD OF INSERT
+AS
+BEGIN
+     declare cur_ cursor for select * from inserted
+	open cur_ 
+	declare @ma VARCHAR(10),@ten nVARCHAR(255), @ngaySinh datetime ,  @maLop VARCHAR(10)	, @maKhoi VARCHAR(10)
+	fetch next from cur_ into @ma ,@ten, @ngaySinh, @maLop, @maKhoi
+	while @@FETCH_STATUS = 0
+	begin
+		insert into NguoiDung  VALUES (@ma)
+		insert  into hocSinh VALUES (@ma, @ten, @ngaySinh, @maLop, @maKhoi)
+	fetch next from cur_ into @ma ,@ten, @ngaySinh, @maLop, @maKhoi
+	end
+	close cur_
+	deallocate cur_
+END
+go
+
+
+
+

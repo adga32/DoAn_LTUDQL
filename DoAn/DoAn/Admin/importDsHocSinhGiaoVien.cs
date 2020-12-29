@@ -6,6 +6,7 @@ using System.Data;
 using System.Data.OleDb;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -26,36 +27,63 @@ namespace DoAn.Admin
         OleDbConnection olecon = new OleDbConnection();
 
 
-
-
-        public bool ExecBulkCopy(DataTable pDt, string pDesTableName = "")
+        public bool InsertDataTableToSQl(DataTable pDt, string pDesTableName)
         {
             try
             {
-
-                //tạo connect
-                SqlConnection connection;
-                var cnecStrS = ConfigurationManager.ConnectionStrings["DoAn.Properties.Settings.QLTTNConnectionString"];
-                connection = new SqlConnection(cnecStrS.ConnectionString);
-                if (pDesTableName.Length == 0)
-                    pDesTableName = pDt.TableName;
-                //insert table giao vine
-                using (connection)
+                using (DoAnDataContext db = new DoAnDataContext())
                 {
-                    connection.Open();
-                    using (SqlBulkCopy sbc = new SqlBulkCopy(connection))
-                    {
-                        sbc.DestinationTableName = pDesTableName;
-                        sbc.WriteToServer(pDt);
-                    }
+                    if (pDesTableName == "giaoVien")
+                        for (int i = 0; pDt.Rows.Count > i; i++)
+                        {
+                            
+                            db.giaoViens.InsertOnSubmit(new giaoVien
+                            {
+                                ma = pDt.Rows[i]["ma"].ToString(),
+                                ten = pDt.Rows[i]["ten"].ToString() , //System.Text.Encoding.Unicode.GetString(Encoding.UTF8.GetBytes(pDt.Rows[i]["ten"].ToString())) ,
+                                ngaySinh = DateTime.Parse(pDt.Rows[i]["ngaySinh"].ToString())
+                            });
+                        }
+
+                    if (pDesTableName == "hocSinh")
+                        for (int i = 0; pDt.Rows.Count > i; i++)
+                        {
+                            db.hocSinhs.InsertOnSubmit(new hocSinh
+                            {
+                                ma = pDt.Rows[i]["ma"].ToString(),
+                                ten = pDt.Rows[i]["ten"].ToString(),
+                                ngaySinh = DateTime.Parse(pDt.Rows[i]["ngaySinh"].ToString()),
+                                maLop = pDt.Rows[i]["maLop"].ToString(),
+                                maKhoi = pDt.Rows[i]["maKhoi"].ToString()
+                            });
+                        }
+                    db.SubmitChanges();
                 }
-                return true;
+
+                ////tạo connect
+                //SqlConnection connection;
+                //var cnecStrS = ConfigurationManager.ConnectionStrings["DoAn.Properties.Settings.QLTTNConnectionString"];
+                //connection = new SqlConnection(cnecStrS.ConnectionString);
+                //if (pDesTableName.Length == 0)
+                //    pDesTableName = pDt.TableName;
+                ////insert table giao vine
+                //using (connection)
+                //{
+                //    connection.Open();
+                //    using (SqlBulkCopy sbc = new SqlBulkCopy(connection))
+                //    {
+                //        sbc.DestinationTableName = pDesTableName;
+                //        sbc.WriteToServer(pDt);
+                //    }
+                //}
+                //return true;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
                 return false;
             }
+            return true;
         }
 
 
@@ -140,7 +168,10 @@ namespace DoAn.Admin
 
             if (comboBox1.SelectedIndex == 0)
             {
-                if (!ExecBulkCopy(dsGiaoVien.Tables[0], "giaoVien"))
+                DataTable dtGV = new DataTable();
+                dtGV = dsGiaoVien.Tables[0];
+
+                if (!InsertDataTableToSQl(dtGV, "giaoVien"))
                     MessageBox.Show("Không thành công!");
                 else
                     MessageBox.Show("Đã thực hiện thành công!");
@@ -148,7 +179,10 @@ namespace DoAn.Admin
 
             if (comboBox1.SelectedIndex == 1)
             {
-                if (!ExecBulkCopy(dsHocSinh.Tables[0], "hocSinh"))
+                DataTable dtHS = new DataTable();
+                dtHS = dsHocSinh.Tables[0];
+
+                if (!InsertDataTableToSQl(dtHS, "hocSinh"))
                     MessageBox.Show("Không thành công!");
                 else
                     MessageBox.Show("Đã thực hiện thành công!");

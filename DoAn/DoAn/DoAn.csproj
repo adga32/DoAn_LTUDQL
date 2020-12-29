@@ -90,6 +90,16 @@
     <Compile Include="ModuleGiaoVien\xemCauHoiTrongDeThiNao.Designer.cs">
       <DependentUpon>xemCauHoiTrongDeThiNao.cs</DependentUpon>
     </Compile>
+    <Compile Include="QLTTNDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLTTNDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLTTNDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLTTNDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Regex\BaseValidator.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -271,6 +281,28 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="QLTTNDataSet.xsc">
+      <DependentUpon>QLTTNDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLTTNDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLTTNDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLTTNDataSet.xss">
+      <DependentUpon>QLTTNDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLTTNDataSet1.xsc">
+      <DependentUpon>QLTTNDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QLTTNDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLTTNDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLTTNDataSet1.xss">
+      <DependentUpon>QLTTNDataSet1.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
