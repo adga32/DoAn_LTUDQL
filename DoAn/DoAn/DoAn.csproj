@@ -72,6 +72,10 @@
     <Compile Include="Admin\QuanLyNguoiDung.Designer.cs">
       <DependentUpon>QuanLyNguoiDung.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModuleGiaoVien\ChinhSuaDe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuleGiaoVien\ChinhSuaDe.Designer.cs" />
     <Compile Include="ModuleGiaoVien\DuyetCauHoiDongGop.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,12 +88,32 @@
     <Compile Include="ModuleGiaoVien\HienThiCauHoiTuCSDL.Designer.cs">
       <DependentUpon>HienThiCauHoiTuCSDL.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModuleGiaoVien\QuanLyDeThi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuleGiaoVien\QuanLyDeThi.Designer.cs" />
     <Compile Include="ModuleGiaoVien\SuaChiTietCauHoi.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ModuleGiaoVien\SuaChiTietCauHoi.Designer.cs">
       <DependentUpon>SuaChiTietCauHoi.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModuleGiaoVien\ThongKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuleGiaoVien\ThongKe.Designer.cs" />
+    <Compile Include="ModuleGiaoVien\ThongKeCauHoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuleGiaoVien\ThongKeCauHoi.Designer.cs" />
+    <Compile Include="ModuleGiaoVien\ThongKeHocSinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuleGiaoVien\ThongKeHocSinh.Designer.cs" />
+    <Compile Include="ModuleGiaoVien\ThongKeKyThi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuleGiaoVien\ThongKeKyThi.Designer.cs" />
     <Compile Include="ModuleGiaoVien\xemCauHoiTrongDeThiNao.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -224,6 +248,7 @@
     <EmbeddedResource Include="DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ModuleGiaoVien\ChinhSuaDe.resx" />
     <EmbeddedResource Include="ModuleGiaoVien\DuyetCauHoiDongGop.resx">
       <DependentUpon>DuyetCauHoiDongGop.cs</DependentUpon>
     </EmbeddedResource>
@@ -254,9 +279,14 @@
     <EmbeddedResource Include="HocSinh\OnLuyenThiThu.resx">
       <DependentUpon>OnLuyenThiThu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ModuleGiaoVien\QuanLyDeThi.resx" />
     <EmbeddedResource Include="ModuleGiaoVien\SuaChiTietCauHoi.resx">
       <DependentUpon>SuaChiTietCauHoi.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ModuleGiaoVien\ThongKe.resx" />
+    <EmbeddedResource Include="ModuleGiaoVien\ThongKeCauHoi.resx" />
+    <EmbeddedResource Include="ModuleGiaoVien\ThongKeHocSinh.resx" />
+    <EmbeddedResource Include="ModuleGiaoVien\ThongKeKyThi.resx" />
     <EmbeddedResource Include="ModuleGiaoVien\xemCauHoiTrongDeThiNao.resx">
       <DependentUpon>xemCauHoiTrongDeThiNao.cs</DependentUpon>
     </EmbeddedResource>

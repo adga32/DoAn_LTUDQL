@@ -1,5 +1,6 @@
 ﻿using DoAn;
 using DoAn.ModuleGiaoVien;
+using GiaoVien;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +19,7 @@ namespace DoAn
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmAdmin());
+            Application.Run(new QuanLyDeThi());
         }
     }
 }
