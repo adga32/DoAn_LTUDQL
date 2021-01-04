@@ -206,6 +206,13 @@ CREATE TABLE tinhTrangBaiLam(
 )
 go	
 
+CREATE TABLE PhanQuyenChucNang(
+	maNguoiDung varchar(10) NOT NULL,
+	quyenSuDung varchar(20) NULL,
+	PRIMARY KEY (maNguoiDung),
+	FOREIGN KEY (maNguoiDung) REFERENCES NguoiDung(manguoidung)
+)
+go
 
 CREATE TRIGGER trg_insertMaNguoiDung_giaovien
 ON giaoVien
