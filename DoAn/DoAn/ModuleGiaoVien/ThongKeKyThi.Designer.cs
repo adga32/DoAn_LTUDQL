@@ -1,5 +1,5 @@
 ﻿
-namespace GiaoVien
+namespace DoAn
 {
     partial class ThongKeKyThi
     {

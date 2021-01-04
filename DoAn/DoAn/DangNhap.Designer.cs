@@ -108,7 +108,7 @@
             this.txtTenTaiKhoan.Name = "txtTenTaiKhoan";
             this.txtTenTaiKhoan.Size = new System.Drawing.Size(253, 30);
             this.txtTenTaiKhoan.TabIndex = 2;
-            this.txtTenTaiKhoan.Text = "mailongad";
+            this.txtTenTaiKhoan.Text = "mailonghs";
             // 
             // label2
             // 

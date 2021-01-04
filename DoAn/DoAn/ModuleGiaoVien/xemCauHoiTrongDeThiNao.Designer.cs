@@ -1,5 +1,5 @@
 ﻿
-namespace DoAn.ModuleGiaoVien
+namespace DoAn
 {
     partial class xemCauHoiTrongDeThiNao
     {

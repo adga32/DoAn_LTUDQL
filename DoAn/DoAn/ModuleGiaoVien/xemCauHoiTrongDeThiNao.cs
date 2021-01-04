@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DoAn.ModuleGiaoVien
+namespace DoAn
 {
     public partial class xemCauHoiTrongDeThiNao : Form
     {

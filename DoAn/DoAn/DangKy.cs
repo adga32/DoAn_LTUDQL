@@ -83,9 +83,6 @@ namespace DoAn
             }
         }
 
-
-
-
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
             DangNhap dangNhap = new DangNhap();
@@ -145,12 +142,26 @@ namespace DoAn
                                         {
                                             ma = MaNguoiDung
                                         });
+
+                                        //lưu phân quyền
+                                        db.PhanQuyenChucNangs.InsertOnSubmit(new PhanQuyenChucNang
+                                        {
+                                            maNguoiDung = MaNguoiDung,
+                                            quyenSuDung = "1-2-3-4"
+                                        });
                                     }
                                     else if (MaNguoiDung.Substring(0, 2) == "GV")
                                     {
                                         db.giaoViens.InsertOnSubmit(new giaoVien
                                         {
                                             ma = MaNguoiDung
+                                        });
+
+                                        //lưu phân quyền
+                                        db.PhanQuyenChucNangs.InsertOnSubmit(new PhanQuyenChucNang
+                                        {
+                                            maNguoiDung = MaNguoiDung,
+                                            quyenSuDung = "1-2-3-4-5-6"
                                         });
                                     }
                                     else

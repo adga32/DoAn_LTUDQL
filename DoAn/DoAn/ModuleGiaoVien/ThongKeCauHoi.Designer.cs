@@ -1,5 +1,5 @@
 ﻿
-namespace GiaoVien
+namespace DoAn
 {
     partial class ThongKeCauHoi
     {
@@ -42,10 +42,10 @@ namespace GiaoVien
             this.groupBox1.Controls.Add(this.dgvDanhSachCauHoi);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox1.Size = new System.Drawing.Size(829, 688);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(799, 414);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách câu hỏi";
@@ -61,14 +61,14 @@ namespace GiaoVien
             this.TiLeXuatHien});
             this.dgvDanhSachCauHoi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDanhSachCauHoi.Location = new System.Drawing.Point(4, 27);
-            this.dgvDanhSachCauHoi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvDanhSachCauHoi.Margin = new System.Windows.Forms.Padding(4);
             this.dgvDanhSachCauHoi.MultiSelect = false;
             this.dgvDanhSachCauHoi.Name = "dgvDanhSachCauHoi";
             this.dgvDanhSachCauHoi.ReadOnly = true;
             this.dgvDanhSachCauHoi.RowHeadersWidth = 51;
             this.dgvDanhSachCauHoi.RowTemplate.Height = 24;
             this.dgvDanhSachCauHoi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDanhSachCauHoi.Size = new System.Drawing.Size(821, 657);
+            this.dgvDanhSachCauHoi.Size = new System.Drawing.Size(791, 383);
             this.dgvDanhSachCauHoi.TabIndex = 0;
             // 
             // NoiDung
@@ -95,10 +95,10 @@ namespace GiaoVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(829, 688);
+            this.ClientSize = new System.Drawing.Size(799, 414);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ThongKeCauHoi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thống kê câu hỏi";

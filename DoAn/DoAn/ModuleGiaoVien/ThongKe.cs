@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GiaoVien
+namespace DoAn
 {
     public partial class ThongKe : Form
     {
@@ -20,19 +20,19 @@ namespace GiaoVien
         private void btnThongKeHocSinh_Click(object sender, EventArgs e)
         {
             ThongKeHocSinh thongKeHocSinh = new ThongKeHocSinh();
-            thongKeHocSinh.ShowDialog();   
+            thongKeHocSinh.Show();   
         }
 
         private void btnThongKeKyThi_Click(object sender, EventArgs e)
         {
             ThongKeKyThi thongKeKyThi = new ThongKeKyThi();
-            thongKeKyThi.ShowDialog();
+            thongKeKyThi.Show();
         }
 
         private void btnThongKeCauHoi_Click(object sender, EventArgs e)
         {
             ThongKeCauHoi thongKeCauHoi = new ThongKeCauHoi();
-            thongKeCauHoi.ShowDialog();
+            thongKeCauHoi.Show();
         }
     }
 }

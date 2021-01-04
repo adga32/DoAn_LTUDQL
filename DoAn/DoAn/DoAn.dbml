@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QLTTN" Class="DoAnDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-283JDNO\SQLEXPRESS;Initial Catalog=QLTTN;Integrated Security=True" SettingsObjectName="DoAn.Properties.Settings" SettingsPropertyName="QLTTNConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DRAGON-PC-SHARP\SQLEXPRESS;Initial Catalog=QLTTN;Integrated Security=True" SettingsObjectName="DoAn.Properties.Settings" SettingsPropertyName="QLTTNConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.adminn" Member="adminns">
     <Type Name="adminn">
       <Column Name="ma" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -188,7 +188,15 @@
       <Association Name="NguoiDung_adminn" Member="adminn" ThisKey="manguoidung" OtherKey="ma" Type="adminn" Cardinality="One" />
       <Association Name="NguoiDung_giaoVien" Member="giaoVien" ThisKey="manguoidung" OtherKey="ma" Type="giaoVien" Cardinality="One" />
       <Association Name="NguoiDung_hocSinh" Member="hocSinh" ThisKey="manguoidung" OtherKey="ma" Type="hocSinh" Cardinality="One" />
+      <Association Name="NguoiDung_PhanQuyenChucNang" Member="PhanQuyenChucNang" ThisKey="manguoidung" OtherKey="maNguoiDung" Type="PhanQuyenChucNang" Cardinality="One" />
       <Association Name="NguoiDung_taiKhoan" Member="taiKhoans" ThisKey="manguoidung" OtherKey="idNguoiSoHuu" Type="taiKhoan" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PhanQuyenChucNang" Member="PhanQuyenChucNangs">
+    <Type Name="PhanQuyenChucNang">
+      <Column Name="maNguoiDung" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="quyenSuDung" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Association Name="NguoiDung_PhanQuyenChucNang" Member="NguoiDung" ThisKey="maNguoiDung" OtherKey="manguoidung" Type="NguoiDung" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.taiKhoan" Member="taiKhoans">

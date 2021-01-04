@@ -1,7 +1,4 @@
-﻿using DoAn;
-using DoAn.ModuleGiaoVien;
-using GiaoVien;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -19,7 +16,7 @@ namespace DoAn
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new QuanLyDeThi());
+            Application.Run(new DangNhap());
         }
     }
 }

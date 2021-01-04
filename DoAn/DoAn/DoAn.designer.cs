@@ -84,6 +84,9 @@ namespace DoAn
     partial void InsertNguoiDung(NguoiDung instance);
     partial void UpdateNguoiDung(NguoiDung instance);
     partial void DeleteNguoiDung(NguoiDung instance);
+    partial void InsertPhanQuyenChucNang(PhanQuyenChucNang instance);
+    partial void UpdatePhanQuyenChucNang(PhanQuyenChucNang instance);
+    partial void DeletePhanQuyenChucNang(PhanQuyenChucNang instance);
     partial void InserttaiKhoan(taiKhoan instance);
     partial void UpdatetaiKhoan(taiKhoan instance);
     partial void DeletetaiKhoan(taiKhoan instance);
@@ -263,6 +266,14 @@ namespace DoAn
 			get
 			{
 				return this.GetTable<NguoiDung>();
+			}
+		}
+		
+		public System.Data.Linq.Table<PhanQuyenChucNang> PhanQuyenChucNangs
+		{
+			get
+			{
+				return this.GetTable<PhanQuyenChucNang>();
 			}
 		}
 		
@@ -4258,6 +4269,8 @@ namespace DoAn
 		
 		private EntityRef<hocSinh> _hocSinh;
 		
+		private EntityRef<PhanQuyenChucNang> _PhanQuyenChucNang;
+		
 		private EntitySet<taiKhoan> _taiKhoans;
 		
     #region Extensibility Method Definitions
@@ -4273,6 +4286,7 @@ namespace DoAn
 			this._adminn = default(EntityRef<adminn>);
 			this._giaoVien = default(EntityRef<giaoVien>);
 			this._hocSinh = default(EntityRef<hocSinh>);
+			this._PhanQuyenChucNang = default(EntityRef<PhanQuyenChucNang>);
 			this._taiKhoans = new EntitySet<taiKhoan>(new Action<taiKhoan>(this.attach_taiKhoans), new Action<taiKhoan>(this.detach_taiKhoans));
 			OnCreated();
 		}
@@ -4384,6 +4398,35 @@ namespace DoAn
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="NguoiDung_PhanQuyenChucNang", Storage="_PhanQuyenChucNang", ThisKey="manguoidung", OtherKey="maNguoiDung", IsUnique=true, IsForeignKey=false)]
+		public PhanQuyenChucNang PhanQuyenChucNang
+		{
+			get
+			{
+				return this._PhanQuyenChucNang.Entity;
+			}
+			set
+			{
+				PhanQuyenChucNang previousValue = this._PhanQuyenChucNang.Entity;
+				if (((previousValue != value) 
+							|| (this._PhanQuyenChucNang.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._PhanQuyenChucNang.Entity = null;
+						previousValue.NguoiDung = null;
+					}
+					this._PhanQuyenChucNang.Entity = value;
+					if ((value != null))
+					{
+						value.NguoiDung = this;
+					}
+					this.SendPropertyChanged("PhanQuyenChucNang");
+				}
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="NguoiDung_taiKhoan", Storage="_taiKhoans", ThisKey="manguoidung", OtherKey="idNguoiSoHuu")]
 		public EntitySet<taiKhoan> taiKhoans
 		{
@@ -4427,6 +4470,133 @@ namespace DoAn
 		{
 			this.SendPropertyChanging();
 			entity.NguoiDung = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.PhanQuyenChucNang")]
+	public partial class PhanQuyenChucNang : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _maNguoiDung;
+		
+		private string _quyenSuDung;
+		
+		private EntityRef<NguoiDung> _NguoiDung;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnmaNguoiDungChanging(string value);
+    partial void OnmaNguoiDungChanged();
+    partial void OnquyenSuDungChanging(string value);
+    partial void OnquyenSuDungChanged();
+    #endregion
+		
+		public PhanQuyenChucNang()
+		{
+			this._NguoiDung = default(EntityRef<NguoiDung>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_maNguoiDung", DbType="VarChar(10) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string maNguoiDung
+		{
+			get
+			{
+				return this._maNguoiDung;
+			}
+			set
+			{
+				if ((this._maNguoiDung != value))
+				{
+					if (this._NguoiDung.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnmaNguoiDungChanging(value);
+					this.SendPropertyChanging();
+					this._maNguoiDung = value;
+					this.SendPropertyChanged("maNguoiDung");
+					this.OnmaNguoiDungChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_quyenSuDung", DbType="VarChar(20)")]
+		public string quyenSuDung
+		{
+			get
+			{
+				return this._quyenSuDung;
+			}
+			set
+			{
+				if ((this._quyenSuDung != value))
+				{
+					this.OnquyenSuDungChanging(value);
+					this.SendPropertyChanging();
+					this._quyenSuDung = value;
+					this.SendPropertyChanged("quyenSuDung");
+					this.OnquyenSuDungChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="NguoiDung_PhanQuyenChucNang", Storage="_NguoiDung", ThisKey="maNguoiDung", OtherKey="manguoidung", IsForeignKey=true)]
+		public NguoiDung NguoiDung
+		{
+			get
+			{
+				return this._NguoiDung.Entity;
+			}
+			set
+			{
+				NguoiDung previousValue = this._NguoiDung.Entity;
+				if (((previousValue != value) 
+							|| (this._NguoiDung.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._NguoiDung.Entity = null;
+						previousValue.PhanQuyenChucNang = null;
+					}
+					this._NguoiDung.Entity = value;
+					if ((value != null))
+					{
+						value.PhanQuyenChucNang = this;
+						this._maNguoiDung = value.manguoidung;
+					}
+					else
+					{
+						this._maNguoiDung = default(string);
+					}
+					this.SendPropertyChanged("NguoiDung");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
 		}
 	}
 	

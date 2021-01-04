@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GiaoVien
+namespace DoAn
 {
     public partial class ThongKeKyThi : Form
     {

@@ -33,10 +33,29 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1427.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1427.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1427.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1427.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1427.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -48,77 +67,107 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin\frmAdmin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admin\frmAdmin.Designer.cs">
-      <DependentUpon>frmAdmin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\importDsHocSinhGiaoVien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admin\importDsHocSinhGiaoVien.Designer.cs">
-      <DependentUpon>importDsHocSinhGiaoVien.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\QuanLyHeThong.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admin\QuanLyHeThong.Designer.cs">
-      <DependentUpon>QuanLyHeThong.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\QuanLyNguoiDung.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admin\QuanLyNguoiDung.Designer.cs">
-      <DependentUpon>QuanLyNguoiDung.cs</DependentUpon>
-    </Compile>
     <Compile Include="ModuleGiaoVien\ChinhSuaDe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ModuleGiaoVien\ChinhSuaDe.Designer.cs" />
-    <Compile Include="ModuleGiaoVien\DuyetCauHoiDongGop.cs">
+    <Compile Include="ModuleGiaoVien\ChinhSuaDe.designer.cs">
+      <DependentUpon>ChinhSuaDe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuleHocSinh\DongGopCauHoi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ModuleGiaoVien\DuyetCauHoiDongGop.Designer.cs">
-      <DependentUpon>DuyetCauHoiDongGop.cs</DependentUpon>
+    <Compile Include="ModuleHocSinh\DongGopCauHoi.designer.cs">
+      <DependentUpon>DongGopCauHoi.cs</DependentUpon>
     </Compile>
     <Compile Include="ModuleGiaoVien\HienThiCauHoiTuCSDL.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ModuleGiaoVien\HienThiCauHoiTuCSDL.Designer.cs">
+    <Compile Include="ModuleGiaoVien\HienThiCauHoiTuCSDL.designer.cs">
       <DependentUpon>HienThiCauHoiTuCSDL.cs</DependentUpon>
     </Compile>
-    <Compile Include="ModuleGiaoVien\QuanLyDeThi.cs">
+    <Compile Include="ModuleGiaoVien\LayCauHoiTuExcel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ModuleGiaoVien\QuanLyDeThi.Designer.cs" />
-    <Compile Include="ModuleGiaoVien\SuaChiTietCauHoi.cs">
+    <Compile Include="ModuleGiaoVien\LayCauHoiTuExcel.designer.cs">
+      <DependentUpon>LayCauHoiTuExcel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuleGiaoVien\DuyetCauHoiDongGop.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ModuleGiaoVien\SuaChiTietCauHoi.Designer.cs">
-      <DependentUpon>SuaChiTietCauHoi.cs</DependentUpon>
+    <Compile Include="ModuleGiaoVien\DuyetCauHoiDongGop.designer.cs">
+      <DependentUpon>DuyetCauHoiDongGop.cs</DependentUpon>
     </Compile>
-    <Compile Include="ModuleGiaoVien\ThongKe.cs">
+    <Compile Include="ModuleGiaoVien\GVquanlycauhoi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ModuleGiaoVien\ThongKe.Designer.cs" />
-    <Compile Include="ModuleGiaoVien\ThongKeCauHoi.cs">
+    <Compile Include="ModuleGiaoVien\GVquanlycauhoi.designer.cs">
+      <DependentUpon>GVquanlycauhoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuleAdmin\importDsHocSinhGiaoVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ModuleGiaoVien\ThongKeCauHoi.Designer.cs" />
-    <Compile Include="ModuleGiaoVien\ThongKeHocSinh.cs">
+    <Compile Include="ModuleAdmin\importDsHocSinhGiaoVien.designer.cs">
+      <DependentUpon>importDsHocSinhGiaoVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuleHocSinh\BangDiem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ModuleGiaoVien\ThongKeHocSinh.Designer.cs" />
-    <Compile Include="ModuleGiaoVien\ThongKeKyThi.cs">
+    <Compile Include="ModuleHocSinh\BangDiem.Designer.cs">
+      <DependentUpon>BangDiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuleGiaoVien\CapNhatKyThiOnTap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ModuleGiaoVien\ThongKeKyThi.Designer.cs" />
-    <Compile Include="ModuleGiaoVien\xemCauHoiTrongDeThiNao.cs">
+    <Compile Include="ModuleGiaoVien\CapNhatKyThiOnTap.Designer.cs">
+      <DependentUpon>CapNhatKyThiOnTap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuleAdmin\frmAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ModuleGiaoVien\xemCauHoiTrongDeThiNao.Designer.cs">
-      <DependentUpon>xemCauHoiTrongDeThiNao.cs</DependentUpon>
+    <Compile Include="ModuleAdmin\frmAdmin.Designer.cs">
+      <DependentUpon>frmAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuleGiaoVien\CapNhatKyThi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuleGiaoVien\CapNhatKyThi.Designer.cs">
+      <DependentUpon>CapNhatKyThi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuleGiaoVien\QuanLyKyThi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuleGiaoVien\QuanLyKyThi.Designer.cs">
+      <DependentUpon>QuanLyKyThi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuleGiaoVien\QuanLyKyThiOnTap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuleGiaoVien\QuanLyKyThiOnTap.Designer.cs">
+      <DependentUpon>QuanLyKyThiOnTap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuleGiaoVien\PrintDanhSachHS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuleGiaoVien\PrintDanhSachHS.Designer.cs">
+      <DependentUpon>PrintDanhSachHS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuleGiaoVien\PrintKetQuaKyThi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuleGiaoVien\PrintKetQuaKyThi.Designer.cs">
+      <DependentUpon>PrintKetQuaKyThi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuleAdmin\QuanLyNguoiDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuleAdmin\QuanLyNguoiDung.designer.cs">
+      <DependentUpon>QuanLyNguoiDung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuleAdmin\PhanQuyenNguoiDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuleAdmin\PhanQuyenNguoiDung.Designer.cs">
+      <DependentUpon>PhanQuyenNguoiDung.cs</DependentUpon>
     </Compile>
     <Compile Include="QLTTNDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -129,6 +178,24 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>QLTTNDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ModuleAdmin\SaoLuuDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuleAdmin\SaoLuuDatabase.designer.cs">
+      <DependentUpon>SaoLuuDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuleAdmin\QuanLyHeThong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuleAdmin\QuanLyHeThong.Designer.cs">
+      <DependentUpon>QuanLyHeThong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuleGiaoVien\QuanLyDeThi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuleGiaoVien\QuanLyDeThi.designer.cs">
+      <DependentUpon>QuanLyDeThi.cs</DependentUpon>
     </Compile>
     <Compile Include="Regex\BaseValidator.cs">
       <SubType>Component</SubType>
@@ -154,10 +221,10 @@
     <Compile Include="DangNhap.Designer.cs">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="HocSinh\DanhSachCauHoiLuyenTap.cs">
+    <Compile Include="ModuleHocSinh\DanhSachCauHoiLuyenTap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HocSinh\DanhSachCauHoiLuyenTap.designer.cs">
+    <Compile Include="ModuleHocSinh\DanhSachCauHoiLuyenTap.designer.cs">
       <DependentUpon>DanhSachCauHoiLuyenTap.cs</DependentUpon>
     </Compile>
     <Compile Include="DoAn.designer.cs">
@@ -165,46 +232,28 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DoAn.dbml</DependentUpon>
     </Compile>
-    <Compile Include="HocSinh\DongGopCauHoi.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="HocSinh\DongGopCauHoi.designer.cs">
-      <DependentUpon>DongGopCauHoi.cs</DependentUpon>
-    </Compile>
     <Compile Include="ModuleGiaoVien\GiaoVien.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ModuleGiaoVien\GiaoVien.designer.cs">
       <DependentUpon>GiaoVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="ModuleGiaoVien\GVquanlycauhoi.cs">
+    <Compile Include="ModuleHocSinh\HocSinh.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ModuleGiaoVien\GVquanlycauhoi.designer.cs">
-      <DependentUpon>GVquanlycauhoi.cs</DependentUpon>
-    </Compile>
-    <Compile Include="HocSinh\HocSinh.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="HocSinh\HocSinh.Designer.cs">
+    <Compile Include="ModuleHocSinh\HocSinh.Designer.cs">
       <DependentUpon>HocSinh.cs</DependentUpon>
     </Compile>
-    <Compile Include="HocSinh\LamBaiTracNghiem.cs">
+    <Compile Include="ModuleHocSinh\LamBaiTracNghiem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HocSinh\LamBaiTracNghiem.Designer.cs">
+    <Compile Include="ModuleHocSinh\LamBaiTracNghiem.Designer.cs">
       <DependentUpon>LamBaiTracNghiem.cs</DependentUpon>
     </Compile>
-    <Compile Include="ModuleGiaoVien\LayCauHoiTuExcel.cs">
+    <Compile Include="ModuleHocSinh\OnLuyenThiThu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ModuleGiaoVien\LayCauHoiTuExcel.designer.cs">
-      <DependentUpon>LayCauHoiTuExcel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="HocSinh\OnLuyenThiThu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="HocSinh\OnLuyenThiThu.Designer.cs">
+    <Compile Include="ModuleHocSinh\OnLuyenThiThu.Designer.cs">
       <DependentUpon>OnLuyenThiThu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -221,23 +270,101 @@
     <Compile Include="Regex\RequiredFieldValidator.Designer.cs">
       <DependentUpon>RequiredFieldValidator.cs</DependentUpon>
     </Compile>
-    <Compile Include="HocSinh\ThongTinHocSinh.cs">
+    <Compile Include="ModuleHocSinh\ThongTinHocSinh.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HocSinh\ThongTinHocSinh.Designer.cs">
+    <Compile Include="ModuleHocSinh\ThongTinHocSinh.Designer.cs">
       <DependentUpon>ThongTinHocSinh.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Admin\frmAdmin.resx">
-      <DependentUpon>frmAdmin.cs</DependentUpon>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="ModuleGiaoVien\SuaChiTietCauHoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuleGiaoVien\SuaChiTietCauHoi.designer.cs">
+      <DependentUpon>SuaChiTietCauHoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuleGiaoVien\ThongKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuleGiaoVien\ThongKe.designer.cs">
+      <DependentUpon>ThongKe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuleGiaoVien\ThongKeCauHoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuleGiaoVien\ThongKeCauHoi.designer.cs">
+      <DependentUpon>ThongKeCauHoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuleGiaoVien\ThongKeHocSinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuleGiaoVien\ThongKeHocSinh.designer.cs">
+      <DependentUpon>ThongKeHocSinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuleGiaoVien\ThongKeKyThi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuleGiaoVien\ThongKeKyThi.designer.cs">
+      <DependentUpon>ThongKeKyThi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuleHocSinh\Thi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuleHocSinh\Thi.Designer.cs">
+      <DependentUpon>Thi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reposts\ThongTinBangDiem.cs" />
+    <Compile Include="ModuleGiaoVien\xemCauHoiTrongDeThiNao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuleGiaoVien\xemCauHoiTrongDeThiNao.designer.cs">
+      <DependentUpon>xemCauHoiTrongDeThiNao.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ModuleGiaoVien\ChinhSuaDe.resx">
+      <DependentUpon>ChinhSuaDe.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin\importDsHocSinhGiaoVien.resx">
-      <DependentUpon>importDsHocSinhGiaoVien.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Admin\QuanLyHeThong.resx">
+    <EmbeddedResource Include="ModuleAdmin\QuanLyHeThong.resx">
       <DependentUpon>QuanLyHeThong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin\QuanLyNguoiDung.resx">
+    <EmbeddedResource Include="ModuleHocSinh\DongGopCauHoi.resx">
+      <DependentUpon>DongGopCauHoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuleGiaoVien\HienThiCauHoiTuCSDL.resx">
+      <DependentUpon>HienThiCauHoiTuCSDL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuleGiaoVien\LayCauHoiTuExcel.resx">
+      <DependentUpon>LayCauHoiTuExcel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuleGiaoVien\DuyetCauHoiDongGop.resx">
+      <DependentUpon>DuyetCauHoiDongGop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuleGiaoVien\GVquanlycauhoi.resx">
+      <DependentUpon>GVquanlycauhoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuleAdmin\importDsHocSinhGiaoVien.resx">
+      <DependentUpon>importDsHocSinhGiaoVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuleGiaoVien\PrintKetQuaKyThi.resx">
+      <DependentUpon>PrintKetQuaKyThi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuleAdmin\QuanLyNguoiDung.resx">
       <DependentUpon>QuanLyNguoiDung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuleAdmin\SaoLuuDatabase.resx">
+      <DependentUpon>SaoLuuDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuleAdmin\PhanQuyenNguoiDung.resx">
+      <DependentUpon>PhanQuyenNguoiDung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuleGiaoVien\QuanLyDeThi.resx">
+      <DependentUpon>QuanLyDeThi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuleHocSinh\Thi.resx">
+      <DependentUpon>Thi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reposts\DsHocSinh.rdlc" />
+    <EmbeddedResource Include="ModuleAdmin\frmAdmin.resx">
+      <DependentUpon>frmAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CauTraLoi.resx">
       <DependentUpon>CauTraLoi.cs</DependentUpon>
@@ -248,47 +375,38 @@
     <EmbeddedResource Include="DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ModuleGiaoVien\ChinhSuaDe.resx" />
-    <EmbeddedResource Include="ModuleGiaoVien\DuyetCauHoiDongGop.resx">
-      <DependentUpon>DuyetCauHoiDongGop.cs</DependentUpon>
+    <EmbeddedResource Include="ModuleGiaoVien\CapNhatKyThi.resx">
+      <DependentUpon>CapNhatKyThi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ModuleGiaoVien\HienThiCauHoiTuCSDL.resx">
-      <DependentUpon>HienThiCauHoiTuCSDL.cs</DependentUpon>
+    <EmbeddedResource Include="ModuleGiaoVien\CapNhatKyThiOnTap.resx">
+      <DependentUpon>CapNhatKyThiOnTap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HocSinh\DanhSachCauHoiLuyenTap.resx">
+    <EmbeddedResource Include="ModuleGiaoVien\PrintDanhSachHS.resx">
+      <DependentUpon>PrintDanhSachHS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuleGiaoVien\QuanLyKyThi.resx">
+      <DependentUpon>QuanLyKyThi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuleGiaoVien\QuanLyKyThiOnTap.resx">
+      <DependentUpon>QuanLyKyThiOnTap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuleHocSinh\BangDiem.resx">
+      <DependentUpon>BangDiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuleHocSinh\DanhSachCauHoiLuyenTap.resx">
       <DependentUpon>DanhSachCauHoiLuyenTap.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="HocSinh\DongGopCauHoi.resx">
-      <DependentUpon>DongGopCauHoi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModuleGiaoVien\GiaoVien.resx">
       <DependentUpon>GiaoVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ModuleGiaoVien\GVquanlycauhoi.resx">
-      <DependentUpon>GVquanlycauhoi.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="HocSinh\HocSinh.resx">
+    <EmbeddedResource Include="ModuleHocSinh\HocSinh.resx">
       <DependentUpon>HocSinh.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HocSinh\LamBaiTracNghiem.resx">
+    <EmbeddedResource Include="ModuleHocSinh\LamBaiTracNghiem.resx">
       <DependentUpon>LamBaiTracNghiem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ModuleGiaoVien\LayCauHoiTuExcel.resx">
-      <DependentUpon>LayCauHoiTuExcel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="HocSinh\OnLuyenThiThu.resx">
+    <EmbeddedResource Include="ModuleHocSinh\OnLuyenThiThu.resx">
       <DependentUpon>OnLuyenThiThu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ModuleGiaoVien\QuanLyDeThi.resx" />
-    <EmbeddedResource Include="ModuleGiaoVien\SuaChiTietCauHoi.resx">
-      <DependentUpon>SuaChiTietCauHoi.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ModuleGiaoVien\ThongKe.resx" />
-    <EmbeddedResource Include="ModuleGiaoVien\ThongKeCauHoi.resx" />
-    <EmbeddedResource Include="ModuleGiaoVien\ThongKeHocSinh.resx" />
-    <EmbeddedResource Include="ModuleGiaoVien\ThongKeKyThi.resx" />
-    <EmbeddedResource Include="ModuleGiaoVien\xemCauHoiTrongDeThiNao.resx">
-      <DependentUpon>xemCauHoiTrongDeThiNao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -299,8 +417,28 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="HocSinh\ThongTinHocSinh.resx">
+    <EmbeddedResource Include="ModuleHocSinh\ThongTinHocSinh.resx">
       <DependentUpon>ThongTinHocSinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reposts\BangDiemHs.rdlc" />
+    <EmbeddedResource Include="Reposts\KetQuaKyThi.rdlc" />
+    <EmbeddedResource Include="ModuleGiaoVien\SuaChiTietCauHoi.resx">
+      <DependentUpon>SuaChiTietCauHoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuleGiaoVien\xemCauHoiTrongDeThiNao.resx">
+      <DependentUpon>xemCauHoiTrongDeThiNao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuleGiaoVien\ThongKe.resx">
+      <DependentUpon>ThongKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuleGiaoVien\ThongKeCauHoi.resx">
+      <DependentUpon>ThongKeCauHoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuleGiaoVien\ThongKeHocSinh.resx">
+      <DependentUpon>ThongKeHocSinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuleGiaoVien\ThongKeKyThi.resx">
+      <DependentUpon>ThongKeKyThi.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="DoAn.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
@@ -311,6 +449,9 @@
       <DependentUpon>DoAn.dbml</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\ThongTinBangDiem.datasource">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -349,6 +490,20 @@
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
