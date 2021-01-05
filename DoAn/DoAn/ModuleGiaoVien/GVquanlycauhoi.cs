@@ -1,4 +1,5 @@
 ﻿using DoAn;
+using DoAn.ModuleGiaoVien;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -42,6 +43,12 @@ namespace DoAn
         {
             xemCauHoiTrongDeThiNao xemCauHoiTrongDeThi = new xemCauHoiTrongDeThiNao();
             xemCauHoiTrongDeThi.ShowDialog();
+        }
+
+        private void BTTExportDatabase_Click(object sender, EventArgs e)
+        {
+            ExportDatabaseCauHoi exportDatabaseCauHoi = new ExportDatabaseCauHoi();
+            exportDatabaseCauHoi.ShowDialog();
         }
     }
 }

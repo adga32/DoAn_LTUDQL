@@ -33,6 +33,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ClosedXML, Version=0.95.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClosedXML.0.95.4\lib\net46\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.7.2.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.7.2\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelNumberFormat, Version=1.0.10.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelNumberFormat.1.0.10\lib\net20\ExcelNumberFormat.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1427.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
     </Reference>
@@ -55,6 +64,12 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.Primitives.4.0.1\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Packaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Packaging.4.0.0\lib\net46\System.IO.Packaging.dll</HintPath>
+    </Reference>
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -65,13 +80,26 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ModuleAdmin\ExportDsHocSinhGiaoVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuleAdmin\ExportDsHocSinhGiaoVien.Designer.cs">
+      <DependentUpon>ExportDsHocSinhGiaoVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="ModuleGiaoVien\ChinhSuaDe.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ModuleGiaoVien\ChinhSuaDe.designer.cs">
       <DependentUpon>ChinhSuaDe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuleGiaoVien\ExportDatabaseCauHoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuleGiaoVien\ExportDatabaseCauHoi.Designer.cs">
+      <DependentUpon>ExportDatabaseCauHoi.cs</DependentUpon>
     </Compile>
     <Compile Include="ModuleHocSinh\DongGopCauHoi.cs">
       <SubType>Form</SubType>
@@ -197,6 +225,26 @@
     <Compile Include="ModuleGiaoVien\QuanLyDeThi.designer.cs">
       <DependentUpon>QuanLyDeThi.cs</DependentUpon>
     </Compile>
+    <Compile Include="QLTTNDataSetCauHoi.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLTTNDataSetCauHoi.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLTTNDataSetDapAnCauHoi.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLTTNDataSetDapAnCauHoi.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLTTNDataSetGiaoVien.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLTTNDataSetGiaoVien.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLTTNDataSetHocSinh.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLTTNDataSetHocSinh.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Regex\BaseValidator.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -320,11 +368,17 @@
     <Compile Include="ModuleGiaoVien\xemCauHoiTrongDeThiNao.designer.cs">
       <DependentUpon>xemCauHoiTrongDeThiNao.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ModuleAdmin\ExportDsHocSinhGiaoVien.resx">
+      <DependentUpon>ExportDsHocSinhGiaoVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ModuleGiaoVien\ChinhSuaDe.resx">
       <DependentUpon>ChinhSuaDe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModuleAdmin\QuanLyHeThong.resx">
       <DependentUpon>QuanLyHeThong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuleGiaoVien\ExportDatabaseCauHoi.resx">
+      <DependentUpon>ExportDatabaseCauHoi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModuleHocSinh\DongGopCauHoi.resx">
       <DependentUpon>DongGopCauHoi.cs</DependentUpon>
@@ -482,6 +536,50 @@
     </None>
     <None Include="QLTTNDataSet1.xss">
       <DependentUpon>QLTTNDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QLTTNDataSetCauHoi.xsc">
+      <DependentUpon>QLTTNDataSetCauHoi.xsd</DependentUpon>
+    </None>
+    <None Include="QLTTNDataSetCauHoi.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLTTNDataSetCauHoi.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLTTNDataSetCauHoi.xss">
+      <DependentUpon>QLTTNDataSetCauHoi.xsd</DependentUpon>
+    </None>
+    <None Include="QLTTNDataSetDapAnCauHoi.xsc">
+      <DependentUpon>QLTTNDataSetDapAnCauHoi.xsd</DependentUpon>
+    </None>
+    <None Include="QLTTNDataSetDapAnCauHoi.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLTTNDataSetDapAnCauHoi.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLTTNDataSetDapAnCauHoi.xss">
+      <DependentUpon>QLTTNDataSetDapAnCauHoi.xsd</DependentUpon>
+    </None>
+    <None Include="QLTTNDataSetGiaoVien.xsc">
+      <DependentUpon>QLTTNDataSetGiaoVien.xsd</DependentUpon>
+    </None>
+    <None Include="QLTTNDataSetGiaoVien.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLTTNDataSetGiaoVien.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLTTNDataSetGiaoVien.xss">
+      <DependentUpon>QLTTNDataSetGiaoVien.xsd</DependentUpon>
+    </None>
+    <None Include="QLTTNDataSetHocSinh.xsc">
+      <DependentUpon>QLTTNDataSetHocSinh.xsd</DependentUpon>
+    </None>
+    <None Include="QLTTNDataSetHocSinh.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLTTNDataSetHocSinh.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLTTNDataSetHocSinh.xss">
+      <DependentUpon>QLTTNDataSetHocSinh.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

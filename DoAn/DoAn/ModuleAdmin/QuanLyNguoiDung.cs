@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DoAn.ModuleAdmin;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
@@ -48,6 +49,12 @@ namespace DoAn
             this.hocSinhTableAdapter.Fill(this.qLTTNDataSet1.hocSinh);
 
             MessageBox.Show("thay đổi thành công ");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ExportDsHocSinhGiaoVien exportDsHocSinhGiaoVien = new ExportDsHocSinhGiaoVien();
+            exportDsHocSinhGiaoVien.Show();
         }
     }
 }

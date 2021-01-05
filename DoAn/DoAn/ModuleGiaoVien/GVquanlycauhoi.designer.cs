@@ -33,6 +33,7 @@ namespace DoAn
             this.button_HienThiCauHoiTuCSDL = new System.Windows.Forms.Button();
             this.button_DuyetCauHOiDongGop = new System.Windows.Forms.Button();
             this.buttonXemCauHoiTrongDeThiNao = new System.Windows.Forms.Button();
+            this.BTTExportDatabase = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button_layDulieuTuExcel
@@ -75,11 +76,22 @@ namespace DoAn
             this.buttonXemCauHoiTrongDeThiNao.UseVisualStyleBackColor = true;
             this.buttonXemCauHoiTrongDeThiNao.Click += new System.EventHandler(this.buttonXemCauHoiTrongDeThiNao_Click);
             // 
+            // BTTExportDatabase
+            // 
+            this.BTTExportDatabase.Location = new System.Drawing.Point(476, 29);
+            this.BTTExportDatabase.Name = "BTTExportDatabase";
+            this.BTTExportDatabase.Size = new System.Drawing.Size(75, 67);
+            this.BTTExportDatabase.TabIndex = 4;
+            this.BTTExportDatabase.Text = "Export Dữ liệu câu hỏi vào Excel";
+            this.BTTExportDatabase.UseVisualStyleBackColor = true;
+            this.BTTExportDatabase.Click += new System.EventHandler(this.BTTExportDatabase_Click);
+            // 
             // GVquanlycauhoi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.BTTExportDatabase);
             this.Controls.Add(this.buttonXemCauHoiTrongDeThiNao);
             this.Controls.Add(this.button_DuyetCauHOiDongGop);
             this.Controls.Add(this.button_HienThiCauHoiTuCSDL);
@@ -96,5 +108,6 @@ namespace DoAn
         private System.Windows.Forms.Button button_HienThiCauHoiTuCSDL;
         private System.Windows.Forms.Button button_DuyetCauHOiDongGop;
         private System.Windows.Forms.Button buttonXemCauHoiTrongDeThiNao;
+        private System.Windows.Forms.Button BTTExportDatabase;
     }
 }

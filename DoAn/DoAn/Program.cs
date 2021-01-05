@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DoAn.ModuleAdmin;
+using DoAn.ModuleGiaoVien;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +18,7 @@ namespace DoAn
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DangNhap());
+            Application.Run(new GVquanlycauhoi());
         }
     }
 }
