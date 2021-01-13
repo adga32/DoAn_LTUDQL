@@ -137,12 +137,7 @@ namespace DoAn
                                         idNguoiSoHuu = MaNguoiDung,
                                     });
                                     if (MaNguoiDung.Substring(0, 2) == "HS")
-                                    {
-                                        db.hocSinhs.InsertOnSubmit(new hocSinh
-                                        {
-                                            ma = MaNguoiDung
-                                        });
-
+                                    {                       
                                         //lưu phân quyền
                                         db.PhanQuyenChucNangs.InsertOnSubmit(new PhanQuyenChucNang
                                         {
@@ -151,12 +146,7 @@ namespace DoAn
                                         });
                                     }
                                     else if (MaNguoiDung.Substring(0, 2) == "GV")
-                                    {
-                                        db.giaoViens.InsertOnSubmit(new giaoVien
-                                        {
-                                            ma = MaNguoiDung
-                                        });
-
+                                    {              
                                         //lưu phân quyền
                                         db.PhanQuyenChucNangs.InsertOnSubmit(new PhanQuyenChucNang
                                         {
