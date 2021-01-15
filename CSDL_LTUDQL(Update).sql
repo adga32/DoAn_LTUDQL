@@ -254,25 +254,7 @@ BEGIN
 END
 go
 
-CREATE TRIGGER trg_insertMaNguoiDung_Admin
-ON adminn
-INSTEAD OF INSERT
-AS
-BEGIN
-     declare cur_ cursor for select * from inserted
-	open cur_ 
-	declare @ma VARCHAR(10),@ten nVARCHAR(255), @ngaySinh datetime 
-	fetch next from cur_ into @ma ,@ten, @ngaySinh
-	while @@FETCH_STATUS = 0
-	begin
-		insert into NguoiDung  VALUES (@ma)
-		insert  into adminn VALUES (@ma, @ten, @ngaySinh)
-	fetch next from cur_ into @ma ,@ten, @ngaySinh
-	end
-	close cur_
-	deallocate cur_
-END
-go
+
 
 --trigger xóa mã người dùng trong bảng người dùng khi xóa giáo viên
 CREATE TRIGGER trg_deleteMaNguoiDung_giaovien
@@ -314,26 +296,7 @@ BEGIN
 	deallocate cur_
 END
 go
---trigger xóa mã người dùng trong bảng người dùng khi xóa admin
-CREATE TRIGGER trg_deleteMaNguoiDung_Admin
-ON adminn
-INSTEAD OF DELETE
-AS
-BEGIN
-    declare cur_ cursor for select ma from deleted
-	open cur_ 
-	declare @ma VARCHAR(10)
-	fetch next from cur_ into @ma 
-	while @@FETCH_STATUS = 0
-	begin
-	DELETE  FROM adminn WHERE ma = @ma 
-	DELETE  FROM NguoiDung WHERE manguoidung = @ma 
-	fetch next from cur_ into @ma
-	end
-	close cur_
-	deallocate cur_
-END
-go
+
 
 
 
