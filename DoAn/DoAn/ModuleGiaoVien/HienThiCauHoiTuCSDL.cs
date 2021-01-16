@@ -13,7 +13,7 @@ using DoAn;
 
 namespace DoAn
 {
-    public partial class HienThiCauHoiTuCSDL : Form
+    public partial class HienThiCauHoiTuCSDL : MetroFramework.Forms.MetroForm
     {
 
         public string ma;

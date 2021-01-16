@@ -38,9 +38,10 @@ namespace DoAn
             // 
             // button_layDulieuTuExcel
             // 
-            this.button_layDulieuTuExcel.Location = new System.Drawing.Point(33, 29);
+            this.button_layDulieuTuExcel.Location = new System.Drawing.Point(218, 78);
+            this.button_layDulieuTuExcel.Margin = new System.Windows.Forms.Padding(4);
             this.button_layDulieuTuExcel.Name = "button_layDulieuTuExcel";
-            this.button_layDulieuTuExcel.Size = new System.Drawing.Size(75, 67);
+            this.button_layDulieuTuExcel.Size = new System.Drawing.Size(240, 82);
             this.button_layDulieuTuExcel.TabIndex = 0;
             this.button_layDulieuTuExcel.Text = "Lấy Dữ liệu Excel Có sẳn";
             this.button_layDulieuTuExcel.UseVisualStyleBackColor = true;
@@ -48,29 +49,32 @@ namespace DoAn
             // 
             // button_HienThiCauHoiTuCSDL
             // 
-            this.button_HienThiCauHoiTuCSDL.Location = new System.Drawing.Point(142, 29);
+            this.button_HienThiCauHoiTuCSDL.Location = new System.Drawing.Point(218, 185);
+            this.button_HienThiCauHoiTuCSDL.Margin = new System.Windows.Forms.Padding(4);
             this.button_HienThiCauHoiTuCSDL.Name = "button_HienThiCauHoiTuCSDL";
-            this.button_HienThiCauHoiTuCSDL.Size = new System.Drawing.Size(75, 67);
+            this.button_HienThiCauHoiTuCSDL.Size = new System.Drawing.Size(240, 82);
             this.button_HienThiCauHoiTuCSDL.TabIndex = 1;
-            this.button_HienThiCauHoiTuCSDL.Text = "Hien Thi CauHoi Tu CSDL";
+            this.button_HienThiCauHoiTuCSDL.Text = "Hiển thị câu hỏi từ CSDL";
             this.button_HienThiCauHoiTuCSDL.UseVisualStyleBackColor = true;
             this.button_HienThiCauHoiTuCSDL.Click += new System.EventHandler(this.button_HienThiCauHoiTuCSDL_Click);
             // 
             // button_DuyetCauHOiDongGop
             // 
-            this.button_DuyetCauHOiDongGop.Location = new System.Drawing.Point(263, 29);
+            this.button_DuyetCauHOiDongGop.Location = new System.Drawing.Point(218, 294);
+            this.button_DuyetCauHOiDongGop.Margin = new System.Windows.Forms.Padding(4);
             this.button_DuyetCauHOiDongGop.Name = "button_DuyetCauHOiDongGop";
-            this.button_DuyetCauHOiDongGop.Size = new System.Drawing.Size(75, 67);
+            this.button_DuyetCauHOiDongGop.Size = new System.Drawing.Size(240, 82);
             this.button_DuyetCauHOiDongGop.TabIndex = 2;
-            this.button_DuyetCauHOiDongGop.Text = "Duyet Cau hoi";
+            this.button_DuyetCauHOiDongGop.Text = "Duyệt câu hỏi";
             this.button_DuyetCauHOiDongGop.UseVisualStyleBackColor = true;
             this.button_DuyetCauHOiDongGop.Click += new System.EventHandler(this.button_DuyetCauHOiDongGop_Click);
             // 
             // buttonXemCauHoiTrongDeThiNao
             // 
-            this.buttonXemCauHoiTrongDeThiNao.Location = new System.Drawing.Point(373, 29);
+            this.buttonXemCauHoiTrongDeThiNao.Location = new System.Drawing.Point(218, 402);
+            this.buttonXemCauHoiTrongDeThiNao.Margin = new System.Windows.Forms.Padding(4);
             this.buttonXemCauHoiTrongDeThiNao.Name = "buttonXemCauHoiTrongDeThiNao";
-            this.buttonXemCauHoiTrongDeThiNao.Size = new System.Drawing.Size(75, 67);
+            this.buttonXemCauHoiTrongDeThiNao.Size = new System.Drawing.Size(240, 82);
             this.buttonXemCauHoiTrongDeThiNao.TabIndex = 3;
             this.buttonXemCauHoiTrongDeThiNao.Text = "Xem câu hỏi đã trong kỳ thi nào ";
             this.buttonXemCauHoiTrongDeThiNao.UseVisualStyleBackColor = true;
@@ -78,9 +82,10 @@ namespace DoAn
             // 
             // BTTExportDatabase
             // 
-            this.BTTExportDatabase.Location = new System.Drawing.Point(476, 29);
+            this.BTTExportDatabase.Location = new System.Drawing.Point(218, 509);
+            this.BTTExportDatabase.Margin = new System.Windows.Forms.Padding(4);
             this.BTTExportDatabase.Name = "BTTExportDatabase";
-            this.BTTExportDatabase.Size = new System.Drawing.Size(75, 67);
+            this.BTTExportDatabase.Size = new System.Drawing.Size(240, 82);
             this.BTTExportDatabase.TabIndex = 4;
             this.BTTExportDatabase.Text = "Export Dữ liệu câu hỏi vào Excel";
             this.BTTExportDatabase.UseVisualStyleBackColor = true;
@@ -88,16 +93,18 @@ namespace DoAn
             // 
             // GVquanlycauhoi
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(684, 633);
             this.Controls.Add(this.BTTExportDatabase);
             this.Controls.Add(this.buttonXemCauHoiTrongDeThiNao);
             this.Controls.Add(this.button_DuyetCauHOiDongGop);
             this.Controls.Add(this.button_HienThiCauHoiTuCSDL);
             this.Controls.Add(this.button_layDulieuTuExcel);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "GVquanlycauhoi";
-            this.Text = "GVquanlycauhoi";
+            this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
+            this.Text = "Quản lí câu hỏi";
             this.ResumeLayout(false);
 
         }

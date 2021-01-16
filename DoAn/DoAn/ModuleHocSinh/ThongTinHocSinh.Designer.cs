@@ -43,6 +43,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.dtgKetQua = new System.Windows.Forms.DataGridView();
             this.dtgDSLichThi = new System.Windows.Forms.DataGridView();
+            this.metroSetControlBox1 = new MetroSet_UI.Controls.MetroSetControlBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.metroSetControlBox2 = new MetroSet_UI.Controls.MetroSetControlBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -53,8 +56,7 @@
             // 
             // splitContainer1
             // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Location = new System.Drawing.Point(15, 73);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -113,7 +115,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(386, 117);
+            this.label5.Location = new System.Drawing.Point(376, 118);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(41, 19);
             this.label5.TabIndex = 2;
@@ -123,7 +125,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(386, 79);
+            this.label3.Location = new System.Drawing.Point(376, 80);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 19);
             this.label3.TabIndex = 2;
@@ -143,7 +145,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(386, 41);
+            this.label2.Location = new System.Drawing.Point(376, 42);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 19);
             this.label2.TabIndex = 2;
@@ -202,6 +204,7 @@
             this.dtgKetQua.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgKetQua.Location = new System.Drawing.Point(558, 43);
             this.dtgKetQua.Name = "dtgKetQua";
+            this.dtgKetQua.RowHeadersWidth = 51;
             this.dtgKetQua.RowTemplate.Height = 24;
             this.dtgKetQua.Size = new System.Drawing.Size(444, 425);
             this.dtgKetQua.TabIndex = 0;
@@ -211,18 +214,88 @@
             this.dtgDSLichThi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgDSLichThi.Location = new System.Drawing.Point(26, 43);
             this.dtgDSLichThi.Name = "dtgDSLichThi";
+            this.dtgDSLichThi.RowHeadersWidth = 51;
             this.dtgDSLichThi.RowTemplate.Height = 24;
             this.dtgDSLichThi.Size = new System.Drawing.Size(460, 425);
             this.dtgDSLichThi.TabIndex = 0;
+            // 
+            // metroSetControlBox1
+            // 
+            this.metroSetControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.metroSetControlBox1.CloseHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.metroSetControlBox1.CloseHoverForeColor = System.Drawing.Color.White;
+            this.metroSetControlBox1.CloseNormalForeColor = System.Drawing.Color.Gray;
+            this.metroSetControlBox1.DisabledForeColor = System.Drawing.Color.DimGray;
+            this.metroSetControlBox1.IsDerivedStyle = true;
+            this.metroSetControlBox1.Location = new System.Drawing.Point(926, -26);
+            this.metroSetControlBox1.MaximizeBox = true;
+            this.metroSetControlBox1.MaximizeHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.metroSetControlBox1.MaximizeHoverForeColor = System.Drawing.Color.Gray;
+            this.metroSetControlBox1.MaximizeNormalForeColor = System.Drawing.Color.Gray;
+            this.metroSetControlBox1.MinimizeBox = true;
+            this.metroSetControlBox1.MinimizeHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.metroSetControlBox1.MinimizeHoverForeColor = System.Drawing.Color.Gray;
+            this.metroSetControlBox1.MinimizeNormalForeColor = System.Drawing.Color.Gray;
+            this.metroSetControlBox1.Name = "metroSetControlBox1";
+            this.metroSetControlBox1.Size = new System.Drawing.Size(100, 25);
+            this.metroSetControlBox1.Style = MetroSet_UI.Enums.Style.Light;
+            this.metroSetControlBox1.StyleManager = null;
+            this.metroSetControlBox1.TabIndex = 2;
+            this.metroSetControlBox1.Text = "metroSetControlBox1";
+            this.metroSetControlBox1.ThemeAuthor = "Narwin";
+            this.metroSetControlBox1.ThemeName = "MetroLite";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Red;
+            this.label4.Location = new System.Drawing.Point(441, 30);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(185, 27);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Thông tin cá nhân";
+            // 
+            // metroSetControlBox2
+            // 
+            this.metroSetControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.metroSetControlBox2.CloseHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.metroSetControlBox2.CloseHoverForeColor = System.Drawing.Color.White;
+            this.metroSetControlBox2.CloseNormalForeColor = System.Drawing.Color.Gray;
+            this.metroSetControlBox2.DisabledForeColor = System.Drawing.Color.DimGray;
+            this.metroSetControlBox2.IsDerivedStyle = true;
+            this.metroSetControlBox2.Location = new System.Drawing.Point(932, 0);
+            this.metroSetControlBox2.MaximizeBox = true;
+            this.metroSetControlBox2.MaximizeHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.metroSetControlBox2.MaximizeHoverForeColor = System.Drawing.Color.Gray;
+            this.metroSetControlBox2.MaximizeNormalForeColor = System.Drawing.Color.Gray;
+            this.metroSetControlBox2.MinimizeBox = true;
+            this.metroSetControlBox2.MinimizeHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.metroSetControlBox2.MinimizeHoverForeColor = System.Drawing.Color.Gray;
+            this.metroSetControlBox2.MinimizeNormalForeColor = System.Drawing.Color.Gray;
+            this.metroSetControlBox2.Name = "metroSetControlBox2";
+            this.metroSetControlBox2.Size = new System.Drawing.Size(100, 25);
+            this.metroSetControlBox2.Style = MetroSet_UI.Enums.Style.Light;
+            this.metroSetControlBox2.StyleManager = null;
+            this.metroSetControlBox2.TabIndex = 4;
+            this.metroSetControlBox2.Text = "metroSetControlBox2";
+            this.metroSetControlBox2.ThemeAuthor = "Narwin";
+            this.metroSetControlBox2.ThemeName = "MetroLite";
             // 
             // ThongTinHocSinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1026, 722);
+            this.BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle;
+            this.ClientSize = new System.Drawing.Size(1064, 818);
+            this.Controls.Add(this.metroSetControlBox2);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.metroSetControlBox1);
             this.Controls.Add(this.splitContainer1);
+            this.DisplayHeader = false;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ThongTinHocSinh";
+            this.Padding = new System.Windows.Forms.Padding(20, 30, 20, 20);
             this.Text = "Thông tin cá nhân";
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
@@ -233,6 +306,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtgKetQua)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgDSLichThi)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -253,5 +327,8 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView dtgKetQua;
         private System.Windows.Forms.ComboBox cbClass;
+        private MetroSet_UI.Controls.MetroSetControlBox metroSetControlBox1;
+        private System.Windows.Forms.Label label4;
+        private MetroSet_UI.Controls.MetroSetControlBox metroSetControlBox2;
     }
 }

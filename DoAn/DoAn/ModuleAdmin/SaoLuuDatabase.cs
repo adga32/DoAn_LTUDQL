@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace DoAn
 {
-    public partial class SaoLuuDatabase : Form
+    public partial class SaoLuuDatabase : MetroFramework.Forms.MetroForm
     {
         public SaoLuuDatabase()
         {

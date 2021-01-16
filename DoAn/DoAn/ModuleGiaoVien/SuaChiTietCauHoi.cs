@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace DoAn
 {
-    public partial class SuaChiTietCauHoi : Form
+    public partial class SuaChiTietCauHoi : MetroFramework.Forms.MetroForm
     {
         RequiredFieldValidator requiedNoiDungCauHoi;
         CauTraLoi[] listCtrlDapAn;

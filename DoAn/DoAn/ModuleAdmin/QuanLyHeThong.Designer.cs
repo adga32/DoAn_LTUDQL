@@ -62,7 +62,7 @@
             this.Controls.Add(this.btnSaoLuuDatabse);
             this.Controls.Add(this.btnThietLapPhanQuyen);
             this.Name = "QuanLyHeThong";
-            this.Text = "QuanLyHeThong";
+            this.Text = "Quản lý hệ thống";
             this.Load += new System.EventHandler(this.QuanLyHeThong_Load);
             this.ResumeLayout(false);
 

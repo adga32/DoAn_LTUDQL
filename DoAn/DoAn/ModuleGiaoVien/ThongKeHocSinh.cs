@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace DoAn
 {
-    public partial class ThongKeHocSinh : Form
+    public partial class ThongKeHocSinh : MetroFramework.Forms.MetroForm
     {
         int TopDiemTB = 0;
         public ThongKeHocSinh()

@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace DoAn
 {
-    public partial class BangDiem : Form
+    public partial class BangDiem : MetroFramework.Forms.MetroForm
     {
         string maHocSinh;
 

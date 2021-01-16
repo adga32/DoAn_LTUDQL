@@ -60,21 +60,21 @@ namespace DoAn
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(20, 60);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(485, 521);
+            this.panel1.Size = new System.Drawing.Size(445, 482);
             this.panel1.TabIndex = 0;
             // 
             // txtMaDe
             // 
-            this.txtMaDe.Location = new System.Drawing.Point(226, 51);
+            this.txtMaDe.Location = new System.Drawing.Point(225, 39);
             this.txtMaDe.Name = "txtMaDe";
             this.txtMaDe.Size = new System.Drawing.Size(121, 30);
             this.txtMaDe.TabIndex = 38;
             // 
             // btnChinhSuaDe
             // 
-            this.btnChinhSuaDe.Location = new System.Drawing.Point(292, 416);
+            this.btnChinhSuaDe.Location = new System.Drawing.Point(291, 404);
             this.btnChinhSuaDe.Name = "btnChinhSuaDe";
             this.btnChinhSuaDe.Size = new System.Drawing.Size(133, 54);
             this.btnChinhSuaDe.TabIndex = 37;
@@ -84,7 +84,7 @@ namespace DoAn
             // 
             // btnTaoDe
             // 
-            this.btnTaoDe.Location = new System.Drawing.Point(50, 416);
+            this.btnTaoDe.Location = new System.Drawing.Point(49, 404);
             this.btnTaoDe.Name = "btnTaoDe";
             this.btnTaoDe.Size = new System.Drawing.Size(133, 54);
             this.btnTaoDe.TabIndex = 36;
@@ -94,7 +94,7 @@ namespace DoAn
             // 
             // txtSoLuongCauHoi
             // 
-            this.txtSoLuongCauHoi.Location = new System.Drawing.Point(226, 309);
+            this.txtSoLuongCauHoi.Location = new System.Drawing.Point(225, 297);
             this.txtSoLuongCauHoi.Name = "txtSoLuongCauHoi";
             this.txtSoLuongCauHoi.Size = new System.Drawing.Size(121, 30);
             this.txtSoLuongCauHoi.TabIndex = 35;
@@ -102,7 +102,7 @@ namespace DoAn
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(46, 312);
+            this.label5.Location = new System.Drawing.Point(45, 300);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(150, 22);
             this.label5.TabIndex = 34;
@@ -111,7 +111,7 @@ namespace DoAn
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(40, 241);
+            this.label4.Location = new System.Drawing.Point(39, 229);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(156, 22);
             this.label4.TabIndex = 33;
@@ -121,7 +121,7 @@ namespace DoAn
             // 
             this.cbbKhoi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbKhoi.FormattingEnabled = true;
-            this.cbbKhoi.Location = new System.Drawing.Point(226, 171);
+            this.cbbKhoi.Location = new System.Drawing.Point(225, 159);
             this.cbbKhoi.Name = "cbbKhoi";
             this.cbbKhoi.Size = new System.Drawing.Size(121, 30);
             this.cbbKhoi.TabIndex = 32;
@@ -129,7 +129,7 @@ namespace DoAn
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(141, 171);
+            this.label3.Location = new System.Drawing.Point(140, 159);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(55, 22);
             this.label3.TabIndex = 31;
@@ -139,14 +139,14 @@ namespace DoAn
             // 
             this.cbbMonHoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbMonHoc.FormattingEnabled = true;
-            this.cbbMonHoc.Location = new System.Drawing.Point(226, 110);
+            this.cbbMonHoc.Location = new System.Drawing.Point(225, 98);
             this.cbbMonHoc.Name = "cbbMonHoc";
             this.cbbMonHoc.Size = new System.Drawing.Size(121, 30);
             this.cbbMonHoc.TabIndex = 29;
             // 
             // txtThoiGianLamBai
             // 
-            this.txtThoiGianLamBai.Location = new System.Drawing.Point(226, 238);
+            this.txtThoiGianLamBai.Location = new System.Drawing.Point(225, 226);
             this.txtThoiGianLamBai.Name = "txtThoiGianLamBai";
             this.txtThoiGianLamBai.Size = new System.Drawing.Size(121, 30);
             this.txtThoiGianLamBai.TabIndex = 30;
@@ -154,7 +154,7 @@ namespace DoAn
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(111, 113);
+            this.label2.Location = new System.Drawing.Point(110, 101);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(85, 22);
             this.label2.TabIndex = 28;
@@ -163,7 +163,7 @@ namespace DoAn
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(130, 54);
+            this.label1.Location = new System.Drawing.Point(129, 42);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(66, 22);
             this.label1.TabIndex = 27;
@@ -171,11 +171,10 @@ namespace DoAn
             // 
             // QuanLyDeThi
             // 
-            this.ClientSize = new System.Drawing.Size(485, 521);
+            this.ClientSize = new System.Drawing.Size(485, 562);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "QuanLyDeThi";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý đề thi";
             this.Load += new System.EventHandler(this.QuanLyDeThi_Load);
             this.panel1.ResumeLayout(false);

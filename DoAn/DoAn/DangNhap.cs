@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace DoAn
 {
-    public partial class DangNhap : Form
+    public partial class DangNhap : MetroFramework.Forms.MetroForm
     {
         public delegate void NguoiDungHienTai(TextBox tbtext);
         

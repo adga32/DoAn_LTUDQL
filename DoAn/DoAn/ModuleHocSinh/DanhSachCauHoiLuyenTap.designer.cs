@@ -73,7 +73,7 @@ namespace DoAn
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Location = new System.Drawing.Point(20, 60);
             this.splitContainer1.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainer1.Name = "splitContainer1";
             // 
@@ -84,7 +84,7 @@ namespace DoAn
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.groupBox2);
-            this.splitContainer1.Size = new System.Drawing.Size(1423, 798);
+            this.splitContainer1.Size = new System.Drawing.Size(1383, 751);
             this.splitContainer1.SplitterDistance = 699;
             this.splitContainer1.SplitterWidth = 6;
             this.splitContainer1.TabIndex = 0;
@@ -255,10 +255,11 @@ namespace DoAn
             // 
             // ucA
             // 
-            this.ucA.BackColor = System.Drawing.SystemColors.Control;
+            this.ucA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.ucA.CheckBox = false;
             this.ucA.Enabled = false;
             this.ucA.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ucA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.ucA.Location = new System.Drawing.Point(101, 156);
             this.ucA.Margin = new System.Windows.Forms.Padding(8);
             this.ucA.Name = "ucA";
@@ -449,12 +450,11 @@ namespace DoAn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1423, 798);
+            this.ClientSize = new System.Drawing.Size(1423, 831);
             this.Controls.Add(this.splitContainer1);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DanhSachCauHoiLuyenTap";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Danh sách câu hỏi luyện tập";
             this.Load += new System.EventHandler(this.DanhSachCauHoiLuyenTap_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);

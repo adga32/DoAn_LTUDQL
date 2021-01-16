@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace DoAn
 {
-    public partial class ChinhSuaDe : Form
+    public partial class ChinhSuaDe : MetroFramework.Forms.MetroForm
     {
         string MACAUHOIDANGCHON;
         string MAMONCUADEDANGCHON;

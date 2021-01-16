@@ -34,10 +34,10 @@
             // reportViewer1
             // 
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "DoAn.Reposts.BangDiemHs.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(12, 3);
+            this.reportViewer1.Location = new System.Drawing.Point(0, 81);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(776, 418);
+            this.reportViewer1.Size = new System.Drawing.Size(797, 391);
             this.reportViewer1.TabIndex = 0;
             // 
             // BangDiem
@@ -47,7 +47,7 @@
             this.ClientSize = new System.Drawing.Size(800, 472);
             this.Controls.Add(this.reportViewer1);
             this.Name = "BangDiem";
-            this.Text = "BangDiem";
+            this.Text = "Bảng Điểm";
             this.Load += new System.EventHandler(this.BangDiem_Load);
             this.ResumeLayout(false);
 

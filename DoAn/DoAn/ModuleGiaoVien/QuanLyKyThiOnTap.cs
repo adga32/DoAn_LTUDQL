@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace DoAn
 {
-    public partial class QuanLyKyThiOnTap : Form
+    public partial class QuanLyKyThiOnTap : MetroFramework.Forms.MetroForm
     {
         // 1->insert, 0->update
         public delegate void DelegateInsertOrUpdate(int flag);

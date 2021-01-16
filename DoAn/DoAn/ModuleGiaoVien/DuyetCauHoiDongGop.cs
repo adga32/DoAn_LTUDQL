@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace DoAn
 {
-    public partial class DuyetCauHoiDongGop : Form
+    public partial class DuyetCauHoiDongGop : MetroFramework.Forms.MetroForm
     {
 
         string maCauHoiHienTai;

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace DoAn
 {
-    public partial class CapNhatKyThiOnTap : Form
+    public partial class CapNhatKyThiOnTap : MetroFramework.Forms.MetroForm
     {
         string maKhoiGVChon;
         string maMonHocGVChon;

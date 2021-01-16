@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace DoAn
 {
-    public partial class QuanLyNguoiDung : Form
+    public partial class QuanLyNguoiDung : MetroFramework.Forms.MetroForm
     {
 
         public QuanLyNguoiDung()

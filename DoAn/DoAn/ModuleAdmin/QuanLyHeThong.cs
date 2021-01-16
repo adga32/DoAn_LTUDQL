@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace DoAn
 {
-    public partial class QuanLyHeThong : Form
+    public partial class QuanLyHeThong : MetroFramework.Forms.MetroForm
     {
         public QuanLyHeThong()
         {

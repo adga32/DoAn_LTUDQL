@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace DoAn.ModuleAdmin
 {
-    public partial class ExportDsHocSinhGiaoVien : Form
+    public partial class ExportDsHocSinhGiaoVien : MetroFramework.Forms.MetroForm
     {
         public ExportDsHocSinhGiaoVien()
         {

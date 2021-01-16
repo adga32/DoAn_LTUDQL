@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace DoAn
 {
-    public partial class QuanLyKyThi : Form
+    public partial class QuanLyKyThi : MetroFramework.Forms.MetroForm
     {
         string maKyThiNguoiDungChon=null;
 

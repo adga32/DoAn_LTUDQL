@@ -87,28 +87,32 @@
             this.dtgGiaoVien.DataSource = this.giaoVienBindingSource;
             this.dtgGiaoVien.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgGiaoVien.Location = new System.Drawing.Point(0, 0);
-            this.dtgGiaoVien.Margin = new System.Windows.Forms.Padding(2);
+            this.dtgGiaoVien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtgGiaoVien.Name = "dtgGiaoVien";
+            this.dtgGiaoVien.RowHeadersWidth = 51;
             this.dtgGiaoVien.RowTemplate.Height = 24;
-            this.dtgGiaoVien.Size = new System.Drawing.Size(892, 163);
+            this.dtgGiaoVien.Size = new System.Drawing.Size(1135, 200);
             this.dtgGiaoVien.TabIndex = 0;
             // 
             // maDataGridViewTextBoxColumn
             // 
             this.maDataGridViewTextBoxColumn.DataPropertyName = "ma";
             this.maDataGridViewTextBoxColumn.HeaderText = "Mã giáo Viên";
+            this.maDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.maDataGridViewTextBoxColumn.Name = "maDataGridViewTextBoxColumn";
             // 
             // tenDataGridViewTextBoxColumn
             // 
             this.tenDataGridViewTextBoxColumn.DataPropertyName = "ten";
             this.tenDataGridViewTextBoxColumn.HeaderText = "Họ Tên Giáo Viên";
+            this.tenDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.tenDataGridViewTextBoxColumn.Name = "tenDataGridViewTextBoxColumn";
             // 
             // ngaySinhDataGridViewTextBoxColumn
             // 
             this.ngaySinhDataGridViewTextBoxColumn.DataPropertyName = "ngaySinh";
             this.ngaySinhDataGridViewTextBoxColumn.HeaderText = "Ngày Sinh Gióa viên";
+            this.ngaySinhDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.ngaySinhDataGridViewTextBoxColumn.Name = "ngaySinhDataGridViewTextBoxColumn";
             // 
             // giaoVienBindingSource
@@ -125,10 +129,9 @@
             // 
             this.lbl1.AutoSize = true;
             this.lbl1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl1.Location = new System.Drawing.Point(2, 0);
-            this.lbl1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl1.Location = new System.Drawing.Point(3, 0);
             this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(136, 16);
+            this.lbl1.Size = new System.Drawing.Size(157, 19);
             this.lbl1.TabIndex = 1;
             this.lbl1.Text = "Danh sách người dùng";
             // 
@@ -136,10 +139,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(2, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 16);
+            this.label1.Size = new System.Drawing.Size(74, 19);
             this.label1.TabIndex = 1;
             this.label1.Text = "Giáo viên";
             // 
@@ -157,40 +159,46 @@
             this.dtgHocSinh.DataSource = this.hocSinhBindingSource;
             this.dtgHocSinh.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgHocSinh.Location = new System.Drawing.Point(0, 0);
-            this.dtgHocSinh.Margin = new System.Windows.Forms.Padding(2);
+            this.dtgHocSinh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtgHocSinh.Name = "dtgHocSinh";
+            this.dtgHocSinh.RowHeadersWidth = 51;
             this.dtgHocSinh.RowTemplate.Height = 24;
-            this.dtgHocSinh.Size = new System.Drawing.Size(892, 176);
+            this.dtgHocSinh.Size = new System.Drawing.Size(1135, 216);
             this.dtgHocSinh.TabIndex = 0;
             // 
             // maDataGridViewTextBoxColumn1
             // 
             this.maDataGridViewTextBoxColumn1.DataPropertyName = "ma";
             this.maDataGridViewTextBoxColumn1.HeaderText = "ma";
+            this.maDataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.maDataGridViewTextBoxColumn1.Name = "maDataGridViewTextBoxColumn1";
             // 
             // tenDataGridViewTextBoxColumn1
             // 
             this.tenDataGridViewTextBoxColumn1.DataPropertyName = "ten";
             this.tenDataGridViewTextBoxColumn1.HeaderText = "ten";
+            this.tenDataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.tenDataGridViewTextBoxColumn1.Name = "tenDataGridViewTextBoxColumn1";
             // 
             // ngaySinhDataGridViewTextBoxColumn1
             // 
             this.ngaySinhDataGridViewTextBoxColumn1.DataPropertyName = "ngaySinh";
             this.ngaySinhDataGridViewTextBoxColumn1.HeaderText = "ngaySinh";
+            this.ngaySinhDataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.ngaySinhDataGridViewTextBoxColumn1.Name = "ngaySinhDataGridViewTextBoxColumn1";
             // 
             // maLopDataGridViewTextBoxColumn
             // 
             this.maLopDataGridViewTextBoxColumn.DataPropertyName = "maLop";
             this.maLopDataGridViewTextBoxColumn.HeaderText = "maLop";
+            this.maLopDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.maLopDataGridViewTextBoxColumn.Name = "maLopDataGridViewTextBoxColumn";
             // 
             // maKhoiDataGridViewTextBoxColumn
             // 
             this.maKhoiDataGridViewTextBoxColumn.DataPropertyName = "maKhoi";
             this.maKhoiDataGridViewTextBoxColumn.HeaderText = "maKhoi";
+            this.maKhoiDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.maKhoiDataGridViewTextBoxColumn.Name = "maKhoiDataGridViewTextBoxColumn";
             // 
             // hocSinhBindingSource
@@ -207,20 +215,19 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(2, 0);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 16);
+            this.label2.Size = new System.Drawing.Size(70, 19);
             this.label2.TabIndex = 1;
             this.label2.Text = "Học sinh";
             // 
             // buttonImport
             // 
             this.buttonImport.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonImport.Location = new System.Drawing.Point(20, 416);
-            this.buttonImport.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonImport.Location = new System.Drawing.Point(27, 601);
+            this.buttonImport.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonImport.Name = "buttonImport";
-            this.buttonImport.Size = new System.Drawing.Size(180, 59);
+            this.buttonImport.Size = new System.Drawing.Size(240, 73);
             this.buttonImport.TabIndex = 2;
             this.buttonImport.Text = "Import danh sách học sinh giáo viên";
             this.buttonImport.UseVisualStyleBackColor = true;
@@ -232,9 +239,10 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(27, 74);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(892, 411);
+            this.panel1.Size = new System.Drawing.Size(1135, 506);
             this.panel1.TabIndex = 3;
             // 
             // panel5
@@ -242,18 +250,20 @@
             this.panel5.Controls.Add(this.panel8);
             this.panel5.Controls.Add(this.panel6);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(0, 211);
+            this.panel5.Location = new System.Drawing.Point(0, 260);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(892, 200);
+            this.panel5.Size = new System.Drawing.Size(1135, 246);
             this.panel5.TabIndex = 6;
             // 
             // panel8
             // 
             this.panel8.Controls.Add(this.dtgHocSinh);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel8.Location = new System.Drawing.Point(0, 24);
+            this.panel8.Location = new System.Drawing.Point(0, 30);
+            this.panel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(892, 176);
+            this.panel8.Size = new System.Drawing.Size(1135, 216);
             this.panel8.TabIndex = 3;
             // 
             // panel6
@@ -261,8 +271,9 @@
             this.panel6.Controls.Add(this.label2);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(892, 24);
+            this.panel6.Size = new System.Drawing.Size(1135, 30);
             this.panel6.TabIndex = 2;
             // 
             // panel2
@@ -270,18 +281,20 @@
             this.panel2.Controls.Add(this.panel7);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 24);
+            this.panel2.Location = new System.Drawing.Point(0, 30);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(892, 187);
+            this.panel2.Size = new System.Drawing.Size(1135, 230);
             this.panel2.TabIndex = 4;
             // 
             // panel7
             // 
             this.panel7.Controls.Add(this.dtgGiaoVien);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(0, 24);
+            this.panel7.Location = new System.Drawing.Point(0, 30);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(892, 163);
+            this.panel7.Size = new System.Drawing.Size(1135, 200);
             this.panel7.TabIndex = 1;
             // 
             // panel3
@@ -289,8 +302,9 @@
             this.panel3.Controls.Add(this.label1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(892, 24);
+            this.panel3.Size = new System.Drawing.Size(1135, 30);
             this.panel3.TabIndex = 0;
             // 
             // panel4
@@ -298,17 +312,18 @@
             this.panel4.Controls.Add(this.lbl1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(892, 24);
+            this.panel4.Size = new System.Drawing.Size(1135, 30);
             this.panel4.TabIndex = 5;
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(373, 416);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Location = new System.Drawing.Point(470, 601);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(180, 59);
+            this.button1.Size = new System.Drawing.Size(240, 73);
             this.button1.TabIndex = 4;
             this.button1.Text = "Cập nhật thay đổi ";
             this.button1.UseVisualStyleBackColor = true;
@@ -325,10 +340,10 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(701, 416);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Location = new System.Drawing.Point(922, 601);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(180, 59);
+            this.button2.Size = new System.Drawing.Size(240, 73);
             this.button2.TabIndex = 5;
             this.button2.Text = "Export danh sách học sinh giáo viên";
             this.button2.UseVisualStyleBackColor = true;
@@ -336,16 +351,17 @@
             // 
             // QuanLyNguoiDung
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(892, 486);
+            this.ClientSize = new System.Drawing.Size(1189, 701);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.buttonImport);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "QuanLyNguoiDung";
-            this.Text = "QuanLyNguoiDung";
+            this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
+            this.Text = "Quản lý người dùng";
             this.Load += new System.EventHandler(this.QuanLyNguoiDung_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgGiaoVien)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.giaoVienBindingSource)).EndInit();

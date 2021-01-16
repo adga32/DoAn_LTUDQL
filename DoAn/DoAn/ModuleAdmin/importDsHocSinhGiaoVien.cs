@@ -15,7 +15,7 @@ using System.Windows.Forms;
 
 namespace DoAn
 {
-    public partial class importDsHocSinhGiaoVien : Form
+    public partial class importDsHocSinhGiaoVien : MetroFramework.Forms.MetroForm 
     {
         public importDsHocSinhGiaoVien()
         {

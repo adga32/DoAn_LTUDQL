@@ -31,15 +31,16 @@ namespace DoAn
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvThongKe = new System.Windows.Forms.DataGridView();
+            this.TENHS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DIEM = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TENLOP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtDiemTrungBinh = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.cbbMaDe = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.cbbKyThi = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.TENHS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DIEM = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TENLOP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.metroSetControlBox1 = new MetroSet_UI.Controls.MetroSetControlBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongKe)).BeginInit();
             this.SuspendLayout();
@@ -54,9 +55,9 @@ namespace DoAn
             this.panel1.Controls.Add(this.cbbKyThi);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(20, 60);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(542, 603);
+            this.panel1.Size = new System.Drawing.Size(502, 523);
             this.panel1.TabIndex = 0;
             // 
             // dgvThongKe
@@ -78,6 +79,30 @@ namespace DoAn
             this.dgvThongKe.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvThongKe.Size = new System.Drawing.Size(541, 450);
             this.dgvThongKe.TabIndex = 13;
+            // 
+            // TENHS
+            // 
+            this.TENHS.DataPropertyName = "TENHS";
+            this.TENHS.HeaderText = "Tên học sinh";
+            this.TENHS.MinimumWidth = 6;
+            this.TENHS.Name = "TENHS";
+            this.TENHS.ReadOnly = true;
+            // 
+            // DIEM
+            // 
+            this.DIEM.DataPropertyName = "DIEM";
+            this.DIEM.HeaderText = "Điểm";
+            this.DIEM.MinimumWidth = 6;
+            this.DIEM.Name = "DIEM";
+            this.DIEM.ReadOnly = true;
+            // 
+            // TENLOP
+            // 
+            this.TENLOP.DataPropertyName = "TENLOP";
+            this.TENLOP.HeaderText = "Lớp";
+            this.TENLOP.MinimumWidth = 6;
+            this.TENLOP.Name = "TENLOP";
+            this.TENLOP.ReadOnly = true;
             // 
             // txtDiemTrungBinh
             // 
@@ -134,35 +159,38 @@ namespace DoAn
             this.label1.TabIndex = 7;
             this.label1.Text = "Kỳ thi:";
             // 
-            // TENHS
+            // metroSetControlBox1
             // 
-            this.TENHS.DataPropertyName = "TENHS";
-            this.TENHS.HeaderText = "Tên học sinh";
-            this.TENHS.MinimumWidth = 6;
-            this.TENHS.Name = "TENHS";
-            this.TENHS.ReadOnly = true;
-            // 
-            // DIEM
-            // 
-            this.DIEM.DataPropertyName = "DIEM";
-            this.DIEM.HeaderText = "Điểm";
-            this.DIEM.MinimumWidth = 6;
-            this.DIEM.Name = "DIEM";
-            this.DIEM.ReadOnly = true;
-            // 
-            // TENLOP
-            // 
-            this.TENLOP.DataPropertyName = "TENLOP";
-            this.TENLOP.HeaderText = "Lớp";
-            this.TENLOP.MinimumWidth = 6;
-            this.TENLOP.Name = "TENLOP";
-            this.TENLOP.ReadOnly = true;
+            this.metroSetControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.metroSetControlBox1.CloseHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.metroSetControlBox1.CloseHoverForeColor = System.Drawing.Color.White;
+            this.metroSetControlBox1.CloseNormalForeColor = System.Drawing.Color.Gray;
+            this.metroSetControlBox1.DisabledForeColor = System.Drawing.Color.DimGray;
+            this.metroSetControlBox1.IsDerivedStyle = true;
+            this.metroSetControlBox1.Location = new System.Drawing.Point(422, 3);
+            this.metroSetControlBox1.MaximizeBox = true;
+            this.metroSetControlBox1.MaximizeHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.metroSetControlBox1.MaximizeHoverForeColor = System.Drawing.Color.Gray;
+            this.metroSetControlBox1.MaximizeNormalForeColor = System.Drawing.Color.Gray;
+            this.metroSetControlBox1.MinimizeBox = true;
+            this.metroSetControlBox1.MinimizeHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.metroSetControlBox1.MinimizeHoverForeColor = System.Drawing.Color.Gray;
+            this.metroSetControlBox1.MinimizeNormalForeColor = System.Drawing.Color.Gray;
+            this.metroSetControlBox1.Name = "metroSetControlBox1";
+            this.metroSetControlBox1.Size = new System.Drawing.Size(100, 25);
+            this.metroSetControlBox1.Style = MetroSet_UI.Enums.Style.Light;
+            this.metroSetControlBox1.StyleManager = null;
+            this.metroSetControlBox1.TabIndex = 1;
+            this.metroSetControlBox1.Text = "metroSetControlBox1";
+            this.metroSetControlBox1.ThemeAuthor = "Narwin";
+            this.metroSetControlBox1.ThemeName = "MetroLite";
             // 
             // ThongKeKyThi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(542, 603);
+            this.Controls.Add(this.metroSetControlBox1);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -189,5 +217,6 @@ namespace DoAn
         private System.Windows.Forms.DataGridViewTextBoxColumn TENHS;
         private System.Windows.Forms.DataGridViewTextBoxColumn DIEM;
         private System.Windows.Forms.DataGridViewTextBoxColumn TENLOP;
+        private MetroSet_UI.Controls.MetroSetControlBox metroSetControlBox1;
     }
 }

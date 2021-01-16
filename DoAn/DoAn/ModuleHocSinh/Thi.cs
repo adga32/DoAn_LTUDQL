@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace DoAn
 {
-    public partial class Thi : Form
+    public partial class Thi : MetroFramework.Forms.MetroForm
     {
         public delegate void NguoiDungHienTai(string userName);
 

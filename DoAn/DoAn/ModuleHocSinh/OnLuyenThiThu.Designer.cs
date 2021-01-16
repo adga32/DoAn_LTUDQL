@@ -43,6 +43,7 @@
             this.dtgDeThi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgDeThi.Location = new System.Drawing.Point(21, 154);
             this.dtgDeThi.Name = "dtgDeThi";
+            this.dtgDeThi.RowHeadersWidth = 51;
             this.dtgDeThi.RowTemplate.Height = 24;
             this.dtgDeThi.Size = new System.Drawing.Size(594, 249);
             this.dtgDeThi.TabIndex = 0;
@@ -62,6 +63,7 @@
             this.dtgDapAn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgDapAn.Location = new System.Drawing.Point(648, 154);
             this.dtgDapAn.Name = "dtgDapAn";
+            this.dtgDapAn.RowHeadersWidth = 51;
             this.dtgDapAn.RowTemplate.Height = 24;
             this.dtgDapAn.Size = new System.Drawing.Size(461, 249);
             this.dtgDapAn.TabIndex = 2;
@@ -109,7 +111,6 @@
             this.Controls.Add(this.btnTest);
             this.Controls.Add(this.dtgDeThi);
             this.Name = "OnLuyenThiThu";
-            this.Text = "OnLuyenThiThu";
             ((System.ComponentModel.ISupportInitialize)(this.dtgDeThi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgDapAn)).EndInit();
             this.ResumeLayout(false);

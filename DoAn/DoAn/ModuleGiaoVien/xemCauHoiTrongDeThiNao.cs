@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace DoAn
 {
-    public partial class xemCauHoiTrongDeThiNao : Form
+    public partial class xemCauHoiTrongDeThiNao : MetroFramework.Forms.MetroForm
     {
         public string ma;
         public List<int> ListrowIndex = new List<int>();

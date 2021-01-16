@@ -60,7 +60,7 @@
             // 
             this.cbbMonHoc.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbMonHoc.FormattingEnabled = true;
-            this.cbbMonHoc.Location = new System.Drawing.Point(149, 32);
+            this.cbbMonHoc.Location = new System.Drawing.Point(179, 83);
             this.cbbMonHoc.Margin = new System.Windows.Forms.Padding(4);
             this.cbbMonHoc.Name = "cbbMonHoc";
             this.cbbMonHoc.Size = new System.Drawing.Size(160, 30);
@@ -70,7 +70,7 @@
             // 
             this.cbbKhoi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbKhoi.FormattingEnabled = true;
-            this.cbbKhoi.Location = new System.Drawing.Point(481, 32);
+            this.cbbKhoi.Location = new System.Drawing.Point(511, 83);
             this.cbbKhoi.Margin = new System.Windows.Forms.Padding(4);
             this.cbbKhoi.Name = "cbbKhoi";
             this.cbbKhoi.Size = new System.Drawing.Size(101, 30);
@@ -80,7 +80,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(27, 36);
+            this.label1.Location = new System.Drawing.Point(57, 87);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(90, 22);
@@ -91,7 +91,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(380, 36);
+            this.label2.Location = new System.Drawing.Point(410, 87);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 22);
@@ -101,7 +101,7 @@
             // txtNoiDungCauHoi
             // 
             this.txtNoiDungCauHoi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNoiDungCauHoi.Location = new System.Drawing.Point(149, 101);
+            this.txtNoiDungCauHoi.Location = new System.Drawing.Point(179, 152);
             this.txtNoiDungCauHoi.Margin = new System.Windows.Forms.Padding(4);
             this.txtNoiDungCauHoi.Multiline = true;
             this.txtNoiDungCauHoi.Name = "txtNoiDungCauHoi";
@@ -112,7 +112,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(27, 106);
+            this.label3.Location = new System.Drawing.Point(57, 157);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(82, 66);
@@ -123,7 +123,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(27, 224);
+            this.label4.Location = new System.Drawing.Point(57, 275);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(87, 22);
@@ -134,7 +134,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(597, 224);
+            this.label5.Location = new System.Drawing.Point(627, 275);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(87, 22);
@@ -145,7 +145,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(597, 335);
+            this.label6.Location = new System.Drawing.Point(627, 386);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(87, 22);
@@ -156,7 +156,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(27, 335);
+            this.label7.Location = new System.Drawing.Point(57, 386);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(87, 22);
@@ -167,7 +167,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(597, 450);
+            this.label8.Location = new System.Drawing.Point(627, 501);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(87, 22);
@@ -178,7 +178,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(27, 450);
+            this.label9.Location = new System.Drawing.Point(57, 501);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(87, 22);
@@ -188,7 +188,7 @@
             // btnDongGop
             // 
             this.btnDongGop.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDongGop.Location = new System.Drawing.Point(245, 626);
+            this.btnDongGop.Location = new System.Drawing.Point(275, 677);
             this.btnDongGop.Margin = new System.Windows.Forms.Padding(4);
             this.btnDongGop.Name = "btnDongGop";
             this.btnDongGop.Size = new System.Drawing.Size(168, 70);
@@ -200,7 +200,7 @@
             // btnXemDanhSachCauHoiDongGop
             // 
             this.btnXemDanhSachCauHoiDongGop.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXemDanhSachCauHoiDongGop.Location = new System.Drawing.Point(837, 626);
+            this.btnXemDanhSachCauHoiDongGop.Location = new System.Drawing.Point(867, 677);
             this.btnXemDanhSachCauHoiDongGop.Margin = new System.Windows.Forms.Padding(4);
             this.btnXemDanhSachCauHoiDongGop.Name = "btnXemDanhSachCauHoiDongGop";
             this.btnXemDanhSachCauHoiDongGop.Size = new System.Drawing.Size(168, 70);
@@ -212,7 +212,7 @@
             // txtGoiY
             // 
             this.txtGoiY.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGoiY.Location = new System.Drawing.Point(149, 524);
+            this.txtGoiY.Location = new System.Drawing.Point(179, 575);
             this.txtGoiY.Margin = new System.Windows.Forms.Padding(4);
             this.txtGoiY.Multiline = true;
             this.txtGoiY.Name = "txtGoiY";
@@ -223,7 +223,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(27, 550);
+            this.label10.Location = new System.Drawing.Point(57, 601);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(62, 22);
@@ -234,7 +234,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(615, 36);
+            this.label11.Location = new System.Drawing.Point(645, 87);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(73, 22);
@@ -245,7 +245,7 @@
             // 
             this.cbbDoKho.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbDoKho.FormattingEnabled = true;
-            this.cbbDoKho.Location = new System.Drawing.Point(716, 32);
+            this.cbbDoKho.Location = new System.Drawing.Point(746, 83);
             this.cbbDoKho.Margin = new System.Windows.Forms.Padding(4);
             this.cbbDoKho.Name = "cbbDoKho";
             this.cbbDoKho.Size = new System.Drawing.Size(119, 30);
@@ -254,7 +254,7 @@
             // ucF
             // 
             this.ucF.CheckBox = false;
-            this.ucF.Location = new System.Drawing.Point(695, 428);
+            this.ucF.Location = new System.Drawing.Point(725, 479);
             this.ucF.Margin = new System.Windows.Forms.Padding(5);
             this.ucF.Name = "ucF";
             this.ucF.NoiDung = "";
@@ -265,7 +265,7 @@
             // ucE
             // 
             this.ucE.CheckBox = false;
-            this.ucE.Location = new System.Drawing.Point(124, 428);
+            this.ucE.Location = new System.Drawing.Point(154, 479);
             this.ucE.Margin = new System.Windows.Forms.Padding(5);
             this.ucE.Name = "ucE";
             this.ucE.NoiDung = "";
@@ -276,7 +276,7 @@
             // ucD
             // 
             this.ucD.CheckBox = false;
-            this.ucD.Location = new System.Drawing.Point(695, 313);
+            this.ucD.Location = new System.Drawing.Point(725, 364);
             this.ucD.Margin = new System.Windows.Forms.Padding(5);
             this.ucD.Name = "ucD";
             this.ucD.NoiDung = "";
@@ -287,7 +287,7 @@
             // ucC
             // 
             this.ucC.CheckBox = false;
-            this.ucC.Location = new System.Drawing.Point(124, 313);
+            this.ucC.Location = new System.Drawing.Point(154, 364);
             this.ucC.Margin = new System.Windows.Forms.Padding(5);
             this.ucC.Name = "ucC";
             this.ucC.NoiDung = "";
@@ -298,7 +298,7 @@
             // ucB
             // 
             this.ucB.CheckBox = false;
-            this.ucB.Location = new System.Drawing.Point(695, 202);
+            this.ucB.Location = new System.Drawing.Point(725, 253);
             this.ucB.Margin = new System.Windows.Forms.Padding(5);
             this.ucB.Name = "ucB";
             this.ucB.NoiDung = "";
@@ -309,7 +309,7 @@
             // ucA
             // 
             this.ucA.CheckBox = false;
-            this.ucA.Location = new System.Drawing.Point(124, 202);
+            this.ucA.Location = new System.Drawing.Point(154, 253);
             this.ucA.Margin = new System.Windows.Forms.Padding(5);
             this.ucA.Name = "ucA";
             this.ucA.NoiDung = "";
@@ -321,7 +321,7 @@
             // 
             this.lblLoaiCauHoi.AutoSize = true;
             this.lblLoaiCauHoi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLoaiCauHoi.Location = new System.Drawing.Point(873, 36);
+            this.lblLoaiCauHoi.Location = new System.Drawing.Point(903, 87);
             this.lblLoaiCauHoi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLoaiCauHoi.Name = "lblLoaiCauHoi";
             this.lblLoaiCauHoi.Size = new System.Drawing.Size(114, 22);
@@ -332,7 +332,7 @@
             // 
             this.cbbLoaiCauHoi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbLoaiCauHoi.FormattingEnabled = true;
-            this.cbbLoaiCauHoi.Location = new System.Drawing.Point(995, 33);
+            this.cbbLoaiCauHoi.Location = new System.Drawing.Point(1025, 84);
             this.cbbLoaiCauHoi.Margin = new System.Windows.Forms.Padding(4);
             this.cbbLoaiCauHoi.Name = "cbbLoaiCauHoi";
             this.cbbLoaiCauHoi.Size = new System.Drawing.Size(119, 30);
@@ -342,7 +342,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1223, 756);
+            this.ClientSize = new System.Drawing.Size(1223, 763);
             this.Controls.Add(this.lblLoaiCauHoi);
             this.Controls.Add(this.cbbLoaiCauHoi);
             this.Controls.Add(this.label11);
@@ -371,7 +371,6 @@
             this.Controls.Add(this.cbbMonHoc);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DongGopCauHoi";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đóng góp câu hỏi";
             this.Load += new System.EventHandler(this.DongGopCauHoi_Load);
             this.ResumeLayout(false);

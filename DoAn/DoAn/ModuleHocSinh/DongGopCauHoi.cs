@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace DoAn
 {
-    public partial class DongGopCauHoi : Form
+    public partial class DongGopCauHoi : MetroFramework.Forms.MetroForm
     {
         string ID;
         string LoaiCauHoi="";

@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace DoAn
 {
-    public partial class frmAdmin : Form
+    public partial class frmAdmin : MetroFramework.Forms.MetroForm
     {
         string nguoidunghientai;
         public void LayNguoiDungHienTai(TextBox txtTenTaiKhoan)

@@ -44,10 +44,12 @@
             // 
             this.dtgKyThi.AllowUserToAddRows = false;
             this.dtgKyThi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgKyThi.Location = new System.Drawing.Point(64, 129);
+            this.dtgKyThi.Location = new System.Drawing.Point(72, 153);
+            this.dtgKyThi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtgKyThi.Name = "dtgKyThi";
+            this.dtgKyThi.RowHeadersWidth = 51;
             this.dtgKyThi.RowTemplate.Height = 24;
-            this.dtgKyThi.Size = new System.Drawing.Size(723, 456);
+            this.dtgKyThi.Size = new System.Drawing.Size(814, 542);
             this.dtgKyThi.TabIndex = 0;
             // 
             // label1
@@ -55,7 +57,8 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(403, 23);
+            this.label1.Location = new System.Drawing.Point(428, 35);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(149, 27);
             this.label1.TabIndex = 1;
@@ -65,7 +68,8 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(60, 97);
+            this.label2.Location = new System.Drawing.Point(67, 80);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(120, 19);
             this.label2.TabIndex = 2;
@@ -74,9 +78,10 @@
             // btnTaoKyThiMoi
             // 
             this.btnTaoKyThiMoi.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTaoKyThiMoi.Location = new System.Drawing.Point(818, 129);
+            this.btnTaoKyThiMoi.Location = new System.Drawing.Point(921, 153);
+            this.btnTaoKyThiMoi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnTaoKyThiMoi.Name = "btnTaoKyThiMoi";
-            this.btnTaoKyThiMoi.Size = new System.Drawing.Size(144, 45);
+            this.btnTaoKyThiMoi.Size = new System.Drawing.Size(162, 53);
             this.btnTaoKyThiMoi.TabIndex = 3;
             this.btnTaoKyThiMoi.Text = "Tạo kỳ thi mới";
             this.btnTaoKyThiMoi.UseVisualStyleBackColor = true;
@@ -84,9 +89,10 @@
             // btnCapNhatKyThi
             // 
             this.btnCapNhatKyThi.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCapNhatKyThi.Location = new System.Drawing.Point(822, 214);
+            this.btnCapNhatKyThi.Location = new System.Drawing.Point(924, 253);
+            this.btnCapNhatKyThi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCapNhatKyThi.Name = "btnCapNhatKyThi";
-            this.btnCapNhatKyThi.Size = new System.Drawing.Size(140, 45);
+            this.btnCapNhatKyThi.Size = new System.Drawing.Size(157, 53);
             this.btnCapNhatKyThi.TabIndex = 3;
             this.btnCapNhatKyThi.Text = "Cập nhật kỳ thi";
             this.btnCapNhatKyThi.UseVisualStyleBackColor = true;
@@ -94,9 +100,10 @@
             // btnXoaKyThi
             // 
             this.btnXoaKyThi.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoaKyThi.Location = new System.Drawing.Point(822, 299);
+            this.btnXoaKyThi.Location = new System.Drawing.Point(924, 355);
+            this.btnXoaKyThi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnXoaKyThi.Name = "btnXoaKyThi";
-            this.btnXoaKyThi.Size = new System.Drawing.Size(144, 45);
+            this.btnXoaKyThi.Size = new System.Drawing.Size(162, 53);
             this.btnXoaKyThi.TabIndex = 3;
             this.btnXoaKyThi.Text = "Xóa kỳ thi";
             this.btnXoaKyThi.UseVisualStyleBackColor = true;
@@ -104,9 +111,10 @@
             // btnDsThi
             // 
             this.btnDsThi.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDsThi.Location = new System.Drawing.Point(64, 635);
+            this.btnDsThi.Location = new System.Drawing.Point(72, 754);
+            this.btnDsThi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDsThi.Name = "btnDsThi";
-            this.btnDsThi.Size = new System.Drawing.Size(154, 53);
+            this.btnDsThi.Size = new System.Drawing.Size(174, 63);
             this.btnDsThi.TabIndex = 3;
             this.btnDsThi.Text = "Danh sách thí sinh";
             this.btnDsThi.UseVisualStyleBackColor = true;
@@ -114,9 +122,10 @@
             // btnBangDiem
             // 
             this.btnBangDiem.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBangDiem.Location = new System.Drawing.Point(244, 635);
+            this.btnBangDiem.Location = new System.Drawing.Point(275, 754);
+            this.btnBangDiem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBangDiem.Name = "btnBangDiem";
-            this.btnBangDiem.Size = new System.Drawing.Size(134, 53);
+            this.btnBangDiem.Size = new System.Drawing.Size(150, 63);
             this.btnBangDiem.TabIndex = 3;
             this.btnBangDiem.Text = "Bảng kết quả";
             this.btnBangDiem.UseVisualStyleBackColor = true;
@@ -124,9 +133,10 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(822, 635);
+            this.button1.Location = new System.Drawing.Point(924, 754);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 46);
+            this.button1.Size = new System.Drawing.Size(113, 54);
             this.button1.TabIndex = 3;
             this.button1.Text = "Đóng";
             this.button1.UseVisualStyleBackColor = true;
@@ -134,9 +144,9 @@
             // 
             // QuanLyKyThi
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(998, 719);
+            this.ClientSize = new System.Drawing.Size(1122, 854);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnBangDiem);
             this.Controls.Add(this.btnDsThi);
@@ -146,7 +156,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dtgKyThi);
+            this.DisplayHeader = false;
+            this.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "QuanLyKyThi";
+            this.Padding = new System.Windows.Forms.Padding(23, 35, 23, 24);
             this.Text = "QuanLyKyThi";
             ((System.ComponentModel.ISupportInitialize)(this.dtgKyThi)).EndInit();
             this.ResumeLayout(false);

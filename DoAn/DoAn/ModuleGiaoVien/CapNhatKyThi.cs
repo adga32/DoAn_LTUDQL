@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace DoAn
 {
-    public partial class CapNhatKyThi : Form
+    public partial class CapNhatKyThi : MetroFramework.Forms.MetroForm
     {
         // 1 -> insert, 0 -> update
         int updateOrInsert = 1;

@@ -30,10 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.rptVDsHocSinh = new Microsoft.Reporting.WinForms.ReportViewer();
             this.ThongTinBangDiemBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.rptVDsHocSinh = new Microsoft.Reporting.WinForms.ReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.ThongTinBangDiemBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // ThongTinBangDiemBindingSource
+            // 
+            this.ThongTinBangDiemBindingSource.DataSource = typeof(DoAn.ThongTinBangDiem);
             // 
             // rptVDsHocSinh
             // 
@@ -41,24 +45,20 @@
             reportDataSource1.Value = this.ThongTinBangDiemBindingSource;
             this.rptVDsHocSinh.LocalReport.DataSources.Add(reportDataSource1);
             this.rptVDsHocSinh.LocalReport.ReportEmbeddedResource = "DoAn.Reposts.DsHocSinh.rdlc";
-            this.rptVDsHocSinh.Location = new System.Drawing.Point(12, 12);
+            this.rptVDsHocSinh.Location = new System.Drawing.Point(13, 72);
             this.rptVDsHocSinh.Name = "rptVDsHocSinh";
             this.rptVDsHocSinh.ServerReport.BearerToken = null;
             this.rptVDsHocSinh.Size = new System.Drawing.Size(856, 476);
             this.rptVDsHocSinh.TabIndex = 0;
             // 
-            // ThongTinBangDiemBindingSource
-            // 
-            this.ThongTinBangDiemBindingSource.DataSource = typeof(DoAn.ThongTinBangDiem);
-            // 
             // PrintDanhSachHS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(880, 500);
+            this.ClientSize = new System.Drawing.Size(880, 562);
             this.Controls.Add(this.rptVDsHocSinh);
             this.Name = "PrintDanhSachHS";
-            this.Text = "PrintDanhSachHS";
+            this.Text = "In danh sách học sinh";
             this.Load += new System.EventHandler(this.PrintDanhSachHS_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ThongTinBangDiemBindingSource)).EndInit();
             this.ResumeLayout(false);

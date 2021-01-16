@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace DoAn
 {
-    public partial class ThongTinHocSinh : Form
+    public partial class ThongTinHocSinh : MetroFramework.Forms.MetroForm
     {
         string ID_hocSinh;
 

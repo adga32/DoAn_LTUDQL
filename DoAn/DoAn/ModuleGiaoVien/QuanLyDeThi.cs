@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace DoAn
 {
-    public partial class QuanLyDeThi : Form
+    public partial class QuanLyDeThi : MetroFramework.Forms.MetroForm
     {
         RequiredFieldValidator RequiredFieldValidatorMaDe;
         RequiredFieldValidator RequiredFieldValidatorSoLuongCauHoi;

@@ -48,9 +48,10 @@ namespace DoAn
             this.panel1.Controls.Add(this.txtFilePath);
             this.panel1.Controls.Add(this.button_sql);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(27, 74);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 65);
+            this.panel1.Size = new System.Drawing.Size(1073, 80);
             this.panel1.TabIndex = 0;
             // 
             // comboBox1
@@ -59,33 +60,37 @@ namespace DoAn
             this.comboBox1.Items.AddRange(new object[] {
             "Giáo Viên",
             "Học sinh"});
-            this.comboBox1.Location = new System.Drawing.Point(133, 19);
+            this.comboBox1.Location = new System.Drawing.Point(177, 23);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.Size = new System.Drawing.Size(160, 24);
             this.comboBox1.TabIndex = 8;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged_1);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(290, 26);
+            this.label1.Location = new System.Drawing.Point(387, 32);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(36, 13);
+            this.label1.Size = new System.Drawing.Size(45, 17);
             this.label1.TabIndex = 7;
             this.label1.Text = "PATH";
             // 
             // txtFilePath
             // 
-            this.txtFilePath.Location = new System.Drawing.Point(341, 19);
+            this.txtFilePath.Location = new System.Drawing.Point(455, 23);
+            this.txtFilePath.Margin = new System.Windows.Forms.Padding(4);
             this.txtFilePath.Name = "txtFilePath";
-            this.txtFilePath.Size = new System.Drawing.Size(430, 20);
+            this.txtFilePath.Size = new System.Drawing.Size(572, 22);
             this.txtFilePath.TabIndex = 6;
             // 
             // button_sql
             // 
-            this.button_sql.Location = new System.Drawing.Point(30, 3);
+            this.button_sql.Location = new System.Drawing.Point(40, 4);
+            this.button_sql.Margin = new System.Windows.Forms.Padding(4);
             this.button_sql.Name = "button_sql";
-            this.button_sql.Size = new System.Drawing.Size(75, 59);
+            this.button_sql.Size = new System.Drawing.Size(100, 73);
             this.button_sql.TabIndex = 5;
             this.button_sql.Text = "Đưa dữ liệu vào database";
             this.button_sql.UseVisualStyleBackColor = true;
@@ -95,9 +100,10 @@ namespace DoAn
             // 
             this.panel2.Controls.Add(this.dataGridView1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 65);
+            this.panel2.Location = new System.Drawing.Point(27, 154);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(800, 385);
+            this.panel2.Size = new System.Drawing.Size(1073, 418);
             this.panel2.TabIndex = 1;
             // 
             // dataGridView1
@@ -105,19 +111,23 @@ namespace DoAn
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(800, 385);
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(1073, 418);
             this.dataGridView1.TabIndex = 1;
             // 
             // importDsHocSinhGiaoVien
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1127, 597);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "importDsHocSinhGiaoVien";
-            this.Text = "importDsHocSinhGiaoVien";
+            this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
+            this.Text = "Thêm danh sách học sinh, giáo viên";
             this.Load += new System.EventHandler(this.importDsHocSinhGiaoVien_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

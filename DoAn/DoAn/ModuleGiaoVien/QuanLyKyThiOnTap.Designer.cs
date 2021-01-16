@@ -43,6 +43,7 @@
             this.dtgKyThi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgKyThi.Location = new System.Drawing.Point(77, 113);
             this.dtgKyThi.Name = "dtgKyThi";
+            this.dtgKyThi.RowHeadersWidth = 51;
             this.dtgKyThi.RowTemplate.Height = 24;
             this.dtgKyThi.Size = new System.Drawing.Size(710, 304);
             this.dtgKyThi.TabIndex = 0;
@@ -52,7 +53,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(423, 28);
+            this.label1.Location = new System.Drawing.Point(423, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(215, 27);
             this.label1.TabIndex = 1;
@@ -104,7 +105,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(73, 89);
+            this.label2.Location = new System.Drawing.Point(73, 59);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(165, 19);
             this.label2.TabIndex = 1;
@@ -122,7 +123,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dtgKyThi);
+            this.DisplayHeader = false;
             this.Name = "QuanLyKyThiOnTap";
+            this.Padding = new System.Windows.Forms.Padding(20, 30, 20, 20);
             this.Text = "QuanLyKyThiOnTap";
             ((System.ComponentModel.ISupportInitialize)(this.dtgKyThi)).EndInit();
             this.ResumeLayout(false);

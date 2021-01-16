@@ -11,7 +11,7 @@ using System.Data.SqlClient;
 
 namespace DoAn
 {
-    public partial class LamBaiTracNghiem : Form
+    public partial class LamBaiTracNghiem : MetroFramework.Forms.MetroForm
     {
         // biến toàn cục form
         string nguoiDungHienTaiLamBai;

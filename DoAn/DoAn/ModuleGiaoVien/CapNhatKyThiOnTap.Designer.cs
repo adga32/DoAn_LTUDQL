@@ -106,6 +106,7 @@
             this.dtgHocSinh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgHocSinh.Location = new System.Drawing.Point(26, 187);
             this.dtgHocSinh.Name = "dtgHocSinh";
+            this.dtgHocSinh.RowHeadersWidth = 51;
             this.dtgHocSinh.RowTemplate.Height = 24;
             this.dtgHocSinh.Size = new System.Drawing.Size(694, 416);
             this.dtgHocSinh.TabIndex = 11;
@@ -125,6 +126,7 @@
             this.dtgDeThi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgDeThi.Location = new System.Drawing.Point(747, 187);
             this.dtgDeThi.Name = "dtgDeThi";
+            this.dtgDeThi.RowHeadersWidth = 51;
             this.dtgDeThi.RowTemplate.Height = 24;
             this.dtgDeThi.Size = new System.Drawing.Size(434, 416);
             this.dtgDeThi.TabIndex = 12;
@@ -166,7 +168,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dtpNgayThi);
             this.Name = "CapNhatKyThiOnTap";
-            this.Text = "CapNhatKyThiOnTap";
+            this.Text = "Cập nhật kỳ thi ôn tập";
             ((System.ComponentModel.ISupportInitialize)(this.dtgHocSinh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgDeThi)).EndInit();
             this.ResumeLayout(false);

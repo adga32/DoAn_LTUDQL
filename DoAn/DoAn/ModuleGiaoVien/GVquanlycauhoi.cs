@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace DoAn
 {
-    public partial class GVquanlycauhoi : Form
+    public partial class GVquanlycauhoi : MetroFramework.Forms.MetroForm
     {
         public GVquanlycauhoi()
         {

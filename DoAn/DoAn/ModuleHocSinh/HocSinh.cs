@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace DoAn
 {
-    public partial class HocSinh : Form
+    public partial class HocSinh : MetroFramework.Forms.MetroForm
     {
         Button[] arrBtn;
 

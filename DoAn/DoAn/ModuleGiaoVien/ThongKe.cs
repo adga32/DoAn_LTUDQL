@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace DoAn
 {
-    public partial class ThongKe : Form
+    public partial class ThongKe : MetroFramework.Forms.MetroForm
     {
         public ThongKe()
         {

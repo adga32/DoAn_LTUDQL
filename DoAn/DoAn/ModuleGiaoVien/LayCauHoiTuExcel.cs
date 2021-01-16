@@ -15,7 +15,7 @@ using DoAn;
 
 namespace DoAn
 {
-    public partial class LayCauHoiTuExcel : Form
+    public partial class LayCauHoiTuExcel : MetroFramework.Forms.MetroForm
     {
         public LayCauHoiTuExcel()
         {

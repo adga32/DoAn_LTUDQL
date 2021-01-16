@@ -32,6 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LamBaiTracNghiem));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.lblSoCauDaHoanThanh = new System.Windows.Forms.Label();
+            this.lblMonHoc = new System.Windows.Forms.Label();
+            this.lblMaDe = new System.Windows.Forms.Label();
             this.lblHienThiCauDaHoanThanh = new System.Windows.Forms.Label();
             this.lblThoiGian = new System.Windows.Forms.Label();
             this.btnNopBai = new System.Windows.Forms.Button();
@@ -47,8 +49,7 @@
             this.txtNoiDungCauHoi = new System.Windows.Forms.TextBox();
             this.lblThoiGianConLai = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.lblMaDe = new System.Windows.Forms.Label();
-            this.lblMonHoc = new System.Windows.Forms.Label();
+            this.metroSetControlBox1 = new MetroSet_UI.Controls.MetroSetControlBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -59,13 +60,14 @@
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Location = new System.Drawing.Point(20, 30);
             this.splitContainer1.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.lblThoiGianConLai);
             this.splitContainer1.Panel1.Controls.Add(this.lblSoCauDaHoanThanh);
             this.splitContainer1.Panel1.Controls.Add(this.lblMonHoc);
             this.splitContainer1.Panel1.Controls.Add(this.lblMaDe);
@@ -86,7 +88,7 @@
             this.splitContainer1.Panel2.Controls.Add(this.ucB);
             this.splitContainer1.Panel2.Controls.Add(this.ucA);
             this.splitContainer1.Panel2.Controls.Add(this.txtNoiDungCauHoi);
-            this.splitContainer1.Size = new System.Drawing.Size(1067, 722);
+            this.splitContainer1.Size = new System.Drawing.Size(1027, 672);
             this.splitContainer1.SplitterDistance = 112;
             this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 0;
@@ -100,6 +102,28 @@
             this.lblSoCauDaHoanThanh.Size = new System.Drawing.Size(46, 22);
             this.lblSoCauDaHoanThanh.TabIndex = 2;
             this.lblSoCauDaHoanThanh.Text = "0/60";
+            // 
+            // lblMonHoc
+            // 
+            this.lblMonHoc.AutoSize = true;
+            this.lblMonHoc.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMonHoc.Location = new System.Drawing.Point(64, 61);
+            this.lblMonHoc.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblMonHoc.Name = "lblMonHoc";
+            this.lblMonHoc.Size = new System.Drawing.Size(79, 22);
+            this.lblMonHoc.TabIndex = 1;
+            this.lblMonHoc.Text = "Môn học";
+            // 
+            // lblMaDe
+            // 
+            this.lblMaDe.AutoSize = true;
+            this.lblMaDe.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMaDe.Location = new System.Drawing.Point(64, 24);
+            this.lblMaDe.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblMaDe.Name = "lblMaDe";
+            this.lblMaDe.Size = new System.Drawing.Size(60, 22);
+            this.lblMaDe.TabIndex = 1;
+            this.lblMaDe.Text = "Mã đề";
             // 
             // lblHienThiCauDaHoanThanh
             // 
@@ -116,7 +140,7 @@
             // 
             this.lblThoiGian.AutoSize = true;
             this.lblThoiGian.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblThoiGian.Location = new System.Drawing.Point(791, 22);
+            this.lblThoiGian.Location = new System.Drawing.Point(770, 22);
             this.lblThoiGian.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblThoiGian.Name = "lblThoiGian";
             this.lblThoiGian.Size = new System.Drawing.Size(156, 22);
@@ -252,45 +276,50 @@
             this.lblThoiGianConLai.AutoSize = true;
             this.lblThoiGianConLai.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblThoiGianConLai.ForeColor = System.Drawing.Color.Red;
-            this.lblThoiGianConLai.Location = new System.Drawing.Point(951, 17);
+            this.lblThoiGianConLai.Location = new System.Drawing.Point(930, 17);
             this.lblThoiGianConLai.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblThoiGianConLai.Name = "lblThoiGianConLai";
             this.lblThoiGianConLai.Size = new System.Drawing.Size(93, 31);
             this.lblThoiGianConLai.TabIndex = 2;
             this.lblThoiGianConLai.Text = "00 : 00";
             // 
-            // lblMaDe
+            // metroSetControlBox1
             // 
-            this.lblMaDe.AutoSize = true;
-            this.lblMaDe.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMaDe.Location = new System.Drawing.Point(64, 24);
-            this.lblMaDe.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblMaDe.Name = "lblMaDe";
-            this.lblMaDe.Size = new System.Drawing.Size(60, 22);
-            this.lblMaDe.TabIndex = 1;
-            this.lblMaDe.Text = "Mã đề";
-            // 
-            // lblMonHoc
-            // 
-            this.lblMonHoc.AutoSize = true;
-            this.lblMonHoc.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMonHoc.Location = new System.Drawing.Point(64, 61);
-            this.lblMonHoc.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblMonHoc.Name = "lblMonHoc";
-            this.lblMonHoc.Size = new System.Drawing.Size(79, 22);
-            this.lblMonHoc.TabIndex = 1;
-            this.lblMonHoc.Text = "Môn học";
+            this.metroSetControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.metroSetControlBox1.CloseHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.metroSetControlBox1.CloseHoverForeColor = System.Drawing.Color.White;
+            this.metroSetControlBox1.CloseNormalForeColor = System.Drawing.Color.Gray;
+            this.metroSetControlBox1.DisabledForeColor = System.Drawing.Color.DimGray;
+            this.metroSetControlBox1.IsDerivedStyle = true;
+            this.metroSetControlBox1.Location = new System.Drawing.Point(930, -2);
+            this.metroSetControlBox1.MaximizeBox = true;
+            this.metroSetControlBox1.MaximizeHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.metroSetControlBox1.MaximizeHoverForeColor = System.Drawing.Color.Gray;
+            this.metroSetControlBox1.MaximizeNormalForeColor = System.Drawing.Color.Gray;
+            this.metroSetControlBox1.MinimizeBox = true;
+            this.metroSetControlBox1.MinimizeHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.metroSetControlBox1.MinimizeHoverForeColor = System.Drawing.Color.Gray;
+            this.metroSetControlBox1.MinimizeNormalForeColor = System.Drawing.Color.Gray;
+            this.metroSetControlBox1.Name = "metroSetControlBox1";
+            this.metroSetControlBox1.Size = new System.Drawing.Size(100, 25);
+            this.metroSetControlBox1.Style = MetroSet_UI.Enums.Style.Light;
+            this.metroSetControlBox1.StyleManager = null;
+            this.metroSetControlBox1.TabIndex = 1;
+            this.metroSetControlBox1.Text = "metroSetControlBox1";
+            this.metroSetControlBox1.ThemeAuthor = "Narwin";
+            this.metroSetControlBox1.ThemeName = "MetroLite";
             // 
             // LamBaiTracNghiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 722);
-            this.Controls.Add(this.lblThoiGianConLai);
+            this.Controls.Add(this.metroSetControlBox1);
             this.Controls.Add(this.splitContainer1);
+            this.DisplayHeader = false;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "LamBaiTracNghiem";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Padding = new System.Windows.Forms.Padding(20, 30, 20, 20);
             this.Text = "LamBaiTracNghiem";
             this.Load += new System.EventHandler(this.LamBaiTracNghiem_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
@@ -300,7 +329,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -325,5 +353,6 @@
         private System.Windows.Forms.Label lblSoCauDaHoanThanh;
         private System.Windows.Forms.Label lblMonHoc;
         private System.Windows.Forms.Label lblMaDe;
+        private MetroSet_UI.Controls.MetroSetControlBox metroSetControlBox1;
     }
 }

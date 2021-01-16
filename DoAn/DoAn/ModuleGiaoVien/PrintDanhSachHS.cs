@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace DoAn
 {
-    public partial class PrintDanhSachHS : Form
+    public partial class PrintDanhSachHS : MetroFramework.Forms.MetroForm
     {
         string maKyThi;
 

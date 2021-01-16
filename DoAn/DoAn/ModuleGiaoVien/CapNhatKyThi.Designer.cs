@@ -67,6 +67,7 @@
             this.dtgHocSinhDeThi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgHocSinhDeThi.Location = new System.Drawing.Point(40, 195);
             this.dtgHocSinhDeThi.Name = "dtgHocSinhDeThi";
+            this.dtgHocSinhDeThi.RowHeadersWidth = 51;
             this.dtgHocSinhDeThi.RowTemplate.Height = 24;
             this.dtgHocSinhDeThi.Size = new System.Drawing.Size(865, 348);
             this.dtgHocSinhDeThi.TabIndex = 2;
@@ -87,7 +88,7 @@
             this.label4.BackColor = System.Drawing.SystemColors.Control;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(451, 21);
+            this.label4.Location = new System.Drawing.Point(385, 23);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(132, 22);
             this.label4.TabIndex = 1;
@@ -169,7 +170,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dtpNgayThi);
             this.Name = "CapNhatKyThi";
-            this.Text = "QuanLyKyThi";
             ((System.ComponentModel.ISupportInitialize)(this.dtgHocSinhDeThi)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

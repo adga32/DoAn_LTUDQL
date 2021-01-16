@@ -57,9 +57,10 @@ namespace DoAn
             this.panel1.Controls.Add(this.dataGridViewDethi);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(27, 74);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(612, 551);
+            this.panel1.Size = new System.Drawing.Size(816, 579);
             this.panel1.TabIndex = 0;
             // 
             // dataGridViewDethi
@@ -69,10 +70,12 @@ namespace DoAn
             this.dataGridViewDethi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewDethi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewDethi.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewDethi.Location = new System.Drawing.Point(0, 100);
+            this.dataGridViewDethi.Location = new System.Drawing.Point(0, 123);
+            this.dataGridViewDethi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridViewDethi.Name = "dataGridViewDethi";
             this.dataGridViewDethi.ReadOnly = true;
-            this.dataGridViewDethi.Size = new System.Drawing.Size(612, 451);
+            this.dataGridViewDethi.RowHeadersWidth = 51;
+            this.dataGridViewDethi.Size = new System.Drawing.Size(816, 456);
             this.dataGridViewDethi.TabIndex = 1;
             // 
             // panel4
@@ -80,8 +83,9 @@ namespace DoAn
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(612, 100);
+            this.panel4.Size = new System.Drawing.Size(816, 123);
             this.panel4.TabIndex = 0;
             // 
             // panel2
@@ -89,9 +93,10 @@ namespace DoAn
             this.panel2.Controls.Add(this.dgvDSCauHoi);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(612, 0);
+            this.panel2.Location = new System.Drawing.Point(843, 74);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(639, 551);
+            this.panel2.Size = new System.Drawing.Size(798, 579);
             this.panel2.TabIndex = 1;
             // 
             // dgvDSCauHoi
@@ -101,10 +106,12 @@ namespace DoAn
             this.dgvDSCauHoi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDSCauHoi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDSCauHoi.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvDSCauHoi.Location = new System.Drawing.Point(0, 100);
+            this.dgvDSCauHoi.Location = new System.Drawing.Point(0, 123);
+            this.dgvDSCauHoi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvDSCauHoi.Name = "dgvDSCauHoi";
             this.dgvDSCauHoi.ReadOnly = true;
-            this.dgvDSCauHoi.Size = new System.Drawing.Size(639, 451);
+            this.dgvDSCauHoi.RowHeadersWidth = 51;
+            this.dgvDSCauHoi.Size = new System.Drawing.Size(798, 456);
             this.dgvDSCauHoi.TabIndex = 1;
             this.dgvDSCauHoi.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDSCauHoi_CellClick);
             // 
@@ -123,16 +130,18 @@ namespace DoAn
             this.panel3.Controls.Add(this.cbbKhoi);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(639, 100);
+            this.panel3.Size = new System.Drawing.Size(798, 123);
             this.panel3.TabIndex = 0;
             // 
             // buttonSearchNext
             // 
             this.buttonSearchNext.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSearchNext.Location = new System.Drawing.Point(556, 54);
+            this.buttonSearchNext.Location = new System.Drawing.Point(741, 66);
+            this.buttonSearchNext.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonSearchNext.Name = "buttonSearchNext";
-            this.buttonSearchNext.Size = new System.Drawing.Size(75, 23);
+            this.buttonSearchNext.Size = new System.Drawing.Size(100, 28);
             this.buttonSearchNext.TabIndex = 22;
             this.buttonSearchNext.Text = "Search Next";
             this.buttonSearchNext.UseVisualStyleBackColor = true;
@@ -141,9 +150,10 @@ namespace DoAn
             // buttonSearch
             // 
             this.buttonSearch.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSearch.Location = new System.Drawing.Point(452, 54);
+            this.buttonSearch.Location = new System.Drawing.Point(603, 66);
+            this.buttonSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonSearch.Name = "buttonSearch";
-            this.buttonSearch.Size = new System.Drawing.Size(75, 23);
+            this.buttonSearch.Size = new System.Drawing.Size(100, 28);
             this.buttonSearch.TabIndex = 21;
             this.buttonSearch.Text = "Search";
             this.buttonSearch.UseVisualStyleBackColor = true;
@@ -151,35 +161,39 @@ namespace DoAn
             // 
             // txtSearchBox
             // 
-            this.txtSearchBox.Location = new System.Drawing.Point(304, 57);
+            this.txtSearchBox.Location = new System.Drawing.Point(405, 70);
+            this.txtSearchBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSearchBox.Name = "txtSearchBox";
-            this.txtSearchBox.Size = new System.Drawing.Size(119, 20);
+            this.txtSearchBox.Size = new System.Drawing.Size(157, 22);
             this.txtSearchBox.TabIndex = 20;
             // 
             // cmbSearchType
             // 
             this.cmbSearchType.FormattingEnabled = true;
-            this.cmbSearchType.Location = new System.Drawing.Point(85, 58);
+            this.cmbSearchType.Location = new System.Drawing.Point(113, 71);
+            this.cmbSearchType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbSearchType.Name = "cmbSearchType";
-            this.cmbSearchType.Size = new System.Drawing.Size(151, 21);
+            this.cmbSearchType.Size = new System.Drawing.Size(200, 24);
             this.cmbSearchType.TabIndex = 19;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 58);
+            this.label1.Location = new System.Drawing.Point(16, 71);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 19);
+            this.label1.Size = new System.Drawing.Size(97, 22);
             this.label1.TabIndex = 18;
             this.label1.Text = "Search By:";
             // 
             // buttonShowALL
             // 
             this.buttonShowALL.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonShowALL.Location = new System.Drawing.Point(555, 14);
+            this.buttonShowALL.Location = new System.Drawing.Point(740, 17);
+            this.buttonShowALL.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonShowALL.Name = "buttonShowALL";
-            this.buttonShowALL.Size = new System.Drawing.Size(75, 23);
+            this.buttonShowALL.Size = new System.Drawing.Size(100, 28);
             this.buttonShowALL.TabIndex = 17;
             this.buttonShowALL.Text = "Show All";
             this.buttonShowALL.UseVisualStyleBackColor = true;
@@ -188,9 +202,10 @@ namespace DoAn
             // button_suaCauhoiSelected
             // 
             this.button_suaCauhoiSelected.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_suaCauhoiSelected.Location = new System.Drawing.Point(451, 14);
+            this.button_suaCauhoiSelected.Location = new System.Drawing.Point(601, 17);
+            this.button_suaCauhoiSelected.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button_suaCauhoiSelected.Name = "button_suaCauhoiSelected";
-            this.button_suaCauhoiSelected.Size = new System.Drawing.Size(75, 23);
+            this.button_suaCauhoiSelected.Size = new System.Drawing.Size(100, 28);
             this.button_suaCauhoiSelected.TabIndex = 13;
             this.button_suaCauhoiSelected.Text = "Sửa";
             this.button_suaCauhoiSelected.UseVisualStyleBackColor = true;
@@ -199,9 +214,10 @@ namespace DoAn
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(11, 15);
+            this.label2.Location = new System.Drawing.Point(15, 18);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 19);
+            this.label2.Size = new System.Drawing.Size(85, 22);
             this.label2.TabIndex = 16;
             this.label2.Text = "Môn học:";
             // 
@@ -211,9 +227,10 @@ namespace DoAn
             this.cbbMonHoc.FormattingEnabled = true;
             this.cbbMonHoc.Items.AddRange(new object[] {
             ""});
-            this.cbbMonHoc.Location = new System.Drawing.Point(84, 12);
+            this.cbbMonHoc.Location = new System.Drawing.Point(112, 15);
+            this.cbbMonHoc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbbMonHoc.Name = "cbbMonHoc";
-            this.cbbMonHoc.Size = new System.Drawing.Size(152, 27);
+            this.cbbMonHoc.Size = new System.Drawing.Size(201, 30);
             this.cbbMonHoc.TabIndex = 14;
             this.cbbMonHoc.SelectedIndexChanged += new System.EventHandler(this.cbbMonHoc_SelectedIndexChanged);
             // 
@@ -221,21 +238,24 @@ namespace DoAn
             // 
             this.cbbKhoi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbKhoi.FormattingEnabled = true;
-            this.cbbKhoi.Location = new System.Drawing.Point(303, 12);
+            this.cbbKhoi.Location = new System.Drawing.Point(404, 15);
+            this.cbbKhoi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbbKhoi.Name = "cbbKhoi";
-            this.cbbKhoi.Size = new System.Drawing.Size(121, 27);
+            this.cbbKhoi.Size = new System.Drawing.Size(160, 30);
             this.cbbKhoi.TabIndex = 15;
             this.cbbKhoi.SelectedIndexChanged += new System.EventHandler(this.cbbKhoi_SelectedIndexChanged);
             // 
             // xemCauHoiTrongDeThiNao
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1251, 551);
+            this.ClientSize = new System.Drawing.Size(1668, 678);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "xemCauHoiTrongDeThiNao";
-            this.Text = "xemCauHoiTrongDeThiNao";
+            this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
+            this.Text = "Xem câu hỏi trong đề thi nào";
             this.Load += new System.EventHandler(this.xemCauHoiTrongDeThiNao_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDethi)).EndInit();

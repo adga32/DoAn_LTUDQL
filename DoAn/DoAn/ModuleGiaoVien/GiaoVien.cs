@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace DoAn
 {
-    public partial class GiaoVien : Form
+    public partial class GiaoVien : MetroFramework.Forms.MetroForm
     {
         Button[] arrBtn;
 

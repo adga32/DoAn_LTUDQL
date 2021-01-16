@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace DoAn
 {
-    public partial class PhanQuyenNguoiDung : Form
+    public partial class PhanQuyenNguoiDung : MetroFramework.Forms.MetroForm
     {
         public PhanQuyenNguoiDung()
         {

@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace DoAn.ModuleGiaoVien
 {
-    public partial class ExportDatabaseCauHoi : Form
+    public partial class ExportDatabaseCauHoi : MetroFramework.Forms.MetroForm
     {
         public ExportDatabaseCauHoi()
         {

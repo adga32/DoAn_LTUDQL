@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace DoAn
 {
-    public partial class ThongKeCauHoi : Form
+    public partial class ThongKeCauHoi : MetroFramework.Forms.MetroForm
     {
         public ThongKeCauHoi()
         {

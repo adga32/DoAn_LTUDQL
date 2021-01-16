@@ -45,6 +45,7 @@
             this.dtgHS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgHS.Location = new System.Drawing.Point(45, 92);
             this.dtgHS.Name = "dtgHS";
+            this.dtgHS.RowHeadersWidth = 51;
             this.dtgHS.RowTemplate.Height = 24;
             this.dtgHS.Size = new System.Drawing.Size(823, 321);
             this.dtgHS.TabIndex = 0;
@@ -55,6 +56,7 @@
             this.dtgGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgGV.Location = new System.Drawing.Point(45, 453);
             this.dtgGV.Name = "dtgGV";
+            this.dtgGV.RowHeadersWidth = 51;
             this.dtgGV.RowTemplate.Height = 24;
             this.dtgGV.Size = new System.Drawing.Size(823, 321);
             this.dtgGV.TabIndex = 0;
@@ -63,7 +65,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(41, 70);
+            this.label1.Location = new System.Drawing.Point(45, 57);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 19);
             this.label1.TabIndex = 1;
@@ -84,7 +86,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(397, 30);
+            this.label3.Location = new System.Drawing.Point(379, 32);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(326, 27);
             this.label3.TabIndex = 1;
@@ -123,7 +125,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dtgGV);
             this.Controls.Add(this.dtgHS);
+            this.DisplayHeader = false;
             this.Name = "PhanQuyenNguoiDung";
+            this.Padding = new System.Windows.Forms.Padding(20, 30, 20, 20);
             this.Text = "Thiết lập chức năng, phân quyền";
             this.Load += new System.EventHandler(this.PhanQuyenNguoiDung_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgHS)).EndInit();
